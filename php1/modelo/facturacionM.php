@@ -123,10 +123,10 @@ class facturacionM
 	function cliente_factura($id,$id_empresa)
 	{
 		$sql="SELECT C.id_cliente,nombre,mail,C.telefono,C.direccion,ci_ruc,num_factura,serie,valor_iva,Autorizacion,fecha,estado_factura,Tipo_pago,datos_adicionales FROM facturas 
-		INNER JOIN cliente C ON facturas.id_cliente = C.id_cliente
-		INNER JOIN empresa ON facturas.id_empresa = empresa.id_empresa
-		WHERE facturas.id_factura = '".$id."'";
-		$result = $this->db->datos($sql,$id_empresa);
+			INNER JOIN cliente C ON facturas.id_cliente = C.id_cliente
+			INNER JOIN empresa ON facturas.id_empresa = empresa.id_empresa
+			WHERE facturas.id_factura = '".$id."'";
+			$result = $this->db->datos($sql,$id_empresa);
 	    return $result;
 				
 	}
