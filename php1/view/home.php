@@ -15,6 +15,9 @@
     <div class="container-fluid p-0">
 
         <h1 class="h3 mb-3"><strong>Bienvenido</strong> ...</h1>
+        <div class="col-sm-12">
+            <label class="small text-danger">* No se olvidew de cargar su firma digital en el apartado de Empresa/ Datos de empresa/Certificados</label>
+        </div>
 
         <div class="row">
                         <div class="col-sm-6 col-xl-3">
@@ -31,11 +34,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <h1 class="mt-1 mb-3">$47.482</h1>
-                                    <div class="mb-0">
+                                    <h1 class="mt-1 mb-3">0</h1>
+                                   <!--  <div class="mb-0">
                                         <span class="badge badge-success-light"> <i class="mdi mdi-arrow-bottom-right"></i> 3.65% </span>
                                         <span class="text-muted">Since last week</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -53,11 +56,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <h1 class="mt-1 mb-3">2.542</h1>
-                                    <div class="mb-0">
+                                    <h1 class="mt-1 mb-3">0</h1>
+                                   <!--  <div class="mb-0">
                                         <span class="badge badge-danger-light"> <i class="mdi mdi-arrow-bottom-right"></i> -5.25% </span>
                                         <span class="text-muted">Since last week</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -75,11 +78,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <h1 class="mt-1 mb-3">16.300</h1>
-                                    <div class="mb-0">
+                                    <h1 class="mt-1 mb-3">0</h1>
+                                  <!--   <div class="mb-0">
                                         <span class="badge badge-success-light"> <i class="mdi mdi-arrow-bottom-right"></i> 4.65% </span>
                                         <span class="text-muted">Since last week</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -97,11 +100,11 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <h1 class="mt-1 mb-3">$20.120</h1>
-                                    <div class="mb-0">
+                                    <h1 class="mt-1 mb-3">0</h1>
+                                    <!-- <div class="mb-0">
                                         <span class="badge badge-success-light"> <i class="mdi mdi-arrow-bottom-right"></i> 2.35% </span>
                                         <span class="text-muted">Since last week</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
