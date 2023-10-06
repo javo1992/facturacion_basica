@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2023-04-12 14:43:00
+Date: 2023-10-06 09:39:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,7 +31,7 @@ CREATE TABLE `accesos_empresa` (
   CONSTRAINT `accesos_empresa_ibfk_1` FOREIGN KEY (`empresa`) REFERENCES `empresa` (`id_empresa`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `accesos_empresa_ibfk_2` FOREIGN KEY (`paginas`) REFERENCES `menu` (`id_menu`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `accesos_empresa_ibfk_3` FOREIGN KEY (`usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=129 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=155 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of accesos_empresa
@@ -68,6 +68,19 @@ INSERT INTO `accesos_empresa` VALUES ('112', '51', '30', '36');
 INSERT INTO `accesos_empresa` VALUES ('113', '52', '30', '36');
 INSERT INTO `accesos_empresa` VALUES ('114', '55', '30', '36');
 INSERT INTO `accesos_empresa` VALUES ('115', '45', '30', '36');
+INSERT INTO `accesos_empresa` VALUES ('129', '1', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('130', '2', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('131', '3', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('132', '26', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('133', '37', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('134', '45', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('135', '46', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('136', '47', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('137', '48', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('138', '49', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('139', '51', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('140', '52', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('141', '55', '7', '38');
 
 -- ----------------------------
 -- Table structure for categoria
@@ -161,7 +174,7 @@ CREATE TABLE `cliente` (
   PRIMARY KEY (`id_cliente`),
   KEY `fk_cliente_empresa` (`id_empresa`) USING BTREE,
   CONSTRAINT `cliente_ibfk_1` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id_empresa`)
-) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of cliente
@@ -190,6 +203,7 @@ INSERT INTO `cliente` VALUES ('69', 'CORSINF', '0999219738', 'mrubio@corsinf.com
 INSERT INTO `cliente` VALUES ('72', 'broodboetiek.S.A.', '2005235673', 'broodboetiekquito@gmail.com', 'la ceramica y ruta viva tumbaco', '7', '1792802547001', 'broodboetiek.S.A.', 'C', null, null, null, 'A');
 INSERT INTO `cliente` VALUES ('75', 'walter vaca', '099999999', 'example@example.com', 'av la gasca y esmeraldas', '6', '0702164179', 'prismanet', 'P', null, 'C', 'cliente_75_6.png', 'A');
 INSERT INTO `cliente` VALUES ('83', 'CONSUMIDOS FINAL', '99999999', 'consumidos@final.com', 'consumidos final', '30', '999999999999', 'CONSUMIDOR FINAL', 'P', null, 'C', null, 'A');
+INSERT INTO `cliente` VALUES ('84', 'CONSUMIDOS FINAL', '99999999', 'consumidos@final.com', 'consumidos final', '7', '999999999999', 'CONSUMIDOR FINAL', 'C', null, 'C', null, 'A');
 
 -- ----------------------------
 -- Table structure for codigos_secuenciales
@@ -204,7 +218,7 @@ CREATE TABLE `codigos_secuenciales` (
   `Serie` varchar(255) DEFAULT NULL,
   `tipo` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_secuenciales`)
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of codigos_secuenciales
@@ -214,7 +228,6 @@ INSERT INTO `codigos_secuenciales` VALUES ('2', 'RE_SERIE_001002', '37', '6', '0
 INSERT INTO `codigos_secuenciales` VALUES ('3', 'GR_SERIE_001002', '22', '6', '0702164179001', '001-002', 'GR');
 INSERT INTO `codigos_secuenciales` VALUES ('6', 'NC_SERIE_001002', '8', '6', '0702164179001', '001-002', 'NC');
 INSERT INTO `codigos_secuenciales` VALUES ('7', 'FA_SERIE_001001', '1', null, null, null, null);
-INSERT INTO `codigos_secuenciales` VALUES ('8', 'FA_SERIE_001001', '2', '7', '1722214507001', '001-001', null);
 INSERT INTO `codigos_secuenciales` VALUES ('13', 'FA_SERIE_001002', '6', '6', '0702164179001', '001-002', 'FA');
 INSERT INTO `codigos_secuenciales` VALUES ('14', 'LC_SERIE_001002', '1', '6', '0702164179001', '001-002', 'LC');
 INSERT INTO `codigos_secuenciales` VALUES ('15', 'RE_SERIE_001001', '4', '6', '0702164179001', '001-001', 'RE');
@@ -225,6 +238,16 @@ INSERT INTO `codigos_secuenciales` VALUES ('49', 'RE_SERIE_001001', '1', '30', '
 INSERT INTO `codigos_secuenciales` VALUES ('50', 'NC_SERIE_001001', '1', '30', '1234567890001', '001-001', 'NC');
 INSERT INTO `codigos_secuenciales` VALUES ('51', 'GR_SERIE_001001', '1', '30', '1234567890001', '001-001', 'GR');
 INSERT INTO `codigos_secuenciales` VALUES ('52', 'LC_SERIE_001001', '1', '30', '1234567890001', '001-001', 'LC');
+INSERT INTO `codigos_secuenciales` VALUES ('58', 'FA_SERIE_001001', '1', '7', '1722214507001', '001-001', 'FA');
+INSERT INTO `codigos_secuenciales` VALUES ('59', 'RE_SERIE_001001', '1', '7', '1722214507001', '001-001', 'RE');
+INSERT INTO `codigos_secuenciales` VALUES ('60', 'NC_SERIE_001001', '1', '7', '1722214507001', '001-001', 'NC');
+INSERT INTO `codigos_secuenciales` VALUES ('61', 'GR_SERIE_001001', '1', '7', '1722214507001', '001-001', 'GR');
+INSERT INTO `codigos_secuenciales` VALUES ('62', 'LC_SERIE_001001', '1', '7', '1722214507001', '001-001', 'LC');
+INSERT INTO `codigos_secuenciales` VALUES ('63', 'FA_SERIE_001001', '1', '33', '1702546738001', '001-001', 'FA');
+INSERT INTO `codigos_secuenciales` VALUES ('64', 'RE_SERIE_001001', '1', '33', '1702546738001', '001-001', 'RE');
+INSERT INTO `codigos_secuenciales` VALUES ('65', 'NC_SERIE_001001', '1', '33', '1702546738001', '001-001', 'NC');
+INSERT INTO `codigos_secuenciales` VALUES ('66', 'GR_SERIE_001001', '1', '33', '1702546738001', '001-001', 'GR');
+INSERT INTO `codigos_secuenciales` VALUES ('67', 'LC_SERIE_001001', '1', '33', '1702546738001', '001-001', 'LC');
 
 -- ----------------------------
 -- Table structure for colores
@@ -314,7 +337,7 @@ CREATE TABLE `empresa` (
   `procesar_automatico` bit(1) DEFAULT b'0',
   `encargado_envios` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_empresa`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of empresa
@@ -323,7 +346,6 @@ INSERT INTO `empresa` VALUES ('5', 'CAFETERIA', 'CAFETERIA', '1722214507', '', '
 INSERT INTO `empresa` VALUES ('6', 'VACA PRIETO WALTER JALIL', 'DISKCOVER SYSTEM', '0702164179001', 'Desarrollo para programacion de DiskCover System', '99999999', 'ejfc19omoshiroi@gmail.com', '../img/empresa/logo.jpeg', null, 'walter_jalil_vaca_prieto_natural_2020_09_10.p12', 'Dlcjvl1210', 'localhost', 'cafeteria1', 'MYSQL', 'root', '', '3306', '1', '.', '0', '4519', '12', '', null, '', '', 'tls', '0', '', '', '12');
 INSERT INTO `empresa` VALUES ('7', 'EDISON JAVIER FARINANGO CABEZAS', 'EDISON JAVIER FARINANGO CABEZAS', '1722214507001', 'COLINAS DEL VALLES JIPIRO Y SANTA BARBARA', '0987242579', 'javier.farinango92@gmail.com', '../img/empresa/logo.png', null, 'EDISON_JAVIER_FARINANGO_CABEZAS_040123130036.p12', 'Fa19071992', 'localhost', 'cafeteria1', 'MYSQL', 'root', '', '3306', '2', '.', '0', null, '12', '', null, '', '', 'tls', '30', '', '', '');
 INSERT INTO `empresa` VALUES ('30', 'empresa xyz', 'empresa xyz', '1234567890001', 'la madrid', '0987654321', 'example.com', '../img/empresa/empresa_xyz', null, '', '', 'localhost', 'cafeteria1', 'MYSQL', 'root', '', '3306', '1', '.', '0', null, '12', null, null, null, '', 'tls', '30', '', '\0', null);
-INSERT INTO `empresa` VALUES ('31', 'empresa 123', 'empresa 123', '1234567890001', 'la pradera', '0987654321', 'example.com', '../img/empresa/empresa_123.png', null, '', '', 'localhost', 'cafeteria1', 'MYSQL', 'root', '', '3306', '1', '.', '0', null, '12', null, null, null, '', 'tls', '30', '', '\0', null);
 
 -- ----------------------------
 -- Table structure for entregas
@@ -1423,7 +1445,7 @@ CREATE TABLE `sucursales` (
   PRIMARY KEY (`id_sucursal`),
   KEY `FK_SUCURSAL_EMPRESA` (`empresa`) USING BTREE,
   CONSTRAINT `sucursales_ibfk_1` FOREIGN KEY (`empresa`) REFERENCES `empresa` (`id_empresa`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of sucursales
@@ -1432,6 +1454,7 @@ INSERT INTO `sucursales` VALUES ('7', '', '', '001-001', '5', null, 'sucursal pr
 INSERT INTO `sucursales` VALUES ('8', '0987456321', 'direccion', '001-002', '6', 'example@example.com', 'sucursal principal');
 INSERT INTO `sucursales` VALUES ('9', '', '', '001-001', '7', 'javier.farinango92@gmail.com', 'SUCURSAL PRINCIPAL');
 INSERT INTO `sucursales` VALUES ('23', '0987654321', 'la madrid', '001-001', '30', 'example.com', 'SUCURSAL PRINCIPAL');
+INSERT INTO `sucursales` VALUES ('25', '0987242579', 'jipiro y santa barbara', '001-001', '7', 'javier.farinango92@gmail.com', 'SUCURSAL PRINCIPAL');
 
 -- ----------------------------
 -- Table structure for tabla_naciones
@@ -2971,7 +2994,7 @@ CREATE TABLE `usuario` (
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`tipo_usuario`) REFERENCES `tipo_usuario` (`id_tipo_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`sucursal`) REFERENCES `sucursales` (`id_sucursal`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `usuario_ibfk_3` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id_empresa`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Records of usuario
@@ -2980,3 +3003,4 @@ INSERT INTO `usuario` VALUES ('18', '6', 'PACO', 'EXAMPLE', '147852369', 'Paco',
 INSERT INTO `usuario` VALUES ('21', '6', 'invitado', 'example', '1750188326', 'invitado', 'invitado', '001-002', '8', '../img/sistema/sin_imagen.jpg', 'EXAMPLE@EXAMPLE.COM', '0987242589', '13');
 INSERT INTO `usuario` VALUES ('22', '7', 'invitado', 'invitado example', '9999999999', 'invitado', 'invitado', '001-001', null, '../img/sistema/sin_imagen.jpg', 'invitado@invitado.com', '022222222222222', '13');
 INSERT INTO `usuario` VALUES ('36', '30', null, null, null, '1234567890001', '1234567890001', '001-001', null, '../img/sistema/sin_imagen.jpg', null, null, '10');
+INSERT INTO `usuario` VALUES ('38', '7', null, null, null, '1722214507001', '1722214507001', '001-001', null, '../img/sistema/sin_imagen.jpg', null, null, '10');
