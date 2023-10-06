@@ -101,7 +101,9 @@
         <nav id="sidebar" class="sidebar js-sidebar">
             <div class="sidebar-content js-simplebar">
                 <a class="sidebar-brand" href="index.html">
-          <span class="align-middle">AdminKit</span>
+          <span class="align-middle">
+              <img src="../img/sistema/logo.png" style="width:80%">
+          </span>
         </a>
 
                 <ul class="sidebar-nav" id="accordionSidebar">

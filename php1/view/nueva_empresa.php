@@ -138,7 +138,7 @@
 											  	</div>									       		
 									       	</div>
 									       	<div class="col-sm-12">
-									       		<label class="small text-danger">* Estas opciones podran ser cambiadas una vez dentro del sistem en em apartado de empresa</label>
+									       		<label class="small text-danger">* Estas opciones podran ser cambiadas una vez dentro del sistema, en el apartado de empresa</label>
 									       	</div>
 									       	
                                      	</div>				 

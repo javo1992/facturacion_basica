@@ -51,21 +51,23 @@
                             <div class="card-body">
                                 <div class="m-sm-4">
                                     <div class="text-center">
-                                        <img src="../img/empresa/logo.png" alt="Charles Hall" class="img-fluid rounded-circle" width="132" height="132" id="logo_emp" />
-                                    </div>                                    
+                                        <img src="../img/empresa/logo_azul.png" alt="Charles Hall" class="img-fluid" width="70%" id="logo_emp" />
+                                        <br>
+                                    </div> 
+                                    <br>                                   
                                      <form class="user">
                                             <p style="color:green;display: none;" id="validar_emp">Empresa validad</p>
                                         <div class="form-group">                                            
-                                            <label class="form-label">Ruc de empresa</label>
+                                            <label class="form-label"><b>Ruc de empresa</b></label>
                                             <input type="text" class="form-control form-control-user" id="txt_empresa" placeholder="RUC de empresa" onblur="busca_empresa()">
                                               <input type="text" class="form-control form-control-user" id="txt_id_empresa" style="display:none">
                                         </div>
                                         <div class="form-group">
-                                            <label class="form-label">Usuario</label>
+                                            <label class="form-label"><b>Usuario</b></label>
                                             <input type="text" class="form-control form-control-user" id="txt_usuario" placeholder="Usuario">
                                         </div>                                        
                                         <div class="form-group">
-                                            <label class="form-label">Password</label>
+                                            <label class="form-label"><b>Password</b></label>
                                             <input type="password" class="form-control form-control-user"
                                                 id="txt_password" placeholder="Password">
                                         </div>
@@ -82,13 +84,12 @@
                                         </div>                                      
                                         <hr>
                                     </form>
-                                    <div class="text-end">
-                                        <a class="medium" href="nueva_empresa.php"><i class="fas fa-fw fa-building"></i>Crear empresa?</a>
-                                    </div>
                                      <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                        <!-- <a class="small" href="forgot-password.html">Forgot Password?</a> -->
                                     </div>
-                                    
+                                    <div class="text-end">
+                                        <a class="small" href="nueva_empresa.php"><u><b>Nueva empresa</b></u></a>
+                                    </div>
 
                                 </div>
                             </div>
