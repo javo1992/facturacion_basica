@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2023-10-06 09:39:03
+Date: 2023-10-10 11:44:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,7 +31,7 @@ CREATE TABLE `accesos_empresa` (
   CONSTRAINT `accesos_empresa_ibfk_1` FOREIGN KEY (`empresa`) REFERENCES `empresa` (`id_empresa`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `accesos_empresa_ibfk_2` FOREIGN KEY (`paginas`) REFERENCES `menu` (`id_menu`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `accesos_empresa_ibfk_3` FOREIGN KEY (`usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=155 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=156 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of accesos_empresa
@@ -45,13 +45,6 @@ INSERT INTO `accesos_empresa` VALUES ('52', '37', '6', '21');
 INSERT INTO `accesos_empresa` VALUES ('53', '8', '6', '21');
 INSERT INTO `accesos_empresa` VALUES ('54', '39', '6', '21');
 INSERT INTO `accesos_empresa` VALUES ('55', '45', '6', '21');
-INSERT INTO `accesos_empresa` VALUES ('56', '13', '7', '22');
-INSERT INTO `accesos_empresa` VALUES ('57', '26', '7', '22');
-INSERT INTO `accesos_empresa` VALUES ('58', '8', '7', '22');
-INSERT INTO `accesos_empresa` VALUES ('59', '3', '7', '22');
-INSERT INTO `accesos_empresa` VALUES ('60', '13', '7', '22');
-INSERT INTO `accesos_empresa` VALUES ('61', '45', '7', '22');
-INSERT INTO `accesos_empresa` VALUES ('62', '37', '7', '22');
 INSERT INTO `accesos_empresa` VALUES ('63', '46', '6', '21');
 INSERT INTO `accesos_empresa` VALUES ('65', '51', '6', '18');
 INSERT INTO `accesos_empresa` VALUES ('66', '52', '6', '18');
@@ -68,19 +61,32 @@ INSERT INTO `accesos_empresa` VALUES ('112', '51', '30', '36');
 INSERT INTO `accesos_empresa` VALUES ('113', '52', '30', '36');
 INSERT INTO `accesos_empresa` VALUES ('114', '55', '30', '36');
 INSERT INTO `accesos_empresa` VALUES ('115', '45', '30', '36');
-INSERT INTO `accesos_empresa` VALUES ('129', '1', '7', '38');
-INSERT INTO `accesos_empresa` VALUES ('130', '2', '7', '38');
-INSERT INTO `accesos_empresa` VALUES ('131', '3', '7', '38');
-INSERT INTO `accesos_empresa` VALUES ('132', '26', '7', '38');
-INSERT INTO `accesos_empresa` VALUES ('133', '37', '7', '38');
-INSERT INTO `accesos_empresa` VALUES ('134', '45', '7', '38');
-INSERT INTO `accesos_empresa` VALUES ('135', '46', '7', '38');
-INSERT INTO `accesos_empresa` VALUES ('136', '47', '7', '38');
-INSERT INTO `accesos_empresa` VALUES ('137', '48', '7', '38');
-INSERT INTO `accesos_empresa` VALUES ('138', '49', '7', '38');
-INSERT INTO `accesos_empresa` VALUES ('139', '51', '7', '38');
-INSERT INTO `accesos_empresa` VALUES ('140', '52', '7', '38');
-INSERT INTO `accesos_empresa` VALUES ('141', '55', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('130', '1', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('131', '2', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('132', '3', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('133', '26', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('134', '37', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('135', '45', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('136', '46', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('137', '47', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('138', '48', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('139', '49', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('140', '51', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('141', '52', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('142', '55', '7', '38');
+INSERT INTO `accesos_empresa` VALUES ('143', '1', '34', '39');
+INSERT INTO `accesos_empresa` VALUES ('144', '2', '34', '39');
+INSERT INTO `accesos_empresa` VALUES ('145', '3', '34', '39');
+INSERT INTO `accesos_empresa` VALUES ('146', '26', '34', '39');
+INSERT INTO `accesos_empresa` VALUES ('147', '37', '34', '39');
+INSERT INTO `accesos_empresa` VALUES ('148', '45', '34', '39');
+INSERT INTO `accesos_empresa` VALUES ('149', '46', '34', '39');
+INSERT INTO `accesos_empresa` VALUES ('150', '47', '34', '39');
+INSERT INTO `accesos_empresa` VALUES ('151', '48', '34', '39');
+INSERT INTO `accesos_empresa` VALUES ('152', '49', '34', '39');
+INSERT INTO `accesos_empresa` VALUES ('153', '51', '34', '39');
+INSERT INTO `accesos_empresa` VALUES ('154', '52', '34', '39');
+INSERT INTO `accesos_empresa` VALUES ('155', '55', '34', '39');
 
 -- ----------------------------
 -- Table structure for categoria
@@ -95,7 +101,7 @@ CREATE TABLE `categoria` (
   PRIMARY KEY (`id_categoria`),
   KEY `FK_EMPRESA` (`empresa`) USING BTREE,
   CONSTRAINT `categoria_ibfk_1` FOREIGN KEY (`empresa`) REFERENCES `empresa` (`id_empresa`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of categoria
@@ -117,6 +123,9 @@ INSERT INTO `categoria` VALUES ('14', 'servicios', 'A', '6', '../img/sistema/sin
 INSERT INTO `categoria` VALUES ('15', 'Hamburguesa ', 'A', '6', '../img/sistema/sin_imagen.jpg');
 INSERT INTO `categoria` VALUES ('16', 'SERVICIOS', 'A', '7', '../img/sistema/sin_imagen.jpg');
 INSERT INTO `categoria` VALUES ('17', 'producto 1', 'A', '30', '../img/sistema/sin_imagen.jpg');
+INSERT INTO `categoria` VALUES ('18', 'FUMIGACION', 'A', '8', '../img/sistema/sin_imagen.jpg');
+INSERT INTO `categoria` VALUES ('19', 'SERVICIOS', 'A', '34', '../img/sistema/sin_imagen.jpg');
+INSERT INTO `categoria` VALUES ('20', 'HARDWARE', 'A', '34', '../img/sistema/sin_imagen.jpg');
 
 -- ----------------------------
 -- Table structure for cierre_caja
@@ -147,7 +156,7 @@ CREATE TABLE `cierre_caja` (
   PRIMARY KEY (`id_cierre_caja`),
   KEY `FK_USUARIO_CIERECAJA` (`responsable`),
   CONSTRAINT `cierre_caja_ibfk_1` FOREIGN KEY (`responsable`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of cierre_caja
@@ -174,7 +183,7 @@ CREATE TABLE `cliente` (
   PRIMARY KEY (`id_cliente`),
   KEY `fk_cliente_empresa` (`id_empresa`) USING BTREE,
   CONSTRAINT `cliente_ibfk_1` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id_empresa`)
-) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=160 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of cliente
@@ -202,8 +211,85 @@ INSERT INTO `cliente` VALUES ('68', 'CORSINF', '0999219738', 'mrubio@corsinf.com
 INSERT INTO `cliente` VALUES ('69', 'CORSINF', '0999219738', 'mrubio@corsinf.com', 'DE LOS MOTILONES n40-345', '7', '1712605284001', 'COSINF', 'C', null, null, null, 'A');
 INSERT INTO `cliente` VALUES ('72', 'broodboetiek.S.A.', '2005235673', 'broodboetiekquito@gmail.com', 'la ceramica y ruta viva tumbaco', '7', '1792802547001', 'broodboetiek.S.A.', 'C', null, null, null, 'A');
 INSERT INTO `cliente` VALUES ('75', 'walter vaca', '099999999', 'example@example.com', 'av la gasca y esmeraldas', '6', '0702164179', 'prismanet', 'P', null, 'C', 'cliente_75_6.png', 'A');
+INSERT INTO `cliente` VALUES ('76', 'COSUMIDO FINAL', '0222222', 'example@example.com', 'EXAMPLE', '8', '9999999999999', 'CONSUMIDOR FINAL', 'C', null, 'C', null, 'A');
+INSERT INTO `cliente` VALUES ('77', 'TIENDAS INDUSTRIALES ASOCIADAS TIA S. A.', '042598830', 'logistica100@tia.com.ec', 'CHIMBORAZO 217 Y LUQUE ESQ.', '8', '0990017514001', 'TIENDAS INDUSTRIALES ASOCIADAS TIA S. A.', 'C', null, 'R', null, 'A');
+INSERT INTO `cliente` VALUES ('78', 'TRANSPORTE PESADO IMALAYA TRANSPEIMALAYA S.A.', '0990313904', 'transpesimalaya2016@outlook.com', 'CAYETANO CESTARIS S7-158 Y PADRE ELIAS BRITO', '8', '1792680778001', 'TRANSPEIMALAYA S.A.', 'C', null, 'C', null, 'A');
 INSERT INTO `cliente` VALUES ('83', 'CONSUMIDOS FINAL', '99999999', 'consumidos@final.com', 'consumidos final', '30', '999999999999', 'CONSUMIDOR FINAL', 'P', null, 'C', null, 'A');
-INSERT INTO `cliente` VALUES ('84', 'CONSUMIDOS FINAL', '99999999', 'consumidos@final.com', 'consumidos final', '7', '999999999999', 'CONSUMIDOR FINAL', 'C', null, 'C', null, 'A');
+INSERT INTO `cliente` VALUES ('85', '', '042598830', 'logistica100@tia.com.ec', 'CHIMBORAZO 217 Y LUQUE ESQ.', '8', '0990017514001', '', 'C', null, 'R', null, 'I');
+INSERT INTO `cliente` VALUES ('86', 'TIENDAS INDUSTRIALES ASOCIADAS TIA S. A.', '042598830', 'logistica100@tia.com.ec', 'CHIMBORAZO 217 Y LUQUE ESQ.', '8', '0990017514001', 'TIENDAS INDUSTRIALES ASOCIADAS TIA S. A.', 'C', null, 'R', null, 'A');
+INSERT INTO `cliente` VALUES ('87', 'Javier farinango', '0987242579', 'javier.farinango92@gmail.com', 'jipiro y santa barbara', '8', '1722214507001', 'Javier Farinango', 'P', null, 'R', null, 'A');
+INSERT INTO `cliente` VALUES ('88', 'TIENDAS INDUSTRIALES ASOCIADAS TIA S. A.', '042598830', 'logistica100@tia.com.ec', 'CHIMBORAZO 217 Y LUQUE ESQ.', '8', '0990017514001', 'TIENDAS INDUSTRIALES ASOCIADAS TIA S. A.', 'P', null, 'R', null, 'A');
+INSERT INTO `cliente` VALUES ('89', 'JAVIER FARINANGO', '0987242579', 'javier.farinango92@hotmail.com', 'Jipiro y Santa Barbara', '8', '1722214507001', 'JAVIER FARINANGO', 'C', null, 'R', null, 'A');
+INSERT INTO `cliente` VALUES ('90', 'TRANSCORMOGAL S.A.', '0967725552', 'facturacion@transcormogal.com', 'GALO MOLINA Y MAXIMILIANO RODRIGUEZ', '8', '1792282411001', 'TRANSCORMOGAL S.A.', 'C', null, 'R', null, 'A');
+INSERT INTO `cliente` VALUES ('91', 'Compañía de transporte de carga Villarroel y Villarroel CIA LTDA', '0984063534', 'vyv_transcarga@hotmail.com', 'Victoria Alta S61 y Oe4F', '8', '1792379881001', 'Compañía de transporte de carga Villarroel y Villarroel CIA LTDA', 'C', null, 'R', null, 'A');
+INSERT INTO `cliente` VALUES ('92', 'ECUATRANSPO CIA LTDA', '2975285', 'ecuatrans-cialtda@hotmail.com', 'Ciudadela del ejercito', '8', '1791738381001', 'ECUATRANSPO CIA LTDA', 'C', null, 'R', null, 'A');
+INSERT INTO `cliente` VALUES ('93', 'COMPAÑIA DE CARGA PESADA Y LOGISTICA TRANSAYALA S.A.', '0984708447', 'Proveedores@admoracastro.com', 'CONOCOTO / ABDON CALDERON N30-08 Y ISIDRO AYORA MIRANDA', '8', '1792514762001', 'COMPAÑIA DE CARGA PESADA Y LOGISTICA TRANSAYALA S.A.', 'C', null, 'R', null, 'A');
+INSERT INTO `cliente` VALUES ('94', 'TRANSMORACASTRO C.A.', '0981348834', 'proveedores@admoracastro.com', 'DE LOS EUCALIPTOS E2-60 Y JUNCAL', '8', '1792644305001', 'TRANSMORACASTRO C.A.', 'C', null, 'R', null, 'A');
+INSERT INTO `cliente` VALUES ('95', 'CONSUMIDOS FINAL', '99999999', 'consumidos@final.com', 'consumidos final', '7', '999999999999', 'CONSUMIDOR FINAL', 'C', null, 'C', null, 'A');
+INSERT INTO `cliente` VALUES ('96', 'Geancarlo Asencio Panchana', '099031390', 'geanasencio@hotmail.com', 'Calderon', '7', '0922284856', 'Geancarlo Asencio Panchana', 'C', null, 'C', null, 'A');
+INSERT INTO `cliente` VALUES ('97', 'CONSUMIDOS FINAL', '99999999', 'consumidos@final.com', 'consumidos final', '34', '999999999999', 'CONSUMIDOR FINAL', 'C', null, 'C', null, 'A');
+INSERT INTO `cliente` VALUES ('98', 'GIGATRADE', '2271021', 'gigatrade@hotmail.com', 'ISLA FERNANDINA N43-78 Y TOMAS DE BERLANGA', '34', '1791985192001', 'GIGATRADE', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('99', 'FEPP', '', 'facturalago@fepp.org.ec', '12 de febrero 267 y 10 de agosto', '34', '1790164241001', 'FEPP', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('100', 'SACOS GALLARDO CIA LTDA', '22573520', 'erikag@sacosgallardo.com.ec', 'ROCAFUERTE OE6 19', '34', '1792227577001', 'SACOS GALLARDO CIA LTDA', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('101', 'SURTILLANTAS', '3317520', 'auxiliarcontable@surtillantas.com', 'Av Atahualpa Oe2-28 y Hernando de la Cruz', '34', '1792095107001', 'SURTILLANTAS', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('102', 'UDSS SPECIALIZED SERVICES ECUADOR S.A', '5101340', 'veronica.amaguana@udssinc.com', 'Catalina Aldaz N34-155 y Portugal  Ed. Catalina Plaza P6. Of.607', '34', '1792331951001', 'UDSS SPECIALIZED SERVICES ECUADOR S.A', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('103', 'PUCE', '2991700', 'avasquez@puce.edu.ec', 'AV. 12 DE OCTUBRE 1076 Y ROCA', '34', '1790105601001', 'PUCE', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('104', 'ALEXANDRA GALLARDO ROMERO', '6022678', 'mediasytextiles@yahoo.es', 'José de la cuadra n13-349 y de la fraternidad', '34', '1712964129001', 'ALEXANDRA GALLARDO ROMERO', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('105', 'TELDATA', '3196030', 'kleberveo@hotmail.com', 'Alborada - Monjas', '34', '1791802314001', 'TELDATA', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('106', 'CASA DE LA CULTURA ECUATORIANA BENJAMIN CARRION', '2902272', 'jlsamaniegom@gmail.com', 'Av. 6 de Diciembre y Patria', '34', '1760005890001', 'CASA DE LA CULTURA ECUATORIANA BENJAMIN CARRION', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('107', 'ZUBERTECH ENLACE DIGITAL S.A.', '22463522', 'adiaz@enlacedigital.com.ec', 'Francisco de Izazaga N45-07 y Pio Valdivieso', '34', '1792410770001', 'ZUBERTECH ENLACE DIGITAL S.A.', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('108', 'CFR AJUSTADORA DE SINIESTRO S.A.', '2500055', 'cfrajustes@gmail.com', 'GRAL. ROBLES Y AV. AMAZONAS EDIFICIO PROINCO CALISTO', '34', '1792676541001', 'CFR AJUSTADORA DE SINIESTRO S.A.', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('109', 'SOFT WAREHOUSE S.A.', '2904164', 'paola.freire@fit-bank.com', 'Camilo Destruge N24-633 y Francisco Salazar', '34', '1791859669001', 'SOFT WAREHOUSE S.A.', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('110', 'GALO SALCEDO', '2443755', 'galosalcedo@yahoo.com', 'De los Sauces 176', '34', '1706462148001', 'GALO SALCEDO', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('111', 'VOLRISK CONSULTORES ACTUARIALES CIA. LTDA.', '3825605', 'infoec@vol-risk.com', 'Av Shyris N32-218 y Av Eloy Alfaro', '34', '1792334314001', 'VOLRISK CONSULTORES ACTUARIALES CIA. LTDA.', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('112', 'FERRERE ABOGADOS ECUADOR FEREC S.A.', '3810950', 'proveedoreses@ferrere.com', 'AVENIDA 12 DE OCTUBRE N24-68 Y LINCOLN', '34', '1792573408001', 'FERRERE ABOGADOS ECUADOR FEREC S.A.', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('113', 'UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE', '3989400', 'pibedoya@espe.edu.ec', 'AV. GRAL. RUMIÑAHUI S/N Y AMBATO', '34', '1768007390001', 'UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('114', 'LOCATION WORLD S.A.', '22523082', 'gabriela.lema@location-world.com', 'Julio Zaldumbide N24-598 y Miravalle', '34', '1791922727001', 'LOCATION WORLD S.A.', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('115', 'ALVARO LEDESMA', '999449720', 'jeffolopez8@gmail.com', 'Río Coca 2027 y Amazonas', '34', '1703416394001', 'ALVARO LEDESMA', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('116', 'JOSELITO COBO BERNAL', '2647734', 'rcmcobo@hotmail.com', 'José Victoria N25-30 y Av. Colón', '34', '1708765183001', 'JOSELITO COBO BERNAL', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('117', 'CONJUNTO HABITACIONAL PUEBLO BLANCO DEL VALLE II ETAPA C-1', '3810321', 'lizza1973@hotmail.com', 'Pasaje Abel Gilbert 13-91 y Av. Sebastian de Benalcazar', '34', '2390009251001', 'CONJUNTO HABITACIONAL PUEBLO BLANCO DEL VALLE II ETAPA C-1', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('118', 'ROTE GLOBAL CIA.LTDA', '2452299', 'stenorio@roteglobal.com.ec', 'Calle A N43-74 y Edmundo Carvajal', '34', '1792125081001', 'ROTE GLOBAL CIA.LTDA', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('119', 'ANDREA DIAZ AYALA', '2556832', 'asistenteadministrativo@effigia.com.ec', 'LEONIDAZ PLAZA N24-7351 Y MARISCAL FOSH', '34', '1704779501001', 'ANDREA DIAZ AYALA', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('120', 'FRANCISCO ESTEBAN MATEUS ALARCON', '2401072', 'esteban.mateus@gmail.com', 'Urbanización El Labrador E2-66', '34', '1705909081', 'FRANCISCO ESTEBAN MATEUS ALARCON', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('121', 'NANCY VEGA', '2562096', 'nan61v@hotmail.com', 'Cristóbal de Acuña E1-18 a Av 10 de Agosto', '34', '1707117048', 'NANCY VEGA', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('122', 'FAST COMMERCE CIA. LTDA.', '22231316', 'comercial@fastcommerce-fc.com', 'Ulloa 611 y Cristobal de Acuña. Edificio La Finca. piso 2 Oficina 6', '34', '1792703158001', 'FAST COMMERCE CIA. LTDA.', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('123', 'ASOCIACI\\u00d3N O CUENTAS EN PARTICIPACI\\u00d3N GREEN FOODS', '', 'dominiquefreile@grupoenereat.com', 'Shyris y Bélgica', '34', '1792739365001', 'ASOCIACI\\u00d3N O CUENTAS EN PARTICIPACI\\u00d3N GREEN FOODS', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('124', 'TRANQUITO S.A', '3411513', 'tranquito@gmail.com', 'Barrio Atucucho Calle OEA 56131 y calle F', '34', '1791310810001', 'TRANQUITO S.A', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('125', 'PABON ARMAS JORGE OSWALDO', '2254052', 'opabona.cs@gmail.com', 'José Arízaga E4-11 y Jorge Drom', '34', '400363271001', 'PABON ARMAS JORGE OSWALDO', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('126', 'LMT CONEXUS GROUP S.A', '', 'fe.emi@conexus-group.com', 'SAN JOSE COSTA RICA  CURRIDABAT CENTRO COMERCIAL JOSE MARIA ZELEDON CASA 121', '34', '3101680692', 'LMT CONEXUS GROUP S.A', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('127', 'OPTIMA COMUNICACIONES S A', '', 'rfcattaruzzi@gmail.com', 'MONTIEL 2451 1440-CIUDAD AUTONOMA BUENOS AIRES', '34', '30-70797611-6', 'OPTIMA COMUNICACIONES S A', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('128', 'LUIS HERNAN SANTAMARIA SALVADOR', '3948300', 'lhsantamaria@yahoo.com', 'Panamericana sur Km 28 Tambillo', '34', '1703768778001', 'LUIS HERNAN SANTAMARIA SALVADOR', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('129', 'ECUAPETQUIM CIA LTDA', '3948300', 'contabilidad@ecuapetquim.com', 'MIRAFLORES VELLO SN', '34', '1791727797001', 'ECUAPETQUIM CIA LTDA', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('130', 'TELECROB ANDINA SRL', '', 'rfcattaruzzi@gmail.com', 'ESCAZU SAN RAFAEL Del SUPERMERCADO AMPM 150 mts ESTE y 75 mts NORTE', '34', '3102735827', 'TELECROB ANDINA SRL', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('131', 'BOSTON SERVICIOS MEDICOS DE ECUADOR BOSTONMED S.A.', '', 'facturacion@elexial.com', 'Avenida Eloy Alfaro N29-235', '34', '1792970369001', 'BOSTON SERVICIOS MEDICOS DE ECUADOR BOSTONMED S.A.', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('132', 'ERIKA GALLARDO', '', 'erika90_4@hotmail.com', '', '34', '1721348108001', 'ERIKA GALLARDO', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('133', 'TECHMILL TECNOLOGIES PRIVATE LIMITED', '', 'patricio.cj@techmilltecnologies.com', 'Pedro Ponce Carrasco E9-25 y Av 6 de Diciembre', '34', '1793016200001', 'TECHMILL TECNOLOGIES PRIVATE LIMITED', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('134', 'BETY MONCAYO', '', 'bety_amg@hotmail.com', 'CC Quicenteo Sur', '34', '1714960711001', 'BETY MONCAYO', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('135', 'CASABACA S.A.', '2223444', 'mbpenaherrera@casabaca.com', ' 10 DE AGOSTO N21-281', '34', '1790009459001', 'CASABACA S.A.', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('136', 'ENELOJOFILMS CIA LTDA', '2231418', 'facturas@enelojofilms.com', 'Camino de Orellana N27-231', '34', '1792113091001', 'ENELOJOFILMS CIA LTDA', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('137', 'HULARUSS CIA. LTDA.', '', 'dortega@hularuss.net', 'Cumbaya', '34', '1792328284001', 'HULARUSS CIA. LTDA.', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('138', 'FRANCISCO CHECA', '', 'ada_corp@yahoo.com', 'Vía Intervalles Lote 39', '34', '1705554408001', 'FRANCISCO CHECA', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('139', 'DBRAG TECNOLOGIA EN INFORMACION CIA LTDA', '3828370', 'facturas@dbrag.com', 'Whymper N27-70 y Ave. Orellana', '34', '1791847601001', 'DBRAG TECNOLOGIA EN INFORMACION CIA LTDA', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('140', 'LUTOPSA S.A', '5126374', 'lutopsaecuador@hotmail.com', 'VELASCO IBARRA S/N', '34', '992548460001', 'LUTOPSA S.A', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('141', 'AGEDOMO', '', 'agedomo5521@gmail.com', 'Dolores Veintimilla y Rita Lecumberry N2-79', '34', '1720986692001', 'AGEDOMO', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('142', 'SMARTPROCESS S.A', '', 'agrijalva@smartprocessgroup.com', 'Dirección José Padilla 330 e iñaquito', '34', '1792829534001', 'SMARTPROCESS S.A', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('143', 'RED DE SERVICIOS ECUADOR SAS', '', 'contabilidad@reddeservicios.ec', 'AV REPUBLICA DEL SALVADOR N36140', '34', '1793135528001', 'RED DE SERVICIOS ECUADOR SAS', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('144', 'CELEC EP CORPORACION ELECTRICA DEL ECUADOR', '', 'alejandro.regalado@celec.gob.ec', 'AV 6 DE DICIEMBRE N26-235', '34', '1768152800001', 'CELEC EP CORPORACION ELECTRICA DEL ECUADOR', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('145', 'LEGAL BUSINESS ASESORIA & CONSULTORIA', '2220198', 'infolegalbusiness@gmail.com', 'Veintimilla E10-78 y Av 12 de Octubre', '34', '1792584825001', 'LEGAL BUSINESS ASESORIA & CONSULTORIA', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('146', 'INNOVA CONSTRUCTION-TECHNOLOGIES ECUADOR S.A.S', '', 'asistente.contable@novadobe.com', 'AV CRISTOBAL COLON E8-35 Y DIEGO DE ALMAGRO', '34', '1793191081001', 'INNOVA CONSTRUCTION-TECHNOLOGIES ECUADOR S.A.S', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('147', 'NAGARRO S.A.S', '', 'maritza.rolon@nagarro.com', 'CALLE PEDRO PONCE CARRASCO E9-25 Y AV. 6 DE DICIEMBRE', '34', '1793194424001', 'NAGARRO S.A.S', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('148', 'DISTRIMARKET', '222522294', 'jessy.natalia1983@gmail.com', '6 de diciembre entre Veintimilla y Wilson Edificio Lasso N23-60', '34', '1792141850001', 'DISTRIMARKET', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('149', 'CENTRO DE MEDICINA FAMILIAR', '', 'cecibelarellano6@gmail.com', 'Calle San Francisco y Av.America', '34', '1792818893001', 'CENTRO DE MEDICINA FAMILIAR', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('150', 'CONGREGACION HERMANAS DOMINICAS', '3959960', 'msosa@saintdominic.edu.ec', 'Dirección César Davila N10-222', '34', '1791906810001', 'CONGREGACIONN HERMANAS DOMINICAS', 'C', null, 'C', null, 'A');
+INSERT INTO `cliente` VALUES ('151', 'CONGREGACI\\u00d3N DE HERMANAS DOMINICAS DE LA INMACULADA CONCEPCI\\u00d3N', '', 'It@uesdgq.edu.ec', 'Veintemilla 1128 y  Av. Río Amazonas', '34', '1790098753001', 'CONGREGACI\\u00d3N DE HERMANAS DOMINICAS DE LA INMACULADA CONCEPCI\\u00d3N', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('152', 'FUNDACI\\u00d3N VALLE INTEROCE\\u00c1NICO', '22222101', 'info@mediya.ec', 'Medardo silva Oe5-221', '34', '1791323548001', 'FUNDACI\\u00d3N VALLE INTEROCE\\u00c1NICO', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('153', 'PPG CONSTRUCCIONES Y TECNOLOGIA CIA. LTDA.', '', 'jcompras@forto.com.ec', 'Dirección Catalina Aldaz N34 y Portugal', '34', '1792308224001', 'PPG CONSTRUCCIONES Y TECNOLOGIA CIA. LTDA.', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('154', 'ASINTEL ECUADOR S.A.S', '', 'contabilidad@asintelecuador.com', 'Calderon 9  de Agosto y Tulcán', '34', '1793199417001', 'ASINTEL ECUADOR S.A.S', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('155', 'FUNDACION PROSPERAR SALUD', '', 'contabilidad@reddeservicios.ec', 'Av. Rio Amazonas y Av. Naciones Unidas', '34', '1793194697001', 'FUNDACION PROSPERAR SALUD', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('156', 'UNIDAD EDUCATIVA SALESIANA CARDENAL SPELLMAN', '3560001', 'mrodriguez@spellman.edu.ec', 'Rio Santiago S/N y Alfonso Lamiña', '34', '1790098842001', 'UNIDAD EDUCATIVA SALESIANA CARDENAL SPELLMAN', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('157', 'WILLIAN LEON', '', 'contabilidad@wltechnologies.com.ec', 'La Floresta Ibarra', '34', '1002582276001', 'WILLIAN LEON', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('158', 'SIFIZSOFT CIA LTDA', '', 'seguridad@sifizsoft.com', 'Rumipamba E2-214 y Av. Rep\\u00fablica', '34', '1791935950001', 'SIFIZSOFT CIA LTDA', 'C', null, null, null, 'A');
+INSERT INTO `cliente` VALUES ('159', 'MILTON RUBIO', '0999219738', 'mrubio@corsinf.com', 'Rio Coca 2027 y Amazonas\r\n', '34', '1712605284', 'CORSINF', 'C', null, 'C', null, 'A');
 
 -- ----------------------------
 -- Table structure for codigos_secuenciales
@@ -218,7 +304,7 @@ CREATE TABLE `codigos_secuenciales` (
   `Serie` varchar(255) DEFAULT NULL,
   `tipo` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_secuenciales`)
-) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of codigos_secuenciales
@@ -227,27 +313,19 @@ INSERT INTO `codigos_secuenciales` VALUES ('1', 'FA_SERIE_001001', '22', '6', '0
 INSERT INTO `codigos_secuenciales` VALUES ('2', 'RE_SERIE_001002', '37', '6', '0702164179001', '001-002', 'RE');
 INSERT INTO `codigos_secuenciales` VALUES ('3', 'GR_SERIE_001002', '22', '6', '0702164179001', '001-002', 'GR');
 INSERT INTO `codigos_secuenciales` VALUES ('6', 'NC_SERIE_001002', '8', '6', '0702164179001', '001-002', 'NC');
-INSERT INTO `codigos_secuenciales` VALUES ('7', 'FA_SERIE_001001', '1', null, null, null, null);
-INSERT INTO `codigos_secuenciales` VALUES ('13', 'FA_SERIE_001002', '6', '6', '0702164179001', '001-002', 'FA');
-INSERT INTO `codigos_secuenciales` VALUES ('14', 'LC_SERIE_001002', '1', '6', '0702164179001', '001-002', 'LC');
-INSERT INTO `codigos_secuenciales` VALUES ('15', 'RE_SERIE_001001', '4', '6', '0702164179001', '001-001', 'RE');
-INSERT INTO `codigos_secuenciales` VALUES ('16', 'NC_SERIE_001001', '2', '6', '0702164179001', '001-001', 'NC');
-INSERT INTO `codigos_secuenciales` VALUES ('17', 'GR_SERIE_001001', '3', '6', '0702164179001', '001-001', 'GR');
-INSERT INTO `codigos_secuenciales` VALUES ('48', 'FA_SERIE_001001', '2', '30', '1234567890001', '001-001', 'FA');
-INSERT INTO `codigos_secuenciales` VALUES ('49', 'RE_SERIE_001001', '1', '30', '1234567890001', '001-001', 'RE');
-INSERT INTO `codigos_secuenciales` VALUES ('50', 'NC_SERIE_001001', '1', '30', '1234567890001', '001-001', 'NC');
-INSERT INTO `codigos_secuenciales` VALUES ('51', 'GR_SERIE_001001', '1', '30', '1234567890001', '001-001', 'GR');
-INSERT INTO `codigos_secuenciales` VALUES ('52', 'LC_SERIE_001001', '1', '30', '1234567890001', '001-001', 'LC');
-INSERT INTO `codigos_secuenciales` VALUES ('58', 'FA_SERIE_001001', '1', '7', '1722214507001', '001-001', 'FA');
-INSERT INTO `codigos_secuenciales` VALUES ('59', 'RE_SERIE_001001', '1', '7', '1722214507001', '001-001', 'RE');
-INSERT INTO `codigos_secuenciales` VALUES ('60', 'NC_SERIE_001001', '1', '7', '1722214507001', '001-001', 'NC');
-INSERT INTO `codigos_secuenciales` VALUES ('61', 'GR_SERIE_001001', '1', '7', '1722214507001', '001-001', 'GR');
-INSERT INTO `codigos_secuenciales` VALUES ('62', 'LC_SERIE_001001', '1', '7', '1722214507001', '001-001', 'LC');
-INSERT INTO `codigos_secuenciales` VALUES ('63', 'FA_SERIE_001001', '1', '33', '1702546738001', '001-001', 'FA');
-INSERT INTO `codigos_secuenciales` VALUES ('64', 'RE_SERIE_001001', '1', '33', '1702546738001', '001-001', 'RE');
-INSERT INTO `codigos_secuenciales` VALUES ('65', 'NC_SERIE_001001', '1', '33', '1702546738001', '001-001', 'NC');
-INSERT INTO `codigos_secuenciales` VALUES ('66', 'GR_SERIE_001001', '1', '33', '1702546738001', '001-001', 'GR');
-INSERT INTO `codigos_secuenciales` VALUES ('67', 'LC_SERIE_001001', '1', '33', '1702546738001', '001-001', 'LC');
+INSERT INTO `codigos_secuenciales` VALUES ('7', 'FA_SERIE_001003', '76', '8', '1792680778001', '001-003', 'FA');
+INSERT INTO `codigos_secuenciales` VALUES ('8', 'GR_SERIE_001003', '3', '8', '1792680778001\r\n', '001-003', 'GR');
+INSERT INTO `codigos_secuenciales` VALUES ('58', 'NC_SERIE_001003', '7', '8', '1792680778001', '001-003', 'NC');
+INSERT INTO `codigos_secuenciales` VALUES ('59', 'FA_SERIE_001001', '12', '7', '1722214507001', '001-001', 'FA');
+INSERT INTO `codigos_secuenciales` VALUES ('60', 'RE_SERIE_001001', '1', '7', '1722214507001', '001-001', 'RE');
+INSERT INTO `codigos_secuenciales` VALUES ('61', 'NC_SERIE_001001', '1', '7', '1722214507001', '001-001', 'NC');
+INSERT INTO `codigos_secuenciales` VALUES ('62', 'GR_SERIE_001001', '1', '7', '1722214507001', '001-001', 'GR');
+INSERT INTO `codigos_secuenciales` VALUES ('63', 'LC_SERIE_001001', '1', '7', '1722214507001', '001-001', 'LC');
+INSERT INTO `codigos_secuenciales` VALUES ('64', 'FA_SERIE_001001', '798', '34', '1712605284001', '001-001', 'FA');
+INSERT INTO `codigos_secuenciales` VALUES ('65', 'RE_SERIE_001001', '1', '34', '1712605284001', '001-001', 'RE');
+INSERT INTO `codigos_secuenciales` VALUES ('66', 'NC_SERIE_001001', '1', '34', '1712605284001', '001-001', 'NC');
+INSERT INTO `codigos_secuenciales` VALUES ('67', 'GR_SERIE_001001', '1', '34', '1712605284001', '001-001', 'GR');
+INSERT INTO `codigos_secuenciales` VALUES ('68', 'LC_SERIE_001001', '1', '34', '1712605284001', '001-001', 'LC');
 
 -- ----------------------------
 -- Table structure for colores
@@ -259,7 +337,7 @@ CREATE TABLE `colores` (
   `DESCRIPCION` varchar(255) DEFAULT NULL,
   `ESTADO` char(1) DEFAULT NULL,
   PRIMARY KEY (`ID_COLORES`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of colores
@@ -294,7 +372,7 @@ CREATE TABLE `combo` (
   KEY `FK_PRODUCTO_ADD_COMBO` (`id_producto_add`),
   CONSTRAINT `combo_ibfk_1` FOREIGN KEY (`id_producto_add`) REFERENCES `productos` (`id_productos`),
   CONSTRAINT `combo_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_productos`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of combo
@@ -337,15 +415,18 @@ CREATE TABLE `empresa` (
   `procesar_automatico` bit(1) DEFAULT b'0',
   `encargado_envios` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_empresa`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of empresa
 -- ----------------------------
 INSERT INTO `empresa` VALUES ('5', 'CAFETERIA', 'CAFETERIA', '1722214507', '', '231456987', '', '../img/empresa/logo.jpeg', null, 'walter_jalil_vaca_prieto_natural_2020_09_10.p12', 'Dlcjvl1210', 'localhost', 'cafeteria', 'MYSQL', 'root', '', '3306', '1', '.', '1', null, '18', '', null, '', '', 'tls', '30', '\0', '\0', '11');
 INSERT INTO `empresa` VALUES ('6', 'VACA PRIETO WALTER JALIL', 'DISKCOVER SYSTEM', '0702164179001', 'Desarrollo para programacion de DiskCover System', '99999999', 'ejfc19omoshiroi@gmail.com', '../img/empresa/logo.jpeg', null, 'walter_jalil_vaca_prieto_natural_2020_09_10.p12', 'Dlcjvl1210', 'localhost', 'cafeteria1', 'MYSQL', 'root', '', '3306', '1', '.', '0', '4519', '12', '', null, '', '', 'tls', '0', '', '', '12');
-INSERT INTO `empresa` VALUES ('7', 'EDISON JAVIER FARINANGO CABEZAS', 'EDISON JAVIER FARINANGO CABEZAS', '1722214507001', 'COLINAS DEL VALLES JIPIRO Y SANTA BARBARA', '0987242579', 'javier.farinango92@gmail.com', '../img/empresa/logo.png', null, 'EDISON_JAVIER_FARINANGO_CABEZAS_040123130036.p12', 'Fa19071992', 'localhost', 'cafeteria1', 'MYSQL', 'root', '', '3306', '2', '.', '0', null, '12', '', null, '', '', 'tls', '30', '', '', '');
+INSERT INTO `empresa` VALUES ('7', 'EDISON JAVIER FARINANGO CABEZAS', 'EDISON JAVIER FARINANGO CABEZAS', '1722214507001', 'COLINAS DEL VALLES JIPIRO Y SANTA BARBARA', '0987242579', 'javier.farinango92@gmail.com', '../img/empresa/logo.png', null, 'EDISON_JAVIER_FARINANGO_CABEZAS_040123130036.p12', 'Fa19071992', 'localhost', 'cafeteria1', 'MYSQL', 'root', '', '3306', '1', '.', '0', null, '12', '', null, '', '', 'tls', '30', '', '', '');
+INSERT INTO `empresa` VALUES ('8', 'TRANSPEIMALAYA S.A.', 'TRANSPORTE PESADO IMALAYA TRANSPEIMALAYA S.A.', '1792680778001', 'CAYETANO CESTARIS S7-158 Y PADRE ELIAS BRITO', '0990313904', 'transpesimalaya2016@outlook.com', '../img/empresa/logo.jpeg', null, 'Firmaimalaya.p12', 'imalaya2022', 'localhost', 'cafeteria1', 'MYSQL', 'root', '', '3306', '2', '.', '1', null, '12', '', null, '', '', 'tls', '30', '', '', '');
 INSERT INTO `empresa` VALUES ('30', 'empresa xyz', 'empresa xyz', '1234567890001', 'la madrid', '0987654321', 'example.com', '../img/empresa/empresa_xyz', null, '', '', 'localhost', 'cafeteria1', 'MYSQL', 'root', '', '3306', '1', '.', '0', null, '12', null, null, null, '', 'tls', '30', '', '\0', null);
+INSERT INTO `empresa` VALUES ('31', 'empresa 123', 'empresa 123', '1234567890001', 'la pradera', '0987654321', 'example.com', '../img/empresa/empresa_123.png', null, '', '', 'localhost', 'cafeteria1', 'MYSQL', 'root', '', '3306', '1', '.', '0', null, '12', null, null, null, '', 'tls', '30', '', '\0', null);
+INSERT INTO `empresa` VALUES ('34', 'MILTON ANDRES RUBIO PUETATE', 'CORSINF', '1712605284001', 'De los Motilones N40-345 y Camilo Gallegos', '3920507', 'factura@corsinf.com', '../img/empresa/logo.jpeg', null, 'milton_andres_rubio_puetate.p12', 'Casta12/*', 'localhost', 'cafeteria1', 'MYSQL', 'root', '', '3306', '2', '.', '0', null, '12', '', null, 'factura', 'Data12/**', 'tls', '30', '', '', '');
 
 -- ----------------------------
 -- Table structure for entregas
@@ -374,7 +455,7 @@ CREATE TABLE `entregas` (
   CONSTRAINT `entregas_ibfk_1` FOREIGN KEY (`empresa`) REFERENCES `empresa` (`id_empresa`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `entregas_ibfk_2` FOREIGN KEY (`id_factura`) REFERENCES `facturas` (`id_factura`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `entregas_ibfk_3` FOREIGN KEY (`responsable`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of entregas
@@ -390,7 +471,7 @@ CREATE TABLE `estado` (
   `DESCRIPCION` varchar(255) DEFAULT NULL,
   `ESTADO` char(1) DEFAULT NULL,
   PRIMARY KEY (`ID_ESTADO`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of estado
@@ -432,7 +513,7 @@ CREATE TABLE `facturas` (
   CONSTRAINT `facturas_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id_cliente`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `facturas_ibfk_2` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id_empresa`),
   CONSTRAINT `facturas_ibfk_3` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=274 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=394 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of facturas
@@ -450,15 +531,101 @@ INSERT INTO `facturas` VALUES ('258', '16', '0.00', '0.00', '0.00', '0.00', '6',
 INSERT INTO `facturas` VALUES ('259', '17', '151.5', '0', '0.18', '151.68', '6', '18', '2023-03-29', '41', '001-002', '2903202301070216417900110010020000000171234567811', '150', '0.12', '1.5', '01', '0.0000', '2903202301070216417900110010020000000171234567811', 'A', '', null);
 INSERT INTO `facturas` VALUES ('260', '18', '151.50', '0.00', '0.18', '151.68', '6', '18', '2023-03-29', '62', '001-002', '2903202301070216417900110010020000000181234567815', '150', '0.12', '1.5', '20', '0.0000', '2903202301070216417900110010020000000181234567815', 'A', '', null);
 INSERT INTO `facturas` VALUES ('261', '19', '1.00', '0.00', '0.00', '1.00', '6', '18', '2023-04-03', '38', '001-002', '0304202301070216417900110010020000000191234567812', '1', '0.12', '0', '01', '0.0000', '0304202301070216417900110010020000000191234567812', 'A', '', null);
-INSERT INTO `facturas` VALUES ('265', '1', '400.00', '0.00', '48.00', '448.00', '7', '22', '2023-04-04', '65', '001-001', '1104202301123456789000110010010000000011234567814', '0', '0.12', '400', '01', '0.0000', '1104202301123456789000110010010000000011234567814', 'R', '', null);
+INSERT INTO `facturas` VALUES ('265', '1', '400.00', '0.00', '48.00', '448.00', '7', '22', '2023-04-04', '65', '001-001', '0610202301171260528400110010010000000011234567816', '0', '0.12', '400', '01', '0.0000', '0610202301171260528400110010010000000011234567816', 'A', '', null);
 INSERT INTO `facturas` VALUES ('266', '20', '1.00', '0.00', '0.00', '1.00', '6', '18', '2023-04-04', '44', '001-002', '0702164179001', '1', '0.12', '0', '01', '0.0000', null, 'P', '', null);
 INSERT INTO `facturas` VALUES ('267', '2', '150.00', '0.00', '0.00', '150.00', '6', '18', '2023-04-05', '38', '001-002', '0504202301070216417900110010020000000021234567819', '150', '0.12', '0', '01', '0.0000', '0504202301070216417900110010020000000021234567819', 'A', '', null);
 INSERT INTO `facturas` VALUES ('268', '21', '1.00', '0.00', '0.00', '1.00', '6', '18', '2023-04-06', '44', '001-001', '0604202301070216417900110010010000000211234567819', '1', '0.12', '0', '01', '0.0000', '0604202301070216417900110010010000000211234567819', 'A', '', null);
 INSERT INTO `facturas` VALUES ('269', '3', '0.00', '0.00', '0.00', '0.00', '6', '18', '2023-04-06', '38', '001-002', '0702164179001', '0', '0.12', '0', '.', '0.0000', null, 'P', '', null);
-INSERT INTO `facturas` VALUES ('270', '4', '150.00', '0.00', '0.00', '150.00', '6', '18', '2023-04-06', '38', '001-002', '0604202301070216417900110010020000000041234567814', '150', '0.12', '0', '20', '0.0000', '0604202301070216417900110010020000000041234567814', 'A', '', 'placa de camion CVFD-23432');
-INSERT INTO `facturas` VALUES ('271', null, '0.00', '0.00', '0.00', '0.00', '6', '18', '2023-04-07', '51', null, '123456789', '0', '0.12', '0', '.', '0.0000', null, 'P', '', null);
-INSERT INTO `facturas` VALUES ('272', '1', '1.00', '0.00', '0.00', '1.00', '30', '36', '2023-04-11', '83', '001-001', '1104202301123456789000110010010000000011234567814', '1', '0.12', '0', '01', '0.0000', '1104202301123456789000110010010000000011234567814', 'R', '', '');
-INSERT INTO `facturas` VALUES ('273', '5', '150.00', '0.00', '0.00', '150.00', '6', '18', '2023-03-29', '62', '001-002', '2903202301070216417900110010020000000051234567814', '150', '0.12', '0', '20', '0.0000', '2903202301070216417900110010020000000051234567814', 'A', '', null);
+INSERT INTO `facturas` VALUES ('270', '1', '0.00', '0.00', '0.00', '0.00', '8', '24', '2023-04-03', '76', '001-003', '0304202301179268077800110010030000000011234567818', '0', '0.12', '0', '01', '0.0000', '0304202301179268077800110010030000000011234567818', 'A', '', '');
+INSERT INTO `facturas` VALUES ('271', '22', '1.00', '0.00', '0.00', '1.00', '6', '21', '2023-04-05', '44', '001-002', '0504202301070216417900110010020000000221234567818', '1', '0.12', '0', '01', '0.0000', '0504202301070216417900110010020000000221234567818', 'A', '', '');
+INSERT INTO `facturas` VALUES ('272', '2', '81.00', '0.00', '0.00', '81.00', '8', '24', '2023-04-07', '77', '001-003', '0704202301179268077800110010030000000021234567811', '81', '0.12', '0', '01', '0.0000', '0704202301179268077800110010030000000021234567811', 'A', '', '');
+INSERT INTO `facturas` VALUES ('273', '3', '40.00', '0.00', '0.00', '40.00', '8', '24', '2023-04-07', '77', '001-003', '0704202301179268077800110010030000000031234567817', '40', '0.12', '0', '01', '0.0000', '0704202301179268077800110010030000000031234567817', 'A', '', '');
+INSERT INTO `facturas` VALUES ('274', '4', '81.00', '0.00', '0.00', '81.00', '8', '24', '2023-04-07', '77', '001-003', '0704202301179268077800120010030000000041234567810', '81', '0.12', '0', '20', '0.0000', '0704202301179268077800120010030000000041234567810', 'A', '', 'PLACAS: RAB4339');
+INSERT INTO `facturas` VALUES ('275', '5', '40.00', '0.00', '0.00', '40.00', '8', '24', '2023-04-07', '77', '001-003', '0704202301179268077800120010030000000051234567816', '40', '0.12', '0', '20', '0.0000', '0704202301179268077800120010030000000051234567816', 'A', '', 'PLACAS: RAB4339');
+INSERT INTO `facturas` VALUES ('276', '6', '893.11', '0.00', '0.00', '893.11', '8', '24', '2023-04-10', '77', '001-003', '1004202301179268077800120010030000000061234567813', '893.11', '0.12', '0', '20', '0.0000', '1004202301179268077800120010030000000061234567813', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('278', '8', '197.64', '0.00', '0.00', '197.64', '8', '24', '2023-04-10', '77', '001-003', '1004202301179268077800120010030000000081234567814', '197.64', '0.12', '0', '20', '0.0000', '1004202301179268077800120010030000000081234567814', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('285', '9', '919.16', '0.00', '0.00', '919.16', '8', '24', '2023-04-18', '77', '001-003', '1804202301179268077800120010030000000091234567816', '919.16', '0.12', '0', '20', '0.0000', '1804202301179268077800120010030000000091234567816', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('286', '10', '395.28', '0.00', '0.00', '395.28', '8', '24', '2023-04-18', '77', '001-003', '1804202301179268077800120010030000000101234567811', '395.28', '0.12', '0', '20', '0.0000', '1804202301179268077800120010030000000101234567811', 'A', '', 'PLACAS 4339');
+INSERT INTO `facturas` VALUES ('287', '11', '0.00', '0.00', '0.00', '0.00', '8', '24', '2023-04-18', '89', '001-003', '1804202301179268077800120010030000000111234567817', '0', '0.12', '0', '01', '0.0000', '1804202301179268077800120010030000000111234567817', 'A', '', '');
+INSERT INTO `facturas` VALUES ('288', '12', '183.00', '0.00', '0.00', '183.00', '8', '24', '2023-04-21', '86', '001-003', '2104202301179268077800120010030000000121234567814', '183', '0.12', '0', '20', '0.0000', '2104202301179268077800120010030000000121234567814', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('289', '13', '3220.00', '0.00', '0.00', '3220.00', '8', '24', '2023-04-22', '90', '001-003', '2204202301179268077800120010030000000131234567814', '3220', '0.12', '0', '01', '0.0000', '2204202301179268077800120010030000000131234567814', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('291', '14', '310.52', '0.00', '0.00', '310.52', '8', '24', '2023-04-26', '86', '001-003', '2604202301179268077800120010030000000141234567818', '310.52', '0.12', '0', '20', '0.0000', '2604202301179268077800120010030000000141234567818', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('292', '15', '852.12', '0.00', '0.00', '852.12', '8', '24', '2023-04-26', '86', '001-003', '2604202301179268077800120010030000000151234567813', '852.12', '0.12', '0', '20', '0.0000', '2604202301179268077800120010030000000151234567813', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('293', '16', '592.92', '0.00', '0.00', '592.92', '8', '24', '2023-05-01', '86', '001-003', '0105202301179268077800120010030000000161234567815', '592.92', '0.12', '0', '20', '0.0000', '0105202301179268077800120010030000000161234567815', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('294', '17', '189.16', '0.00', '0.00', '189.16', '8', '24', '2023-05-03', '86', '001-003', '0305202301179268077800120010030000000171234567811', '189.16', '0.12', '0', '20', '0.0000', '0305202301179268077800120010030000000171234567811', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('295', '18', '197.64', '0.00', '0.00', '197.64', '8', '24', '2023-05-09', '86', '001-003', '0905202301179268077800120010030000000181234567812', '197.64', '0.12', '0', '20', '0.0000', '0905202301179268077800120010030000000181234567812', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('296', '19', '407.36', '0.00', '0.00', '407.36', '8', '24', '2023-05-09', '86', '001-003', '0905202301179268077800120010030000000191234567818', '407.36', '0.12', '0', '20', '0.0000', '0905202301179268077800120010030000000191234567818', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('297', '20', '359.28', '0.00', '0.00', '359.28', '8', '24', '2023-05-10', '86', '001-003', '1005202301179268077800120010030000000201234567816', '359.28', '0.12', '0', '20', '0.0000', '1005202301179268077800120010030000000201234567816', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('298', '21', '891.00', '0.00', '0.00', '891.00', '8', '24', '2023-05-12', '91', '001-003', '1205202301179268077800120010030000000211234567810', '891', '0.12', '0', '01', '0.0000', '1205202301179268077800120010030000000211234567810', 'A', '', '');
+INSERT INTO `facturas` VALUES ('299', '22', '1228.58', '0.00', '0.00', '1228.58', '8', '24', '2023-05-17', '86', '001-003', '1705202301179268077800120010030000000221234567819', '1228.58', '0.12', '0', '20', '0.0000', '1705202301179268077800120010030000000221234567819', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('300', '23', '224.00', '0.00', '0.00', '224.00', '8', '24', '2023-05-17', '86', '001-003', '1705202301179268077800120010030000000231234567814', '224', '0.12', '0', '20', '0.0000', '1705202301179268077800120010030000000231234567814', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('301', '24', '612.58', '0.00', '0.00', '612.58', '8', '24', '2023-05-23', '86', '001-003', '2305202301179268077800120010030000000241234567815', '612.58', '0.12', '0', '20', '0.0000', '2305202301179268077800120010030000000241234567815', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('302', '25', '228.42', '0.00', '0.00', '228.42', '8', '24', '2023-05-23', '86', '001-003', '2305202301179268077800120010030000000251234567810', '228.42', '0.12', '0', '20', '0.0000', '2305202301179268077800120010030000000251234567810', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('303', '26', '710.00', '0.00', '0.00', '710.00', '8', '24', '2023-05-27', '86', '001-003', '2705202301179268077800120010030000000261234567814', '710', '0.12', '0', '20', '0.0000', '2705202301179268077800120010030000000261234567814', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('304', '27', '270.00', '0.00', '0.00', '270.00', '8', '24', '2023-05-31', '92', '001-003', '3105202301179268077800120010030000000271234567816', '270', '0.12', '0', '01', '0.0000', '3105202301179268077800120010030000000271234567816', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('305', '28', '694.58', '0.00', '0.00', '694.58', '8', '24', '2023-06-02', '86', '001-003', '0206202301179268077800120010030000000281234567811', '694.58', '0.12', '0', '20', '0.0000', '0206202301179268077800120010030000000281234567811', 'A', '', 'PLACAR RAB4339');
+INSERT INTO `facturas` VALUES ('306', '29', '197.64', '0.00', '0.00', '197.64', '8', '24', '2023-06-02', '86', '001-003', '0206202301179268077800120010030000000291234567817', '197.64', '0.12', '0', '20', '0.0000', '0206202301179268077800120010030000000291234567817', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('307', '30', '180.00', '0.00', '0.00', '180.00', '8', '24', '2023-06-12', '93', '001-003', '1206202301179268077800120010030000000301234567816', '180', '0.12', '0', '01', '0.0000', '1206202301179268077800120010030000000301234567816', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('308', '31', '698.91', '0.00', '0.00', '698.91', '8', '24', '2023-06-14', '86', '001-003', '1406202301179268077800120010030000000311234567810', '698.91', '0.12', '0', '20', '0.0000', '1406202301179268077800120010030000000311234567810', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('309', '32', '234.09', '0.00', '0.00', '234.09', '8', '24', '2023-06-14', '86', '001-003', '1406202301179268077800120010030000000321234567816', '234.09', '0.12', '0', '20', '0.0000', '1406202301179268077800120010030000000321234567816', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('310', '33', '394.50', '0.00', '0.00', '394.50', '8', '24', '2023-06-20', '86', '001-003', '2006202301179268077800120010030000000331234567817', '394.5', '0.12', '0', '20', '0.0000', '2006202301179268077800120010030000000331234567817', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('311', '34', '607.50', '0.00', '0.00', '607.50', '8', '24', '2023-06-20', '86', '001-003', '2006202301179268077800120010030000000341234567812', '607.5', '0.12', '0', '20', '0.0000', '2006202301179268077800120010030000000341234567812', 'A', '', '');
+INSERT INTO `facturas` VALUES ('312', '35', '400.91', '0.00', '0.00', '400.91', '8', '24', '2023-06-28', '86', '001-003', '2806202301179268077800120010030000000351234567814', '400.91', '0.12', '0', '20', '0.0000', '2806202301179268077800120010030000000351234567814', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('313', '36', '607.50', '0.00', '0.00', '607.50', '8', '24', '2023-06-28', '86', '001-003', '2806202301179268077800120010030000000361234567811', '607.5', '0.12', '0', '20', '0.0000', '2806202301179268077800120010030000000361234567811', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('314', '37', '300.38', '0.00', '0.00', '300.38', '8', '24', '2023-06-29', '86', '001-003', '2906202301179268077800120010030000000371234567811', '300.38', '0.12', '0', '20', '0.0000', '2906202301179268077800120010030000000371234567811', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('315', '38', '900.00', '0.00', '0.00', '900.00', '8', '24', '2023-07-03', '91', '001-003', '0307202301179268077800120010030000000381234567817', '900', '0.12', '0', '01', '0.0000', '0307202301179268077800120010030000000381234567817', 'AN', '', 'Placas PAB8609');
+INSERT INTO `facturas` VALUES ('316', '39', '891.00', '0.00', '0.00', '891.00', '8', '24', '2023-07-03', '91', '001-003', '0307202301179268077800120010030000000391234567812', '891', '0.12', '0', '01', '0.0000', '0307202301179268077800120010030000000391234567812', 'A', '', 'Placas PAB8609');
+INSERT INTO `facturas` VALUES ('317', '40', '351.00', '0.00', '0.00', '351.00', '8', '24', '2023-07-04', '86', '001-003', '0407202301179268077800120010030000000401234567812', '351', '0.12', '0', '20', '0.0000', '0407202301179268077800120010030000000401234567812', 'AN', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('318', '41', '405.00', '0.00', '0.00', '405.00', '8', '24', '2023-07-04', '86', '001-003', '0407202301179268077800120010030000000411234567818', '405', '0.12', '0', '20', '0.0000', '0407202301179268077800120010030000000411234567818', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('319', '42', '490.00', '0.00', '0.00', '490.00', '8', '24', '2023-07-04', '90', '001-003', '0407202301179268077800120010030000000421234567813', '490', '0.12', '0', '01', '0.0000', '0407202301179268077800120010030000000421234567813', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('320', '43', '84.00', '0.00', '0.00', '84.00', '8', '24', '2023-07-13', '86', '001-003', '1307202301179268077800120010030000000431234567818', '84', '0.12', '0', '20', '0.0000', '1307202301179268077800120010030000000431234567818', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('321', '44', '648.50', '0.00', '0.00', '648.50', '8', '24', '2023-07-18', '86', '001-003', '1807202301179268077800120010030000000441234567816', '648.5', '0.12', '0', '20', '0.0000', '1807202301179268077800120010030000000441234567816', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('323', '45', '581.91', '0.00', '0.00', '581.91', '8', '24', '2023-07-18', '86', '001-003', '1807202301179268077800120010030000000451234567811', '581.91', '0.12', '0', '20', '0.0000', '1807202301179268077800120010030000000451234567811', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('324', '46', '457.09', '0.00', '0.00', '457.09', '8', '24', '2023-07-25', '86', '001-003', '2507202301179268077800120010030000000461234567817', '457.09', '0.12', '0', '20', '0.0000', '2507202301179268077800120010030000000461234567817', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('326', '47', '1174.50', '0.00', '0.00', '1174.50', '8', '24', '2023-07-25', '86', '001-003', '2507202301179268077800120010030000000471234567812', '1174.5', '0.12', '0', '20', '0.0000', '2507202301179268077800120010030000000471234567812', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('327', '48', '30.00', '0.00', '0.00', '30.00', '8', '24', '2023-07-26', '86', '001-003', '2607202301179268077800120010030000000481234567812', '30', '0.12', '0', '20', '0.0000', '2607202301179268077800120010030000000481234567812', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('329', '49', '351.00', '0.00', '0.00', '351.00', '8', '24', '2023-08-07', '86', '001-003', '0708202301179268077800120010030000000491234567811', '351', '0.12', '0', '20', '0.0000', '0708202301179268077800120010030000000491234567811', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('330', '50', '436.59', '0.00', '0.00', '436.59', '8', '24', '2023-08-08', '86', '001-003', '0808202301179268077800120010030000000501234567811', '436.59', '0.12', '0', '20', '0.0000', '0808202301179268077800120010030000000501234567811', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('331', '51', '267.00', '0.00', '0.00', '267.00', '8', '24', '2023-08-08', '86', '001-003', '0808202301179268077800120010030000000511234567817', '267', '0.12', '0', '20', '0.0000', '0808202301179268077800120010030000000511234567817', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('332', '52', '649.75', '0.00', '0.00', '649.75', '8', '24', '2023-08-15', '86', '001-003', '1508202301179268077800120010030000000521234567812', '649.75', '0.12', '0', '20', '0.0000', '1508202301179268077800120010030000000521234567812', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('333', '53', '202.50', '0.00', '0.00', '202.50', '8', '24', '2023-08-15', '86', '001-003', '1508202301179268077800120010030000000531234567818', '202.5', '0.12', '0', '20', '0.0000', '1508202301179268077800120010030000000531234567818', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('334', '54', '6065.00', '0.00', '0.00', '6065.00', '8', '24', '2023-08-18', '90', '001-003', '1808202301179268077800120010030000000541234567817', '6065', '0.12', '0', '01', '0.0000', '1808202301179268077800120010030000000541234567817', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('336', '55', '3480.00', '0.00', '0.00', '3480.00', '8', '24', '2023-08-18', '90', '001-003', '1808202301179268077800120010030000000551234567812', '3480', '0.12', '0', '01', '0.0000', '1808202301179268077800120010030000000551234567812', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('337', '56', '1450.00', '0.00', '0.00', '1450.00', '8', '24', '2023-08-22', '86', '001-003', '2208202301179268077800120010030000000561234567814', '1450', '0.12', '0', '20', '0.0000', '2208202301179268077800120010030000000561234567814', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('338', '57', '290.00', '0.00', '0.00', '290.00', '8', '24', '2023-08-24', '93', '001-003', '2408202301179268077800120010030000000571234567819', '290', '0.12', '0', '01', '0.0000', '2408202301179268077800120010030000000571234567819', 'AN', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('339', '58', '290.00', '0.00', '0.00', '290.00', '8', '24', '2023-08-24', '94', '001-003', '2408202301179268077800120010030000000581234567814', '290', '0.12', '0', '01', '0.0000', '2408202301179268077800120010030000000581234567814', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('340', '59', '652.25', '0.00', '0.00', '652.25', '8', '24', '2023-08-28', '86', '001-003', '2808202301179268077800120010030000000591234567818', '652.25', '0.12', '0', '20', '0.0000', '2808202301179268077800120010030000000591234567818', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('341', '60', '2050.00', '0.00', '0.00', '2050.00', '8', '24', '2023-08-29', '90', '001-003', '2908202301179268077800120010030000000601234567818', '2050', '0.12', '0', '01', '0.0000', '2908202301179268077800120010030000000601234567818', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('342', '61', '200.00', '0.00', '0.00', '200.00', '8', '24', '2023-09-01', '90', '001-003', '0109202301179268077800120010030000000611234567816', '200', '0.12', '0', '20', '0.0000', '0109202301179268077800120010030000000611234567816', 'AN', '', 'PLACAS PAB8608');
+INSERT INTO `facturas` VALUES ('344', '62', '200.00', '0.00', '0.00', '200.00', '8', '24', '2023-09-01', '94', '001-003', '0109202301179268077800120010030000000621234567811', '200', '0.12', '0', '20', '0.0000', '0109202301179268077800120010030000000621234567811', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('345', '63', '468.18', '0.00', '0.00', '468.18', '8', '24', '2023-09-04', '86', '001-003', '0409202301179268077800120010030000000631234567810', '468.18', '0.12', '0', '20', '0.0000', '0409202301179268077800120010030000000631234567810', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('346', '64', '502.82', '0.00', '0.00', '502.82', '8', '24', '2023-09-04', '86', '001-003', '0409202301179268077800120010030000000641234567816', '502.82', '0.12', '0', '20', '0.0000', '0409202301179268077800120010030000000641234567816', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('347', '65', '920.70', '0.00', '0.00', '920.70', '8', '24', '2023-09-04', '91', '001-003', '0409202301179268077800120010030000000651234567811', '920.7', '0.12', '0', '01', '0.0000', '0409202301179268077800120010030000000651234567811', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('348', '66', '1152.00', '0.00', '0.00', '1152.00', '8', '24', '2023-09-12', '86', '001-003', '1209202301179268077800120010030000000661234567811', '1152', '0.12', '0', '20', '0.0000', '1209202301179268077800120010030000000661234567811', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('349', '67', '287.10', '0.00', '0.00', '287.10', '8', '24', '2023-09-15', '91', '001-003', '1509202301179268077800120010030000000671234567810', '287.1', '0.12', '0', '01', '0.0000', '1509202301179268077800120010030000000671234567810', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('350', '68', '912.25', '0.00', '0.00', '912.25', '8', '24', '2023-09-19', '78', '001-003', '1909202301179268077800120010030000000681234567814', '912.25', '0.12', '0', '20', '0.0000', '1909202301179268077800120010030000000681234567814', 'AN', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('351', '69', '912.25', '0.00', '0.00', '912.25', '8', '24', '2023-09-22', '86', '001-003', '2209202301179268077800120010030000000691234567811', '912.25', '0.12', '0', '20', '0.0000', '2209202301179268077800120010030000000691234567811', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('352', '70', '1157.00', '0.00', '0.00', '1157.00', '8', '24', '2023-09-26', '86', '001-003', '2609202301179268077800120010030000000701234567815', '1157', '0.12', '0', '20', '0.0000', '2609202301179268077800120010030000000701234567815', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('353', '71', '329.50', '0.00', '0.00', '329.50', '8', '24', '2023-10-03', '86', '001-003', '0310202301179268077800120010030000000711234567818', '329.5', '0.12', '0', '20', '0.0000', '0310202301179268077800120010030000000711234567818', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('354', '72', '425.50', '0.00', '0.00', '425.50', '8', '24', '2023-10-03', '86', '001-003', '0310202301179268077800120010030000000721234567813', '425.5', '0.12', '0', '20', '0.0000', '0310202301179268077800120010030000000721234567813', 'A', '', 'PLACAS RAB4339');
+INSERT INTO `facturas` VALUES ('357', '73', '396.00', '0.00', '0.00', '396.00', '8', '24', '2023-10-04', '91', '001-003', '0410202301179268077800120010030000000731234567813', '396', '0.12', '0', '01', '0.0000', '0410202301179268077800120010030000000731234567813', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('358', '74', '650.00', '0.00', '0.00', '650.00', '8', '24', '2023-10-05', '90', '001-003', '0510202301179268077800120010030000000741234567813', '650', '0.12', '0', '01', '0.0000', '0510202301179268077800120010030000000741234567813', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('359', '75', '550.00', '0.00', '0.00', '550.00', '8', '24', '2023-10-05', '90', '001-003', '0510202301179268077800120010030000000751234567819', '550', '0.12', '0', '01', '0.0000', '0510202301179268077800120010030000000751234567819', 'A', '', 'PLACAS PAB8609');
+INSERT INTO `facturas` VALUES ('360', '10', '1.00', '0.00', '0.00', '1.00', '7', '38', '2023-10-06', '96', '001-001', '0610202301172221450700110010010000000101234567815', '1', '0.12', '0', '01', '0.0000', '0610202301172221450700110010010000000101234567815', 'A', '', '');
+INSERT INTO `facturas` VALUES ('361', '1', '50.00', '0.00', '6.00', '56.00', '34', '39', '2023-10-06', '97', '001-001', '0610202301171260528400110010010000000011234567816', '0', '0.12', '50', '20', '0.0000', '0610202301171260528400110010010000000011234567816', 'A', '', '');
+INSERT INTO `facturas` VALUES ('363', '2', '4585.28', '0.00', '550.23', '5135.51', '34', '39', '2023-10-06', '116', '001-001', '0610202301171260528400110010010000000021234567811', '0', '0.12', '4585.28', '01', '0.0000', '0610202301171260528400110010010000000021234567811', 'A', '', '');
+INSERT INTO `facturas` VALUES ('380', '3', '450.80', '0.00', '54.10', '504.90', '34', '39', '2023-10-06', '116', '001-001', '0610202301171260528400110010010000000031234567817', '0', '0.12', '450.8', '01', '0.0000', '0610202301171260528400110010010000000031234567817', 'A', '', '');
+INSERT INTO `facturas` VALUES ('381', '4', '5461.40', '0.00', '655.37', '6116.77', '34', '39', '2023-10-06', '116', '001-001', '0610202301171260528400110010010000000041234567812', '0', '0.12', '5461.4', '01', '0.0000', '0610202301171260528400110010010000000041234567812', 'A', '', '');
+INSERT INTO `facturas` VALUES ('382', '5', '4585.28', '0.00', '550.23', '5135.51', '34', '39', '2023-10-06', '116', '001-001', '0610202301171260528400110010010000000051234567818', '0', '0.12', '4585.28', '01', '0.0000', '0610202301171260528400110010010000000051234567818', 'A', '', '');
+INSERT INTO `facturas` VALUES ('383', '6', '100.00', '0.00', '12.00', '112.00', '34', '39', '2023-10-06', '116', '001-001', '0610202301171260528400110010010000000061234567813', '0', '0.12', '100', '01', '0.0000', '0610202301171260528400110010010000000061234567813', 'A', '', '');
+INSERT INTO `facturas` VALUES ('384', '11', '1.00', '0.00', '0.00', '1.00', '7', '38', '2023-10-06', '96', '001-001', '0610202301172221450700110010010000000111234567810', '1', '0.12', '0', '01', '0.0000', '0610202301172221450700110010010000000111234567810', 'A', '', '');
+INSERT INTO `facturas` VALUES ('385', '7', '3268.30', '0.00', '392.20', '3660.50', '34', '39', '2023-10-06', '116', '001-001', '0610202301171260528400110010010000000071234567819', '0', '0.12', '3268.3', '01', '0.0000', '0610202301171260528400110010010000000071234567819', 'A', '', '');
+INSERT INTO `facturas` VALUES ('387', '8', '930.50', '0.00', '111.66', '1042.16', '34', '39', '2023-10-06', '159', '001-001', '0610202301171260528400110010010000000081234567814', '0', '0.12', '930.5', '01', '0.0000', '0610202301171260528400110010010000000081234567814', 'A', '', '');
+INSERT INTO `facturas` VALUES ('389', '793', '5318.10', '0.00', '638.17', '5956.27', '34', '39', '2023-10-10', '126', '001-001', '1712605284001', '0', '0.12', '5318.1', '01', '0.0000', '101020230117126052840012.0000000001234567812', 'R', '', '');
+INSERT INTO `facturas` VALUES ('390', '794', '5318.10', '0.00', '638.17', '5956.27', '34', '39', '2023-10-09', '126', '001-001', '1010202301171260528400120010010000007941234567813', '0', '0.12', '5318.1', '09', '0.0000', '1010202301171260528400120010010000007941234567813', 'R', '', '');
+INSERT INTO `facturas` VALUES ('391', '795', '5318.10', '0.00', '638.17', '5956.27', '34', '39', '2023-10-09', '126', '001-001', '0910202301171260528400120010010000007951234567816', '0', '0.12', '5318.1', '01', '0.0000', '0910202301171260528400120010010000007951234567816', 'A', '', '');
+INSERT INTO `facturas` VALUES ('392', '796', '85454.34', '0.00', '10254.53', '95708.87', '34', '39', '2023-10-09', '150', '001-001', '0910202301171260528400120010010000007961234567811', '0', '0.12', '85454.34', '01', '0.0000', '0910202301171260528400120010010000007961234567811', 'R', '', '');
+INSERT INTO `facturas` VALUES ('393', '797', '85454.34', '0.00', '10254.53', '95708.87', '34', '39', '2023-10-10', '150', '001-001', '1010202301171260528400120010010000007971234567811', '0', '0.12', '85454.34', '01', '0.0000', '1010202301171260528400120010010000007971234567811', 'A', '', '');
 
 -- ----------------------------
 -- Table structure for forma_pago
@@ -474,7 +641,7 @@ CREATE TABLE `forma_pago` (
   PRIMARY KEY (`id_forma_pago`),
   KEY `FK_EMPRESA_FORMA-PAGO` (`id_empresa`) USING BTREE,
   CONSTRAINT `forma_pago_ibfk_1` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id_empresa`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of forma_pago
@@ -492,7 +659,7 @@ CREATE TABLE `genero` (
   `DESCRIPCION` varchar(255) DEFAULT NULL,
   `ESTADO` char(1) DEFAULT NULL,
   PRIMARY KEY (`ID_GENERO`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of genero
@@ -558,7 +725,7 @@ CREATE TABLE `guia_remision` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`ID`),
   KEY `IDX_Facturas_Auxiliares` (`id_empresa`,`TC`,`Serie`,`Factura`,`Fecha`,`id_cliente`,`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of guia_remision
@@ -603,7 +770,7 @@ CREATE TABLE `kardex_temp` (
   `serie` varchar(255) DEFAULT NULL,
   `empresa` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_kardex`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of kardex_temp
@@ -626,7 +793,7 @@ CREATE TABLE `kit` (
   CONSTRAINT `kit_ibfk_1` FOREIGN KEY (`id_materia_prima`) REFERENCES `productos` (`id_productos`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `kit_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_productos`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `kit_ibfk_3` FOREIGN KEY (`tamanio`) REFERENCES `tamanio` (`id_tamanio`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of kit
@@ -655,9 +822,8 @@ CREATE TABLE `lineas_factura` (
   PRIMARY KEY (`id_lineas`),
   KEY `FK_LINEAS_FACTURA` (`id_factura`) USING BTREE,
   KEY `FK_PRODUCTO_LINEA` (`referencia`) USING BTREE,
-  CONSTRAINT `lineas_factura_ibfk_1` FOREIGN KEY (`id_factura`) REFERENCES `facturas` (`id_factura`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `lineas_factura_ibfk_2` FOREIGN KEY (`referencia`) REFERENCES `productos` (`referencia`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=382 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  CONSTRAINT `lineas_factura_ibfk_1` FOREIGN KEY (`id_factura`) REFERENCES `facturas` (`id_factura`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=569 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of lineas_factura
@@ -674,19 +840,147 @@ INSERT INTO `lineas_factura` VALUES ('360', 'Pollo  1', '1', '150.00', '0.00', '
 INSERT INTO `lineas_factura` VALUES ('361', 'servicio de trasporte', '1', '1.50', '0.00', '0.00', '0.18', '1.68', '260', '10.23.25', '0.1200', '001-002', '1.50', '21', null);
 INSERT INTO `lineas_factura` VALUES ('362', 'Queso', '1', '100.00', '0.00', '0.00', '0.00', '100.00', null, '01.01.36', '0.0000', '001-002', '100.00', '22', null);
 INSERT INTO `lineas_factura` VALUES ('363', 'servicio de trasporte', '1', '1.50', '0.00', '0.00', '0.18', '1.68', null, '10.23.25', '0.1200', '001-002', '1.50', '23', null);
-INSERT INTO `lineas_factura` VALUES ('364', 'Pollo  1', '1', '150.00', '0.00', '0.00', '0.00', '150.00', '273', '01.01.37', '0.0000', '001-002', '150.00', '24', null);
-INSERT INTO `lineas_factura` VALUES ('365', 'Pollo  1', '1', '1', '0.00', '0.00', '0.00', '1.00', '261', '01.01.37', '0.0000', '001-002', '1.00', '', null);
-INSERT INTO `lineas_factura` VALUES ('367', 'HORAS ADICIONALES DE DESARROLLO (INTEGRACION TIMEMANAGER E INTRANET)', '8', '50', '0.00', '0.00', '48.00', '448.00', '265', '01.01.005', '0.1200', '001-001', '400.00', '', null);
-INSERT INTO `lineas_factura` VALUES ('368', 'Pollo  1', '1', '1', '0.00', '0.00', '0.00', '1.00', '266', '01.01.37', '0.0000', '001-002', '1.00', '', null);
-INSERT INTO `lineas_factura` VALUES ('369', 'Pollo  1', '1', '150.00', '0.00', '0.00', '0.00', '150.00', '267', '01.01.37', '0.0000', '001-002', '150.00', '', null);
-INSERT INTO `lineas_factura` VALUES ('370', 'Pollo  1', '1', '1', '0.00', '0.00', '0.00', '1.00', '268', '01.01.37', '0.0000', '001-002', '1.00', '', null);
-INSERT INTO `lineas_factura` VALUES ('375', 'Pollo  1', '1', '150.00', '0.00', '0.00', '0.00', '150.00', '270', '01.01.37', '0.0000', '001-002', '150.00', '', 'pollo patas amarillas');
-INSERT INTO `lineas_factura` VALUES ('376', 'prueba 1', '1', '1', '0.00', '0.00', '0.00', '1.00', '272', '001.001', '0.0000', '001-001', '1.00', '', '');
-INSERT INTO `lineas_factura` VALUES ('377', 'Pollo  1', '1', '1', '0.00', '0.00', '0.00', '1.00', null, '01.01.37', '0.0000', '001-002', '1.00', '25', null);
-INSERT INTO `lineas_factura` VALUES ('378', 'Pollo  1', '1', '1', '0.00', '0.00', '0.00', '1.00', null, '01.01.37', '0.0000', '001-001', '1.00', '26', null);
-INSERT INTO `lineas_factura` VALUES ('379', 'Pollo  1', '1', '1', '0.00', '0.00', '0.00', '1.00', null, '01.01.37', '0.0000', '001-001', '1.00', '27', null);
-INSERT INTO `lineas_factura` VALUES ('380', 'Pollo  1', '1', '150.00', '0.00', '0.00', '0.00', '150.00', null, '01.01.37', '0.0000', '001-001', '150.00', '28', null);
-INSERT INTO `lineas_factura` VALUES ('381', 'Pollo  1', '1', '1', '0.00', '0.00', '0.00', '1.00', null, '01.01.37', '0.0000', '001-002', '1.00', '18', null);
+INSERT INTO `lineas_factura` VALUES ('367', 'SERVICIO DE TRANSPORTE LOS DIAS 14 Y 26 DE MARZO DE 2023', '1', '81.00', '0.00', '0.00', '0.00', '81.00', '272', '2', '0.0000', '001-003', '81.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('368', 'SERVICIO DE TRANSPORTE DEL DÍA 14 DE MARZO DE 2022 ', '1', '40.00', '0.00', '0.00', '0.00', '40.00', '273', '3', '0.0000', '001-003', '40.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('369', 'SERVICIO DE TRANSPORTE LOS DIAS 14 Y 26 DE MARZO DE 2023', '1', '81.00', '0.00', '0.00', '0.00', '81.00', '274', '2', '0.0000', '001-003', '81.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('374', 'SERVICIO DE TRANSPORTE DEL DÍA 14 DE MARZO DE 2022 ', '1', '40.00', '0.00', '0.00', '0.00', '40.00', '275', '3', '0.0000', '001-003', '40.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('375', 'Servicios prueba', '1', '0.00', '0.00', '0.00', '0.00', '0.00', null, '001.001', '0.0000', '001-003', '0.00', '25', '');
+INSERT INTO `lineas_factura` VALUES ('376', 'SERVICIO DE TRANSPORTE LOS DIAS 1 - 2 - 3 - 4 - 6 - 8 DE MARZO DE 2023', '1', '893.11', '0.00', '0.00', '0.00', '893.11', '276', '2', '0.0000', '001-003', '893.11', '', '');
+INSERT INTO `lineas_factura` VALUES ('377', 'SERVICIO DE TRANSPORTE DEL DIA 8 DE ABRIL DE 2023 ', '1', '197.64', '0.00', '0.00', '0.00', '197.64', '278', '3', '0.0000', '001-003', '197.64', '', '');
+INSERT INTO `lineas_factura` VALUES ('387', 'SERVICIO DE TRANSPORTE LOS DIAS 10 - 11 - 13 - 14 DE ABRIL DE 2023', '1', '919.16', '0.00', '0.00', '0.00', '919.16', '285', '2', '0.0000', '001-003', '919.16', '', '');
+INSERT INTO `lineas_factura` VALUES ('388', 'SERVICIO DE TRANSPORTE LOS DIAS 10 Y 13 DE ABRIL DE 2023', '1', '395.28', '0.00', '0.00', '0.00', '395.28', '286', '2', '0.0000', '001-003', '395.28', '', '');
+INSERT INTO `lineas_factura` VALUES ('390', 'Servicios prueba', '1', '0.00', '0.00', '0.00', '0.00', '0.00', '287', '001.001', '0.0000', '001-003', '0.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('392', 'SERVICIO DE TRANSPORTE DEL DÍA 09 DE ABRIL DE 2022 ', '1', '183', '0.00', '0.00', '0.00', '183.00', '288', '3', '0.0000', '001-003', '183.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('393', 'VIAJES DE LA UNIVERSAL', '1', '3220', '0.00', '0.00', '0.00', '3220.00', '289', '3', '0.0000', '001-003', '3220.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('396', 'SERVICIO DE TRANSPORTE LOS DIAS 17 - 20 - 21 - 22 - 23 DE ABRIL DE 2023', '1', '310.52', '0.00', '0.00', '0.00', '310.52', '291', '2', '0.0000', '001-003', '310.52', '', '');
+INSERT INTO `lineas_factura` VALUES ('398', 'SERVICIO DE TRANSPORTE LOS DIAS 17 - 20 -22 - 24 DE ABRIL DE 2023', '1', '852.12', '0.00', '0.00', '0.00', '852.12', '292', '2', '0.0000', '001-003', '852.12', '', '');
+INSERT INTO `lineas_factura` VALUES ('399', 'SERVICIO DE TRANSPORTE DE LOS DIAS 10 - 13 - 27 DE ABRIL DE 2023', '1', '592.92', '0.00', '0.00', '0.00', '592.92', '293', '3', '0.0000', '001-003', '592.92', '', '');
+INSERT INTO `lineas_factura` VALUES ('401', 'SERVICIO DE TRANSPORTE LOS DIAS 24 - 25 - 27 DE ABRIL DE 2023', '1', '189.16', '0.00', '0.00', '0.00', '189.16', '294', '2', '0.0000', '001-003', '189.16', '', '');
+INSERT INTO `lineas_factura` VALUES ('402', 'SERVICIO DE TRANSPORTE DEL DÍA 04 DE MAYO DE 2022', '1', '197.64', '0.00', '0.00', '0.00', '197.64', '295', '3', '0.0000', '001-003', '197.64', '', '');
+INSERT INTO `lineas_factura` VALUES ('403', 'SERVICIO DE TRANSPORTE LOS DIAS 02 - 04 - 05 - 06 DE MAYO DE 2023', '1', '407.36', '0.00', '0.00', '0.00', '407.36', '296', '2', '0.0000', '001-003', '407.36', '', '');
+INSERT INTO `lineas_factura` VALUES ('404', 'SERVICIO DE TRANSPORTE DE LOS DIAS 10 - 13 DE ABRIL DE 2023', '1', '359.28', '0.00', '0.00', '0.00', '359.28', '297', '3', '0.0000', '001-003', '359.28', '', '');
+INSERT INTO `lineas_factura` VALUES ('406', 'SERVICIO DE TRANSPORTE', '1', '891', '0.00', '0.00', '0.00', '891.00', '298', '3', '0.0000', '001-003', '891.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('407', 'SERVICIO DE TRANSPORTE LOS DIAS 7 - 9 - 11 - 12 - 13 DE MAYO DE 2023', '1', '1228.58', '0.00', '0.00', '0.00', '1228.58', '299', '2', '0.0000', '001-003', '1228.58', '', '');
+INSERT INTO `lineas_factura` VALUES ('408', 'SERVICIO DE TRANSPORTE DEL DÍA 11 DE MAYO DE 2023', '1', '224', '0.00', '0.00', '0.00', '224.00', '300', '3', '0.0000', '001-003', '224.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('409', 'SERVICIO DE TRANSPORTE LOS DIAS 16 - 16 - 18 - 19 - 20 DE MAYO DE 2023', '1', '612.58', '0.00', '0.00', '0.00', '612.58', '301', '2', '0.0000', '001-003', '612.58', '', '');
+INSERT INTO `lineas_factura` VALUES ('410', 'SERVICIO DE TRANSPORTE DEL DÍA 18 DE MAYO DE 2023', '1', '228.42', '0.00', '0.00', '0.00', '228.42', '302', '3', '0.0000', '001-003', '228.42', '', '');
+INSERT INTO `lineas_factura` VALUES ('411', 'SERVICIO DE TRANSPORTE LOS DIAS 15 Y 25 DE MAYO DE 2023', '1', '710', '0.00', '0.00', '0.00', '710.00', '303', '2', '0.0000', '001-003', '710.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('412', 'SERVICIO DE TRANSPORTE ', '1', '270', '0.00', '0.00', '0.00', '270.00', '304', '3', '0.0000', '001-003', '270.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('413', 'SERVICIO DE TRANSPORTE LOS DIAS 25 - 26 - 27 - 29 - 30 DE MAYO DE 2023', '1', '694.58', '0.00', '0.00', '0.00', '694.58', '305', '2', '0.0000', '001-003', '694.58', '', '');
+INSERT INTO `lineas_factura` VALUES ('414', 'SERVICIO DE TRANSPORTE DEL DÍA 25 DE MAYO DE 2023', '1', '197.64', '0.00', '0.00', '0.00', '197.64', '306', '3', '0.0000', '001-003', '197.64', '', '');
+INSERT INTO `lineas_factura` VALUES ('415', 'SERVICIO DE TRANSPORTE', '1', '180', '0.00', '0.00', '0.00', '180.00', '307', '2', '0.0000', '001-003', '180.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('416', 'SERVICIO DE TRANSPORTE LOS DIAS 01 - 05 - 06 - 08 - 09 - 10 DE JUNIO DE 2023', '1', '698.91', '0.00', '0.00', '0.00', '698.91', '308', '2', '0.0000', '001-003', '698.91', '', '');
+INSERT INTO `lineas_factura` VALUES ('417', 'SERVICIO DE TRANSPORTE DEL DIA 10 DE JUNIO DE 2023 ', '1', '234.09', '0.00', '0.00', '0.00', '234.09', '309', '3', '0.0000', '001-003', '234.09', '', '');
+INSERT INTO `lineas_factura` VALUES ('418', 'SERVICIO DE TRANSPORTE LOS DIAS 11 - 12 - 13 - 15 - 16 - 17 DE JUNIO DE 2023', '1', '394.50', '0.00', '0.00', '0.00', '394.50', '310', '2', '0.0000', '001-003', '394.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('419', 'SERVICIO DE TRANSPORTE LOS DIAS 12 - 15 - 17  DE JUNIO DE 2023', '1', '607.50', '0.00', '0.00', '0.00', '607.50', '311', '2', '0.0000', '001-003', '607.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('420', 'SERVICIO DE TRANSPORTE LOS DIAS 19 - 20 - 22 - 23 - 24 DE JUNIO DE 2023', '1', '400.91', '0.00', '0.00', '0.00', '400.91', '312', '2', '0.0000', '001-003', '400.91', '', '');
+INSERT INTO `lineas_factura` VALUES ('421', 'SERVICIO DE TRANSPORTE LOS DIAS 19 - 22 - 24 DE JUNIO DE 2023', '1', '607.50', '0.00', '0.00', '0.00', '607.50', '313', '2', '0.0000', '001-003', '607.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('422', 'Servicio logístico de transporte - tarifa extraordinaria acordada entre las partes', '1', '300.38', '0.00', '0.00', '0.00', '300.38', '314', '3', '0.0000', '001-003', '300.38', '', '');
+INSERT INTO `lineas_factura` VALUES ('423', 'SERVICIO DE TRANSPORTE', '1', '900.00', '0.00', '0.00', '0.00', '900.00', '315', '3', '0.0000', '001-003', '900.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('424', 'SERVICIO DE TRANSPORTE PARA TUTI ', '1', '891', '0.00', '0.00', '0.00', '891.00', '316', '3', '0.0000', '001-003', '891.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('425', 'SERVICIO DE TRANSPORTE LOS DIAS 25 - 26 - 27 - 29 DE JUNIO DE 2023', '1', '351', '0.00', '0.00', '0.00', '351.00', '317', '2', '0.0000', '001-003', '351.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('426', 'SERVICIO DE TRANSPORTE LOS DIAS 26 - 29 DE JUNIO DE 2023', '1', '405', '0.00', '0.00', '0.00', '405.00', '318', '2', '0.0000', '001-003', '405.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('427', 'VIAJES LA UNIVERSAL', '1', '490', '0.00', '0.00', '0.00', '490.00', '319', '3', '0.0000', '001-003', '490.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('428', 'SERVICIO DE TRANSPORTE DEL DÍA 18 DE JUNIO DE 2023', '1', '84', '0.00', '0.00', '0.00', '84.00', '320', '3', '0.0000', '001-003', '84.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('429', 'SERVICIO DE TRANSPORTE DE LOS DIAS 10 - 13 - 15 DE JULIO DE 2023', '1', '648.50', '0.00', '0.00', '0.00', '648.50', '321', '3', '0.0000', '001-003', '648.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('431', 'SERVICIO DE TRANSPORTE LOS DIAS 09 - 10 - 13 - 14 - 15 DE JULIO DE 2023', '1', '581.91', '0.00', '0.00', '0.00', '581.91', '323', '2', '0.0000', '001-003', '581.91', '', '');
+INSERT INTO `lineas_factura` VALUES ('433', 'SERVICIO DE TRANSPORTE LOS DIAS 17 - 22 DE JULIO DE 2023', '1', '457.09', '0.00', '0.00', '0.00', '457.09', '324', '2', '0.0000', '001-003', '457.09', '', '');
+INSERT INTO `lineas_factura` VALUES ('434', 'SERVICIO DE TRANSPORTE LOS DIAS 16 - 17 - 18 - 21 - 22 - 23 DE JULIO DE 2023', '1', '1174.50', '0.00', '0.00', '0.00', '1174.50', '326', '2', '0.0000', '001-003', '1174.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('436', 'SERVICIO DE TRANSPORTE DEL DÍA 26 DE JULIO DE 2023 ', '1', '30.00', '0.00', '0.00', '0.00', '30.00', '327', '3', '0.0000', '001-003', '30.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('438', 'SERVICIO DE TRANSPORTE LOS DIAS 25 - 26 - 27 - 29 DE JUNIO DE 2023', '1', '351.00', '0.00', '0.00', '0.00', '351.00', '329', '2', '0.0000', '001-003', '351.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('440', 'SERVICIO DE TRANSPORTE LOS DIAS 03 - 05 DE AGOSTO DE 2023', '1', '436.59', '0.00', '0.00', '0.00', '436.59', '330', '2', '0.0000', '001-003', '436.59', '', '');
+INSERT INTO `lineas_factura` VALUES ('441', 'SERVICIO DE TRANSPORTE LOS DIAS 01 - 03 - 04 - 05 DE AGOSTO DE 2023', '1', '267', '0.00', '0.00', '0.00', '267.00', '331', '2', '0.0000', '001-003', '267.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('442', 'SERVICIO DE TRANSPORTE LOS DIAS 6 - 7 - 8 - 10 - 12 DE AGOSTO DE 2023', '1', '649.75', '0.00', '0.00', '0.00', '649.75', '332', '2', '0.0000', '001-003', '649.75', '', '');
+INSERT INTO `lineas_factura` VALUES ('444', 'SERVICIO DE TRANSPORTE DEL DÍA 07 DE AGOSTO DE 2023 ', '1', '202.5', '0.00', '0.00', '0.00', '202.50', '333', '3', '0.0000', '001-003', '202.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('446', 'VIAJES LA UNIVERSAL ', '1', '6065', '0.00', '0.00', '0.00', '6065.00', '334', '3', '0.0000', '001-003', '6065.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('447', 'PAQUETERIA ', '1', '3480', '0.00', '0.00', '0.00', '3480.00', '336', '3', '0.0000', '001-003', '3480.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('449', 'SERVICIO DE TRANSPORTE LOS DIAS 13 - 14 - 15 - 18 - 19 DE AGOSTO DE 2023', '1', '1450', '.00', '0.00', '0.00', '1450.00', '337', '2', '0.0000', '001-003', '1450.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('451', 'SERVICIO DE TRANSPORTE ', '1', '290', '0.00', '0.00', '0.00', '290.00', '338', '3', '0.0000', '001-003', '290.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('452', 'SERVICIO DE TRANSPORTE', '1', '290', '0.00', '0.00', '0.00', '290.00', '339', '3', '0.0000', '001-003', '290.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('453', 'SERVICIO DE TRANSPORTE LOS DIAS 20 - 21 - 24 DE AGOSTO DE 2023', '1', '652.25', '0.00', '0.00', '0.00', '652.25', '340', '2', '0.0000', '001-003', '652.25', '', '');
+INSERT INTO `lineas_factura` VALUES ('454', 'VIAJES LA UNIVERSAL', '1', '2050', '0.00', '0.00', '0.00', '2050.00', '341', '2', '0.0000', '001-003', '2050.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('455', 'VIAJES LA UNIVERSAL', '1', '200', '0.00', '0.00', '0.00', '200.00', '342', '3', '0.0000', '001-003', '200.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('456', 'VIAJES LA UNIVERSAL', '1', '200', '0.00', '0.00', '0.00', '200.00', '344', '3', '0.0000', '001-003', '200.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('457', 'SERVICIO DE TRANSPORTE LOS DIAS 28 Y 31 DE AGOSTO DE 2023', '1', '468.18', '0.00', '0.00', '0.00', '468.18', '345', '2', '0.0000', '001-003', '468.18', '', '');
+INSERT INTO `lineas_factura` VALUES ('458', 'SERVICIO DE TRANSPORTE LOS DIAS 26 - 27 - 28 - 29 - 31 DE AGOSTO DE 2023', '1', '502.82', '0.00', '0.00', '0.00', '502.82', '346', '2', '0.0000', '001-003', '502.82', '', '');
+INSERT INTO `lineas_factura` VALUES ('459', 'SERVICIO DE TRANSPORTE', '1', '920.70', '0.00', '0.00', '0.00', '920.70', '347', '3', '0.0000', '001-003', '920.70', '', '');
+INSERT INTO `lineas_factura` VALUES ('460', 'SERVICIO DE TRANSPORTE LOS DIAS 01 - 02 - 04 - 05 DE ABRIL DE 2023', '1', '1152', '0.00', '0.00', '0.00', '1152.00', '348', '2', '0.0000', '001-003', '1152.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('461', 'SERVICIO DE TRANSPORTE DE GUAYAQUIL A QUITO ', '1', '287.1', '0.00', '0.00', '0.00', '287.10', '349', '3', '0.0000', '001-003', '287.10', '', '');
+INSERT INTO `lineas_factura` VALUES ('462', 'SERVICIO DE TRANSPORTE LOS DIAS 10 - 11 - 12 - 14 Y 16 DE SEPTIEMBRE DE 2023', '1', '912.25', '0.00', '0.00', '0.00', '912.25', '350', '2', '0.0000', '001-003', '912.25', '', '');
+INSERT INTO `lineas_factura` VALUES ('463', 'SERVICIO DE TRANSPORTE LOS DIAS 10 - 11 - 12 - 14 Y 16 DE SEPTIEMBRE DE 2023', '1', '912.25', '0.00', '0.00', '0.00', '912.25', '351', '3', '0.0000', '001-003', '912.25', '', '');
+INSERT INTO `lineas_factura` VALUES ('465', 'SERVICIO DE TRANSPORTE LOS DIAS 17 - 18 - 19 - 21 - 22 - 24 DE SEPTIEMBRE DE 2023', '1', '1157', '0.00', '0.00', '0.00', '1157.00', '352', '2', '0.0000', '001-003', '1157.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('466', 'SERVICIO DE TRANSPORTE LOS DIAS 25 - 26 - 28 - 29 - 30 DE SEPTIEMBRE DE 2023', '1', '329.50', '0.00', '0.00', '0.00', '329.50', '353', '2', '0.0000', '001-003', '329.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('467', 'SERVICIO DE TRANSPORTE LOS DIAS 25 Y 28 DE SEPTIEMBRE DE 2023', '1', '425.50', '0.00', '0.00', '0.00', '425.50', '354', '2', '0.0000', '001-003', '425.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('468', 'SERVICIO DE TRANSPORTE', '1', '396', '0.00', '0.00', '0.00', '396.00', '357', '2', '0.0000', '001-003', '396.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('469', 'SERVICIO DE ENCOMIENDA', '1', '650', '0.00', '0.00', '0.00', '650.00', '358', '3', '0.0000', '001-003', '650.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('470', 'VIAJES LA UNIVERSAL', '1', '550', '0.00', '0.00', '0.00', '550.00', '359', '2', '0.0000', '001-003', '550.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('471', 'mantenimiento', '1', '1', '0.00', '0.00', '0.00', '1.00', '360', '01.01.006', '0.0000', '001-001', '1.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('472', 'CASE TORRE', '1', '50.00', '0.00', '0.00', '6.00', '56.00', '361', '197', '0.1200', '001-001', '50.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('474', 'SERVIDOR HPE ML30 G10+ E-2314 1P 16G NHP 1TB', '1', '4585.28', '0.00', '0.00', '550.23', '5135.51', '363', '226', '0.1200', '001-001', '4585.28', '', '');
+INSERT INTO `lineas_factura` VALUES ('475', 'LICENCIA DE USO DE PLATAFORMA MSC', '1', '450.80', '0.00', '0.00', '54.10', '504.90', '380', '225', '0.1200', '001-001', '450.80', '', '');
+INSERT INTO `lineas_factura` VALUES ('476', 'DISCO DURO ESPECIAL DVR PURPLE 4TB', '47', '116.20', '0.00', '0.00', '655.37', '6116.77', '381', '186', '0.1200', '001-001', '5461.40', '', '');
+INSERT INTO `lineas_factura` VALUES ('477', 'SERVIDOR HPE ML30 G10+ E-2314 1P 16G NHP 1TB', '1', '4585.28', '0.00', '0.00', '550.23', '5135.51', '382', '226', '0.1200', '001-001', '4585.28', '', '');
+INSERT INTO `lineas_factura` VALUES ('478', 'SOPORTE THE-HUB', '1', '100.00', '0.00', '0.00', '12.00', '112.00', '383', '134', '0.1200', '001-001', '100.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('479', 'mantenimiento', '1', '1', '0.00', '0.00', '0.00', '1.00', '384', '01.01.006', '0.0000', '001-001', '1.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('480', 'DISCO DURO 10 TB', '10', '326.83', '0.00', '0.00', '392.20', '3660.50', '385', '206', '0.1200', '001-001', '3268.30', '', '');
+INSERT INTO `lineas_factura` VALUES ('482', 'LICENCENCIA HIKCENTRAL PARA GESTIÓN DE PERSONAL', '1', '930.50', '0.00', '0.00', '111.66', '1042.16', '387', '221', '0.1200', '001-001', '930.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('483', 'OUTSORCING DE TALENTO', '1', '5318.10', '0.00', '0.00', '638.17', '5956.27', '389', '182', '0.1200', '001-001', '5318.10', '', '');
+INSERT INTO `lineas_factura` VALUES ('484', 'OUTSORCING DE TALENTO', '1', '5318.10', '0.00', '0.00', '638.17', '5956.27', '390', '182', '0.1200', '001-001', '5318.10', '', '');
+INSERT INTO `lineas_factura` VALUES ('485', 'OUTSORCING DE TALENTO', '1', '5318.10', '0.00', '0.00', '638.17', '5956.27', '391', '182', '0.1200', '001-001', '5318.10', '', '');
+INSERT INTO `lineas_factura` VALUES ('486', 'CAMARA OJO DE PEZ | 6MP', '33', '574.45', '0.00', '0.00', '2274.82', '21231.67', '392', '200', '0.1200', '001-001', '18956.85', '', '');
+INSERT INTO `lineas_factura` VALUES ('487', 'CAMARA IP DOMO 5MP L1.6MM PANORAMICA 180°', '10', '195.78', '0.00', '0.00', '234.94', '2192.74', '392', '201', '0.1200', '001-001', '1957.80', '', '');
+INSERT INTO `lineas_factura` VALUES ('488', 'CAMARA OJO DE PEZ | 5MP | 180° ACUSENSE', '8', '386.40', '0.00', '0.00', '370.94', '3462.14', '392', '202', '0.1200', '001-001', '3091.20', '', '');
+INSERT INTO `lineas_factura` VALUES ('489', 'CAMARA PTZ | 2MP | ACUSENSE', '2', '745.75', '0.00', '0.00', '178.98', '1670.48', '392', '203', '0.1200', '001-001', '1491.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('490', 'INJECTOR POE 60W', '2', '26.13', '0.00', '0.00', '6.27', '58.53', '392', '223', '0.1200', '001-001', '52.26', '', '');
+INSERT INTO `lineas_factura` VALUES ('494', 'DECODER 8 SALIDAS HDMI', '1', '2203.77', '0.00', '0.00', '264.45', '2468.22', '392', '207', '0.1200', '001-001', '2203.77', '', '');
+INSERT INTO `lineas_factura` VALUES ('495', 'PANTALLA LCD 65 PUL. USO 24/7', '2', '1818.66', '0.00', '0.00', '436.48', '4073.80', '392', '208', '0.1200', '001-001', '3637.32', '', '');
+INSERT INTO `lineas_factura` VALUES ('496', 'MONITOR DE CCTV 43 PUL PARA CCTV', '1', '726.43', '0.00', '0.00', '87.17', '813.60', '392', '209', '0.1200', '001-001', '726.43', '', '');
+INSERT INTO `lineas_factura` VALUES ('497', 'CONTROL JOYSTICK HIKVISION CON PANTALLA', '2', '1253.22', '0.00', '0.00', '300.77', '2807.21', '392', '210', '0.1200', '001-001', '2506.44', '', '');
+INSERT INTO `lineas_factura` VALUES ('498', 'LECTOR BIOMETRICO FACIAL HUELLA', '25', '203.50', '0.00', '0.00', '610.50', '5698.00', '392', '211', '0.1200', '001-001', '5087.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('499', 'FUENTE PARA CONTROL DE ACCESO 5AMP', '10', '34.78', '0.00', '0.00', '41.74', '389.54', '392', '212', '0.1200', '001-001', '347.80', '', '');
+INSERT INTO `lineas_factura` VALUES ('500', 'BATERIA RECARGABLE 12VDC 7AMP', '10', '16.74', '0.00', '0.00', '20.09', '187.49', '392', '213', '0.1200', '001-001', '167.40', '', '');
+INSERT INTO `lineas_factura` VALUES ('501', 'HIKCENTRAL MONITOREO CCTV | 300CH', '1', '8870.46', '0.00', '0.00', '1064.46', '9934.92', '392', '214', '0.1200', '001-001', '8870.46', '', '');
+INSERT INTO `lineas_factura` VALUES ('502', 'LICENCIA HIKCENTRAL PARA 1 CANAL ADICIONAL', '80', '34.78', '0.00', '0.00', '333.89', '3116.29', '392', '215', '0.1200', '001-001', '2782.40', '', '');
+INSERT INTO `lineas_factura` VALUES ('503', 'LICENCIA HIKCENTRAL GESTIÓN VIDEOWALL', '1', '2165.13', '0.00', '0.00', '259.82', '2424.95', '392', '216', '0.1200', '001-001', '2165.13', '', '');
+INSERT INTO `lineas_factura` VALUES ('504', 'LIC. HC ACTIVACIÓN MÓDULO ACCESOS 16 PUERTAS', '1', '717.42', '0.00', '0.00', '86.09', '803.51', '392', '217', '0.1200', '001-001', '717.42', '', '');
+INSERT INTO `lineas_factura` VALUES ('505', 'LICENCIA HC PARA 1 ACCESO ADICIONAL', '9', '37.38', '0.00', '0.00', '40.37', '376.79', '392', '218', '0.1200', '001-001', '336.42', '', '');
+INSERT INTO `lineas_factura` VALUES ('506', 'LIC. HC 1 CANAL DE RECONOCIMIENTO FACIAL', '8', '197.38', '0.00', '0.00', '189.48', '1768.52', '392', '219', '0.1200', '001-001', '1579.04', '', '');
+INSERT INTO `lineas_factura` VALUES ('507', 'LICENCIA HIKCENTRAL PARA GESTION DE VISITAS', '1', '386.40', '0.00', '0.00', '46.37', '432.77', '392', '220', '0.1200', '001-001', '386.40', '', '');
+INSERT INTO `lineas_factura` VALUES ('508', 'LICENCENCIA HIKCENTRAL PARA GESTIÓN DE PERSONAL', '1', '930.50', '0.00', '0.00', '111.66', '1042.16', '392', '221', '0.1200', '001-001', '930.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('509', 'DESARROLLO A MEDIDA', '1', '5508.00', '0.00', '0.00', '660.96', '6168.96', '392', '224', '0.1200', '001-001', '5508.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('510', 'LICENCIA DE USO DE PLATAFORMA MSC', '1', '450.80', '0.00', '0.00', '54.10', '504.90', '392', '225', '0.1200', '001-001', '450.80', '', '');
+INSERT INTO `lineas_factura` VALUES ('511', 'SERVIDOR HPE ML30 G10+ E-2314 1P 16G NHP 1TB', '1', '4585.28', '0.00', '0.00', '550.23', '5135.51', '392', '226', '0.1200', '001-001', '4585.28', '', '');
+INSERT INTO `lineas_factura` VALUES ('512', 'PACK DE MANTENIMIENTO ANUAL', '1', '890.00', '0.00', '0.00', '106.80', '996.80', '392', '227', '0.1200', '001-001', '890.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('514', 'GRABADOR IDS DEEPINMIND | 32CH', '1', '1545.60', '0.00', '0.00', '185.47', '1731.07', '392', '204', '0.1200', '001-001', '1545.60', '', '');
+INSERT INTO `lineas_factura` VALUES ('515', 'GRABADOR 64CH | 8 BAHIAS DISCO DURO', '3', '1776.46', '0.00', '0.00', '639.53', '5968.91', '392', '205', '0.1200', '001-001', '5329.38', '', '');
+INSERT INTO `lineas_factura` VALUES ('516', 'DISCO DURO 10 TB', '28', '326.83', '0.00', '0.00', '1098.15', '10249.39', '392', '206', '0.1200', '001-001', '9151.24', '', '');
+INSERT INTO `lineas_factura` VALUES ('542', 'PACK DE MANTENIMIENTO ANUAL', '1', '890.00', '0.00', '0.00', '106.80', '996.80', '393', '227', '0.1200', '001-001', '890.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('543', 'SERVIDOR HPE ML30 G10+ E-2314 1P 16G NHP 1TB', '1', '4585.28', '0.00', '0.00', '550.23', '5135.51', '393', '226', '0.1200', '001-001', '4585.28', '', '');
+INSERT INTO `lineas_factura` VALUES ('544', 'LICENCIA DE USO DE PLATAFORMA MSC', '1', '450.80', '0.00', '0.00', '54.10', '504.90', '393', '225', '0.1200', '001-001', '450.80', '', '');
+INSERT INTO `lineas_factura` VALUES ('545', 'DESARROLLO A MEDIDA', '1', '5508.00', '0.00', '0.00', '660.96', '6168.96', '393', '224', '0.1200', '001-001', '5508.00', '', '');
+INSERT INTO `lineas_factura` VALUES ('546', 'LICENCENCIA HIKCENTRAL PARA GESTIÓN DE PERSONAL', '1', '930.50', '0.00', '0.00', '111.66', '1042.16', '393', '221', '0.1200', '001-001', '930.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('547', 'LICENCIA HIKCENTRAL PARA GESTION DE VISITAS', '1', '386.40', '0.00', '0.00', '46.37', '432.77', '393', '220', '0.1200', '001-001', '386.40', '', '');
+INSERT INTO `lineas_factura` VALUES ('548', 'LIC. HC 1 CANAL DE RECONOCIMIENTO FACIAL', '8', '197.38', '0.00', '0.00', '189.48', '1768.52', '393', '219', '0.1200', '001-001', '1579.04', '', '');
+INSERT INTO `lineas_factura` VALUES ('549', 'LICENCIA HC PARA 1 ACCESO ADICIONAL', '9', '37.38', '0.00', '0.00', '40.37', '376.79', '393', '218', '0.1200', '001-001', '336.42', '', '');
+INSERT INTO `lineas_factura` VALUES ('550', 'LIC. HC ACTIVACIÓN MÓDULO ACCESOS 16 PUERTAS', '1', '717.42', '0.00', '0.00', '86.09', '803.51', '393', '217', '0.1200', '001-001', '717.42', '', '');
+INSERT INTO `lineas_factura` VALUES ('551', 'LICENCIA HIKCENTRAL GESTIÓN VIDEOWALL', '1', '2165.13', '0.00', '0.00', '259.82', '2424.95', '393', '216', '0.1200', '001-001', '2165.13', '', '');
+INSERT INTO `lineas_factura` VALUES ('552', 'LICENCIA HIKCENTRAL PARA 1 CANAL ADICIONAL', '80', '34.78', '0.00', '0.00', '333.89', '3116.29', '393', '215', '0.1200', '001-001', '2782.40', '', '');
+INSERT INTO `lineas_factura` VALUES ('553', 'HIKCENTRAL MONITOREO CCTV | 300CH', '1', '8870.46', '0.00', '0.00', '1064.46', '9934.92', '393', '214', '0.1200', '001-001', '8870.46', '', '');
+INSERT INTO `lineas_factura` VALUES ('554', 'BATERIA RECARGABLE 12VDC 7AMP', '10', '16.74', '0.00', '0.00', '20.09', '187.49', '393', '213', '0.1200', '001-001', '167.40', '', '');
+INSERT INTO `lineas_factura` VALUES ('555', 'FUENTE PARA CONTROL DE ACCESO 5AMP', '10', '34.78', '0.00', '0.00', '41.74', '389.54', '393', '212', '0.1200', '001-001', '347.80', '', '');
+INSERT INTO `lineas_factura` VALUES ('556', 'LECTOR BIOMETRICO FACIAL HUELLA', '25', '203.50', '0.00', '0.00', '610.50', '5698.00', '393', '211', '0.1200', '001-001', '5087.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('557', 'CONTROL JOYSTICK HIKVISION CON PANTALLA', '2', '1253.22', '0.00', '0.00', '300.77', '2807.21', '393', '210', '0.1200', '001-001', '2506.44', '', '');
+INSERT INTO `lineas_factura` VALUES ('558', 'MONITOR DE CCTV 43 PUL PARA CCTV', '1', '726.43', '0.00', '0.00', '87.17', '813.60', '393', '209', '0.1200', '001-001', '726.43', '', '');
+INSERT INTO `lineas_factura` VALUES ('559', 'PANTALLA LCD 65 PUL. USO 24/7', '2', '1818.66', '0.00', '0.00', '436.48', '4073.80', '393', '208', '0.1200', '001-001', '3637.32', '', '');
+INSERT INTO `lineas_factura` VALUES ('560', 'DECODER 8 SALIDAS HDMI', '1', '2203.77', '0.00', '0.00', '264.45', '2468.22', '393', '207', '0.1200', '001-001', '2203.77', '', '');
+INSERT INTO `lineas_factura` VALUES ('561', 'DISCO DURO 10 TB', '28', '326.83', '0.00', '0.00', '1098.15', '10249.39', '393', '206', '0.1200', '001-001', '9151.24', '', '');
+INSERT INTO `lineas_factura` VALUES ('562', 'GRABADOR 64CH | 8 BAHIAS DISCO DURO', '3', '1776.46', '0.00', '0.00', '639.53', '5968.91', '393', '205', '0.1200', '001-001', '5329.38', '', '');
+INSERT INTO `lineas_factura` VALUES ('563', 'GRABADOR IDS DEEPINMIND | 32CH', '1', '1545.60', '0.00', '0.00', '185.47', '1731.07', '393', '204', '0.1200', '001-001', '1545.60', '', '');
+INSERT INTO `lineas_factura` VALUES ('564', 'INJECTOR POE 60W', '2', '26.13', '0.00', '0.00', '6.27', '58.53', '393', '223', '0.1200', '001-001', '52.26', '', '');
+INSERT INTO `lineas_factura` VALUES ('565', 'CAMARA PTZ | 2MP | ACUSENSE', '2', '745.75', '0.00', '0.00', '178.98', '1670.48', '393', '203', '0.1200', '001-001', '1491.50', '', '');
+INSERT INTO `lineas_factura` VALUES ('566', 'CAMARA OJO DE PEZ | 5MP | 180° ACUSENSE', '8', '386.40', '0.00', '0.00', '370.94', '3462.14', '393', '202', '0.1200', '001-001', '3091.20', '', '');
+INSERT INTO `lineas_factura` VALUES ('567', 'CAMARA IP DOMO 5MP L1.6MM PANORAMICA 180°', '10', '195.78', '0.00', '0.00', '234.94', '2192.74', '393', '201', '0.1200', '001-001', '1957.80', '', '');
+INSERT INTO `lineas_factura` VALUES ('568', 'CAMARA OJO DE PEZ | 6MP', '33', '574.45', '0.00', '0.00', '2274.82', '21231.67', '393', '200', '0.1200', '001-001', '18956.85', '', '');
 
 -- ----------------------------
 -- Table structure for lineas_nota_credito
@@ -707,7 +1001,7 @@ CREATE TABLE `lineas_nota_credito` (
   `serie` varchar(255) DEFAULT NULL,
   `porc_iva` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_nota_credito_linea`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of lineas_nota_credito
@@ -717,6 +1011,12 @@ INSERT INTO `lineas_nota_credito` VALUES ('2', 'servicio de trasporte', '1', '1.
 INSERT INTO `lineas_nota_credito` VALUES ('3', 'Pollo  1', '1', '150.00', '150.00', '4', '0.00', '0.00', '150.00', '0.00', '01.01.37', '001-002', '0');
 INSERT INTO `lineas_nota_credito` VALUES ('4', 'Pollo  1', '1', '150.00', '150.00', '6', '0.00', '0.00', '150.00', '0.00', '01.01.37', '001-002', '0');
 INSERT INTO `lineas_nota_credito` VALUES ('5', 'Pollo  1', '1', '1', '1.00', '7', '0.00', '0.00', '1.00', '0.00', '01.01.37', '001-001', '0');
+INSERT INTO `lineas_nota_credito` VALUES ('8', 'FUMIGACIÓN NOVIEMBRE DICIEMBRE 2022 Y ENERO FEBRERO 2023', '4', '13.50', '54.00', '9', '0.00', '0.00', '54.00', '0.00', '1', '001-003', '0');
+INSERT INTO `lineas_nota_credito` VALUES ('9', 'DESCUENTO', '1', '7.50', '7.50', '10', '0.00', '0.00', '7.50', '0.00', '3', '001-003', '0');
+INSERT INTO `lineas_nota_credito` VALUES ('10', 'SERVICIO DE TRANSPORTE LOS DIAS 25 - 26 - 27 - 29 DE JUNIO DE 2023', '1', '47.50', '47.50', '11', '0.00', '0.00', '47.50', '0.00', '2', '001-003', '0');
+INSERT INTO `lineas_nota_credito` VALUES ('11', 'SERVICIO DE TRANSPORTE LOS DIAS 26 - 29 DE JUNIO DE 2023', '1', '202.50', '202.50', '12', '0.00', '0.00', '202.50', '0.00', '2', '001-003', '0');
+INSERT INTO `lineas_nota_credito` VALUES ('12', 'SERVICIO DE TRANSPORTE LOS DIAS 20 - 21 - 24 DE AGOSTO DE 2023', '1', '7.5', '7.50', '13', '0.00', '0.00', '7.50', '0.00', '2', '001-003', '0');
+INSERT INTO `lineas_nota_credito` VALUES ('13', 'SERVICIO DE TRANSPORTE LOS DIAS 20 - 21 - 24 DE AGOSTO DE 2023', '1', '7.41', '7.41', '14', '0.00', '0.00', '7.41', '0.00', '2', '001-003', '0');
 
 -- ----------------------------
 -- Table structure for lista_tipo_contribuyente
@@ -724,15 +1024,15 @@ INSERT INTO `lineas_nota_credito` VALUES ('5', 'Pollo  1', '1', '1', '1.00', '7'
 DROP TABLE IF EXISTS `lista_tipo_contribuyente`;
 CREATE TABLE `lista_tipo_contribuyente` (
   `ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `RUC` varchar(13) DEFAULT '.',
-  `Zona` varchar(10) DEFAULT '.',
-  `Agente_Retencion` varchar(30) DEFAULT '.',
+  `RUC` varchar(13) COLLATE utf8_spanish_ci DEFAULT '.',
+  `Zona` varchar(10) COLLATE utf8_spanish_ci DEFAULT '.',
+  `Agente_Retencion` varchar(30) COLLATE utf8_spanish_ci DEFAULT '.',
   `Contribuyente_Especial` bit(1) DEFAULT b'0',
   `RIMPE_E` bit(1) DEFAULT NULL,
   `RIMPE_P` bit(1) DEFAULT NULL,
   `Micro_2020` bit(1) DEFAULT b'0',
   `Micro_2021` bit(1) DEFAULT b'0',
-  `X` varchar(1) NOT NULL DEFAULT '.',
+  `X` varchar(1) COLLATE utf8_spanish_ci NOT NULL DEFAULT '.',
   PRIMARY KEY (`ID`),
   UNIQUE KEY `ID` (`ID`),
   KEY `RUC` (`RUC`)
@@ -769,7 +1069,7 @@ CREATE TABLE `marcas` (
   `DESCRIPCION` varchar(255) DEFAULT NULL,
   `ESTADO` char(1) DEFAULT NULL,
   PRIMARY KEY (`ID_MARCA`)
-) ENGINE=InnoDB AUTO_INCREMENT=2673 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2673 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of marcas
@@ -1073,7 +1373,7 @@ CREATE TABLE `menu` (
   `link` varchar(255) DEFAULT NULL,
   `icono` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_menu`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of menu
@@ -1131,7 +1431,7 @@ CREATE TABLE `mesa` (
   KEY `FK_EMPRESA MESA` (`empresa`),
   CONSTRAINT `mesa_ibfk_1` FOREIGN KEY (`empresa`) REFERENCES `empresa` (`id_empresa`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `mesa_ibfk_2` FOREIGN KEY (`referencia`) REFERENCES `productos` (`referencia`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=426 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=426 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of mesa
@@ -1157,7 +1457,7 @@ CREATE TABLE `nota_credito` (
   `estado` varchar(255) DEFAULT NULL,
   `porc_iva` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_nota_credito`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of nota_credito
@@ -1167,6 +1467,12 @@ INSERT INTO `nota_credito` VALUES ('4', '5', '2023-03-24', '001-002', '43', '240
 INSERT INTO `nota_credito` VALUES ('5', '6', '2023-03-24', '001-002', '43', '2403202304070216417900110010020000000061234567816', '2023-03-24', '001-002', '12', '', 'devolucion ', '6', 'A', '0.12');
 INSERT INTO `nota_credito` VALUES ('6', '7', '2023-03-24', '001-002', '62', '0702164179001', '2023-03-24', '-', '', '', '', '6', 'P', '0.12');
 INSERT INTO `nota_credito` VALUES ('7', '1', '2023-04-11', '001-001', '42', '1104202304070216417900110010010000000011234567811', '2023-04-11', '001-001', '2', '1234567890', 'devolucion', '6', 'A', '0.12');
+INSERT INTO `nota_credito` VALUES ('9', '1', '2023-04-18', '001-003', '88', '1804202304179268077800120010030000000011234567811', '2023-04-18', '001-003', '000000009', '01804202301179268077800120010030000000091234567816', 'FUMIGACION PLACAS RAB4339', '8', 'A', '0.12');
+INSERT INTO `nota_credito` VALUES ('10', '2', '2023-08-15', '001-003', '88', '1508202304179268077800120010030000000021234567819', '2023-08-15', '001-003', '000000052', '1508202301179268077800120010030000000521234567812', 'DESCUENTO', '8', 'AN', '0.12');
+INSERT INTO `nota_credito` VALUES ('11', '3', '2023-08-22', '001-003', '88', '2208202304179268077800120010030000000031234567814', '2023-08-22', '001-003', '000000041', '0407202301179268077800120010030000000401234567812', 'DEVOLUCIÓN POR VIAJES NO REALIZADOS', '8', 'A', '0.12');
+INSERT INTO `nota_credito` VALUES ('12', '4', '2023-08-22', '001-003', '88', '2208202304179268077800120010030000000041234567811', '2023-08-22', '001-003', '000000041', '0407202301179268077800120010030000000401234567812', 'DEVOLUCION POR VIAJE NO REALIZADO', '8', 'A', '0.12');
+INSERT INTO `nota_credito` VALUES ('13', '5', '2023-08-28', '001-003', '88', '2808202304179268077800120010030000000051234567812', '2023-08-28', '001-003', '000000059', '2808202301179268077800120010030000000591234567818', 'DESCUENTO', '8', 'AN', '0.12');
+INSERT INTO `nota_credito` VALUES ('14', '6', '2023-08-28', '001-003', '88', '2808202304179268077800120010030000000061234567818', '2023-08-28', '001-003', '000000059', '2808202301179268077800120010030000000591234567818', 'Descuento', '8', 'A', '0.12');
 
 -- ----------------------------
 -- Table structure for notificaciones
@@ -1185,7 +1491,7 @@ CREATE TABLE `notificaciones` (
   KEY `FK_EMPRESA_NOTIFICACION` (`empresa`) USING BTREE,
   CONSTRAINT `notificaciones_ibfk_1` FOREIGN KEY (`empresa`) REFERENCES `empresa` (`id_empresa`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `notificaciones_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of notificaciones
@@ -1210,7 +1516,7 @@ CREATE TABLE `pagos_caja` (
   KEY `FK_FORMA_PAGOS_PAGOS` (`id_forma_pago`) USING BTREE,
   CONSTRAINT `pagos_caja_ibfk_1` FOREIGN KEY (`id_factura`) REFERENCES `facturas` (`id_factura`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `pagos_caja_ibfk_2` FOREIGN KEY (`id_forma_pago`) REFERENCES `forma_pago` (`id_forma_pago`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=181 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=181 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of pagos_caja
@@ -1271,7 +1577,7 @@ CREATE TABLE `productos` (
   CONSTRAINT `productos_ibfk_5` FOREIGN KEY (`genero`) REFERENCES `genero` (`ID_GENERO`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `productos_ibfk_6` FOREIGN KEY (`marca`) REFERENCES `marcas` (`ID_MARCA`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `productos_ibfk_7` FOREIGN KEY (`sucursal`) REFERENCES `sucursales` (`id_sucursal`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=809 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of productos
@@ -1285,7 +1591,239 @@ INSERT INTO `productos` VALUES ('109', '01.01.03', 'Horas de soporte de infraest
 INSERT INTO `productos` VALUES ('110', '01.01.004', 'Envio de correos masivos (Enero)', '107.1400', '1', '', '\0', '0', '', '0.00000', '16', '', '', '7', null, '1', '', '', '1', '1', '1', '9', '', '2023-02-08', '', '0', '0', '', '\0', '\0', null, null, null);
 INSERT INTO `productos` VALUES ('113', '01.01.005', 'Desarrollo', '0.0000', '1', '', '\0', '0', '', '0.00000', '16', '', '', '7', null, '1', '', '', '1', '1', '1', '9', '', '2023-02-27', '', '0', '0', '', '\0', '\0', null, null, null);
 INSERT INTO `productos` VALUES ('114', '01.01.006', 'mantenimiento', '0.0000', '0', '', '\0', '0', '', '0.00000', '16', '', '', '7', null, '1', '', '', '1', '1', '1', '9', '', '2023-03-03', '', '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('115', '001.001', 'Servicios prueba', '0.0000', '0', '', '\0', '0', '', '0.00000', '17', '', '', '8', null, '1', '', '', '1', '1', '1', '10', '', '2023-04-03', '', '0', '0', '', '\0', '\0', null, null, null);
 INSERT INTO `productos` VALUES ('119', '001.001', 'prueba 1', '0.0000', '0', '', '\0', '0', '', '0.00000', '17', '', '', '30', null, '1', '', '', '1', '1', '1', '23', '', '2023-04-11', '', '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('121', '2', 'SERVICIO DE TRANSPORTE LOS DIAS 14 Y 26 DE MARZO DE 2023', '81.0000', '0', '', '\0', '0', '', '0.00000', '17', '', '', '8', null, '1', '', '', '8', '1', '1', '10', '', '2023-04-07', '', '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('124', '3', 'SERVICIO DE TRANSPORTE DEL DÍA 14 DE MARZO DE 2022 ', '40.0000', '0', '', '\0', '0', '', '0.00000', '17', '', '', '8', null, '1', '', '', '8', '1', '1', '10', '', '2023-04-07', '', '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('125', '1', 'FUMIGACIÓN NOVIEMBRE', '13.5000', '0', '', '\0', '0', '', '0.00000', '18', '', '', '8', null, '1', '', '', '1', '1', '1', '10', '', '2023-04-18', '', '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('581', '1', 'OUTSORCING', '350.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('582', '2', 'SERVICIOS PRESTADOS - MANTENIENTO DE SERVIDOR', '150.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('583', '3', 'CONFIGURACIÓN DE VPN', '80.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('584', '4', 'SERVICIOS GENERALES - SOPORTE TÉCNICO', '70.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('585', '5', 'SISTEMA CONTABLE SMARTCONTROL', '7000.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('586', '6', 'SPECTRA CENTRAL 4 ZONAS EXP. 32 2 PARTIC', '30.6300', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('587', '7', 'TECLADO LED CABLEADO DE 10 ZONAS HORIZON', '34.0800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('588', '8', 'DISCO DURO 1TB INTELLI-POWER 24-7 CACHE-64MB SATA 6.0GBJS 3.5INC. PURPLE', '72.6900', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('589', '9', 'CONFIGURACIÓN TERMINAL SERVER', '200.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('590', '10', 'CONFIGURACIÓN DE ACTIVE DIRECTORY', '150.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('591', '11', 'UPS 1KVA ON LINE 110V', '310.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('592', '12', 'LICENCIA KASPERSKY CLOUD', '475.9200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('593', '13', 'LICENCIA ANTIVIRUS SERVER', '168.4400', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('594', '14', 'AM04 POS RF SINGLE EAS ALUMINUM ANTENNA', '892.0800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('595', '15', 'DYN-STHRFN-CASE DYNAPOS RF HARD TAG', '159.6000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('596', '16', 'DYN-STDDU DYNAPOS MAGNETIC DETACHER', '51.4100', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('597', '17', 'IMPRESORA TMU220 USB', '303.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('598', '18', 'NVR 16CH CAPACIDAD 40MB 2HDD', '133.8600', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('599', '19', 'BATERIA RECARGABLE 12VDC 7AMP', '16.7400', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('600', '20', 'LICENCIA INTERFAZ BIOMÉTRICO SOYAL A SQL', '910.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('601', '21', 'DISCO DURO 1TB 5400RPM CACHE-8MB SATA', '150.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('602', '22', 'MAT-1236_ETIQUETA S/IMPRESIÓN  TERMICO PROTEGIDO  TROQUELADA AVANCE 25 MM ANCHO 32 MM NUCLEO 1\\u201d', '19.5600', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('603', '23', 'MAT-1236_ETIQUETA S/IMPRESIÓN  TERMICO PROTEGIDO  TROQUELADA AVANCE 25 MM ANCHO 32 MM NUCLEO 1\\u201d', '12.4200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('604', '24', 'REPARACION NOTEBOOK', '120.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('605', '25', 'TONER NEGRO HP 2354', '42.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('606', '26', 'CARGA TONER N-2345', '32.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('607', '27', 'QPCOM SWITCH  8 PUERTOS 10/100/1000 MBPS', '40.6000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('608', '28', 'IMPRESORA ZEBRA GC420', '500.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('609', '29', 'KIT 5 CAMARAS DVR + 4 CAM 1080', '692.1600', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('610', '30', 'CONFIGURACION Y PUESTA EN MARCHA', '490.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('611', '31', 'DIMM KINGSTON 4GB DDR4 PC-2133 NON ECC', '85.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('612', '32', 'MBO GIGABYTE H110M-H DDR4 LGA1151 I7 V S R HDMI USB3.0 PCI-EX', '96.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('613', '33', 'PROC. INTEL CORE I5-6400 - 2.7GHZ - 6MB - 4NUCLEOS - DDR4-1866/2133', '282.7500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('614', '34', 'FUENTE DE PODER 12V Y MATERIALES', '17.5000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('615', '35', 'DISCO DURO 1 TB. 3', '88.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('616', '36', 'CABLR UTP CAT6', '145.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('617', '37', 'HUBBELL PREMISE SJ6A24B ASCENT CATEGORY 6A RJ45 JACK', '8.9000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('618', '38', 'CENTRAL IPBX UCM6204', '523.6000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('619', '39', 'TELEFONO IP GXP-1628', '54.1500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('620', '40', 'GXP-1625 / TELEFONO IP', '58.1000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('621', '41', 'ETH. SWITCH POE QPCOM 16PTOS 2SFP QP-1602PEW', '422.4600', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('622', '42', 'ETH. SWITCH QPCOM 16PTOS 10/100/1000 RACK QP-1660R ', '156.8000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('623', '43', 'UNIFI SECURITY GATEWAY', '215.6000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('624', '44', 'ORGANIZADOR 1 UR', '26.8800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('625', '45', 'RACK 3U', '42.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('626', '46', 'PUNTOS DE RED Y MATERIALES', '60.2000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('627', '47', 'INSTALACIÓN Y CONFIGURACIÓN CENTRAL IP', '120.9600', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('628', '48', 'CONFIGURACION E INSTALACION', '240.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('629', '49', 'CABLES USB PARALELO', '18.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('630', '50', 'PATCH PANEL MODULAR PARA  CAT5E Y CAT6 24 PTOS', '21.0200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('631', '51', 'UNIFI\\u00ae\\u00a0AC APS ', '179.2000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('632', '52', 'GAC 2500 /  TELEFONO IP AUDIOCONFERENCIA', '526.4000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('633', '53', 'TELEFONO IP GXP-2140', '142.8000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('634', '54', 'GXP-2200EXT / MODULO DE EXTENCIONES', '137.2000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('635', '55', 'ESTACIÓN BASE DP720', '67.2000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('636', '56', 'ESTACIÓN BASE DP750', '68.6000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('637', '57', 'GASTOS DE MOVILIZACION', '245.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('638', '58', 'CONFIGURACIÓN INICIAL SYNOLOGY ', '287.2800', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('639', '59', 'GABINETE   COMPACTO MONOBLOQUE', '157.2300', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('640', '60', 'BANDEJA  ESTANDAR  2 UR.   19\"', '20.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('641', '61', 'MULTITOMA HORIZONTAL 19\"     4 TOMAS DOBLES', '34.9900', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('642', '62', 'ORGANIZADOR CON CANALETA', '20.7500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('643', '63', 'PATCH CORD 3FT CAT 6 AZUL QUEST', '3.1500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('644', '64', 'ETH. PANEL CAT6 24 PUERTOS QP-P24 WITH ETH. KEYSTONE JACK SERIE', '21.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('645', '65', 'SERVICIO TÉCNICO / LAPTOPS', '76.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('646', '66', 'TELÉFONO INALAMBRICO KX-TGC222S PANASONIC', '146.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('647', '67', 'MANTENIMIENTO DE CAMARAS', '38.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('648', '68', 'CELULAR SAMSUNG GALAXY J7PRIME 4G-LTE 3GB 5.5INC 16GB MICROSD ADROID WHITE', '360.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('649', '69', 'CENTRAL UCM 6208 IPBX', '803.6000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('650', '70', 'HOSTING INCONTROL', '20.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('651', '71', 'INSTALACION Y CALIBRACION', '49.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('652', '72', 'DISCO DURO SSD 480GB', '61.8200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('653', '73', 'KASPERSKY TOTAL SECURITY 1 AÑO', '37.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('654', '74', 'SITIO WEB DINAMICO', '1000.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('655', '75', 'BRAZO MECANICO CIERRA PUERTA YALE', '65.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('656', '76', 'UNIFI CONTROLLER CLOUD KEY', '212.8000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('657', '77', 'CONFIGURACIÓN CLOUD SYSTEM UNIFI AP', '210.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('658', '78', 'CENTRAL TELEFÓNICA PANASONIC KX-TES824', '350.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('659', '79', 'CAMARASTIPO BULLET IR 1080P LENTE FIJO 3.6MM IP66', '59.6400', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('660', '80', 'CAMARA IP TIPO BULLET IR 3 MEGAPIXELES LENTE FIJO 4.0MM IP66', '180.1800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('661', '81', 'DVR DIGITAL SISTEMA TRIBIDO PARA 8 CANALES COMPRESIÓN 264 /1TB HD', '280.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('662', '82', 'TRANSRECEPTOR TURBO HD DE VIDEO PASIVO DE UN CANAL', '6.8600', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('663', '83', 'ADAPTADORES SWITCHING 12VDC 1.0AMP', '7.8400', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('664', '84', 'KIT DE CAMARAS ANALGOGICAS', '266.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('665', '85', 'CABLE HDMI 15MTS + ADAPTADOR VGA-HDMI', '63.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('666', '86', 'MATERIALES ELECTRICOS', '240.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('667', '87', 'LECTOR BIOMÉTRICO ID FLEX', '243.6000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('668', '88', 'LECTOR SOYAL AR-725E-M', '203.7000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('669', '89', 'FUENTE DE PODER', '117.6000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('670', '90', 'ANTENA UNIFI LR WIFI LR', '119.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('671', '91', 'SERVICIO DE CLOUT CALLING', '245.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('672', '92', 'IMPORTACIÓN Y CONFIGURACIÓN SISTEMA MAILCHIMP', '14.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('673', '93', 'CREACIÓN Y CUSTOMIZACIÓN DE CAMPAÑAS / PLANTILLAS', '21.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('674', '94', 'BZL PARA MONAJE DE CERRADURA', '32.3400', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('675', '95', 'CERRADURA ELECTROMAGNÉTICA 600LBS Y TEMPORIZADOR INTEGRADO', '66.6400', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('676', '96', 'PANEL DE ALARMAS 4 ZONAS', '34.8000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('677', '97', 'TECLADO LED CABLEADO DE 10 ZONAS HORIZONTAL', '38.7200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('678', '98', 'OUTSORCING DE TALENTO', '1898.4000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('679', '99', 'UPGRADE Y PUESTA EN MARCHA 10 LIC MONITORE REMOTO', '3500.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('680', '100', 'PAGO MENSUAL LEASING', '4202.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('681', '101', 'SATA SSD SOLIDDRIVE 480GB', '90.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('682', '102', 'MEMORIAS DE 4GB ', '80.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('683', '103', 'SSD SATA 1GB ENTERPRISE FOR SERVER', '385.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('684', '104', 'SYNOLOGY DISKSTATION DS1621+ 6-BAY NAS', '2184.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('685', '105', 'DISCO DURO  INTERNO - RED PRO - 10TB', '661.0200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('686', '106', 'UNIFI SWITCH 16 PUERTOS POE', '566.3800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('687', '107', 'ROUTER UNIFI SECURITY GATEWAY PRO4 ', '512.2100', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('688', '108', 'PATCH CORD 7 PIES', '5.7500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('689', '109', 'UNIFI SWITCH 24 PUERTOS', '599.8700', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('690', '110', 'CANALETA EMT Y ANCLAJES', '30.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('691', '111', 'SISTEMA DE AMPLIFICACION', '631.2500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('692', '112', 'CAMARA IP TUBO 2 MP', '56.2500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('693', '113', 'NVR 8CH POE ', '181.2500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('694', '114', 'TELEFONO IP 2 CUENTA SIP', '46.2500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('695', '115', 'UPS ONLINE DE 2KVA', '850.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('696', '116', 'TARJETAS DE ACCESO', '2.1500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('697', '117', 'SWITCH POE 8 PUERTOS', '85.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('698', '118', 'PORTERO ELECTRICO', '206.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('699', '119', 'UNIFI DE 24 PUERTOS US-24 DE UBIQUITI POE', '374.1900', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('700', '120', 'TELEFONO IP INALAMBRICO + BASE CELULAR', '145.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('701', '121', 'RACK DE PISO', '75.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('702', '122', 'BRAZO HIDRAULICO', '35.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('703', '123', 'DISCO DURO DE 4TB NAS', '272.5000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('704', '124', 'GASTOS BIOSEGURIDAD', '50.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('705', '125', 'CARGADOR DE PORTATIL', '55.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('706', '126', 'CABLEADO Y MATERIALES', '80.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('707', '127', 'SYNOLOGY 4-CAMERA LICENSE KEY', '298.4700', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('708', '128', 'SYNOLOGY 8-CAMERA LICENSE KEY', '524.1500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('709', '129', 'CAMARA ANALOGA FULL COLOR', '63.5300', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('710', '130', 'CAMARA DOMO 5MP', '60.2800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('711', '131', 'FUENTES DE PODER PULPO', '26.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('712', '132', 'DISCO DURO PURPLE 2TB', '168.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('713', '133', 'UPS INTERACTIVA1000VA', '85.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('714', '134', 'SOPORTE THE-HUB', '100.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('715', '135', 'DVR DE 4 CANALES', '65.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('716', '136', 'GASTOS DE EDUCADORAS', '520.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('717', '137', 'SYNOLOGY RS2418+ RACKSTATION 12-BAY NAS ENCLOSURE', '4368.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('718', '138', 'SYNOLOGY RAIL KIT RKS1317', '275.1800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('719', '139', 'SYNOLOGY M2D20 M.2 ADAPTER CARD', '247.5200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('720', '140', 'SAMSUNG 1TB 970 EVO PLUS NVME M.2 INTERNAL SSD', '291.2000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('721', '141', 'HD WD 10TB -7200RPM - NAS', '661.0200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('722', '142', 'MONTAJE DE RACK', '120.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('723', '143', 'BATER\\u00cdAS SECAS (PARA UPS). 12 V. / 9 AH.', '32.0300', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('724', '144', 'SO-DIMM 8GB DDR4', '88.8700', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('725', '145', 'GASTO EN GIRAS', '10.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('726', '146', 'UPS 750W OFF LINE', '40.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('727', '147', 'TELEFONO IP GRP2602P', '52.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('728', '148', 'ELABORACION DE FOTOGRAFIAS Y VIDEOS', '100.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('729', '149', 'LICENCIA DE USO DE HOSITNG', '347.7600', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('730', '150', 'WEBCAM 1080 ', '35.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('731', '151', 'HEATPHONE SIMPLE', '12.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('732', '152', 'LECTOR WIEGAND ESCLAVO', '50.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('733', '153', 'DISCO SSD 980MB', '120.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('734', '154', 'NOT. HP PROBOOK 440 G7 ', '1127.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('735', '155', 'SISTEMA DE SEGURIDAD PARA TALLER', '358.0700', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('736', '156', 'LLAVERO DE PROXIMIDAD', '3.5000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('737', '157', 'UNIDAD USB DE 32GB', '25.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('738', '158', 'DIMM MEMORI ECC 16GB', '292.3200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('739', '159', 'NOT. DELL INSPIRON 3511 I5', '423.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('740', '160', 'HD  WD 14 TB NAS 5400 RPM', '620.3500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('741', '161', 'NVR 4 CANALES SIMPLE', '119.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('742', '162', 'NOT. DELL VOSTRO 3400', '963.2000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('743', '163', 'ETIQUETA POLIPROPILENO', '6.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('744', '164', 'ETIQUETAS RFID 60*25 METAL', '890.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('745', '165', 'UNIFI AP-AC 6 PRO', '245.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('746', '166', 'UNIFI SWITCH 16 PUERTOS ', '415.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('747', '167', 'SOPORTE SISTEMA SMARTLAB', '35.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('748', '168', 'CAPACITACION SISTEMA INCONTROL', '35.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('749', '169', 'SISTEMA DE CABLEADO - MATERIAL', '550.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('750', '170', 'SISTEMA DE AUDIO', '900.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('751', '171', 'SISTEMA DE CCTV', '635.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('752', '172', 'DISEÑ Y MANO DE OBRA', '850.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('753', '173', 'SWICH 16 PUERTOS SIMPLE', '89.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('754', '174', 'UPS ONLINE 3KVA', '466.8200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('755', '175', 'UNIFI SWITCH 48 PUERTOS', '1152.0400', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('756', '176', 'BATERIA DE NOTEBOOK', '90.7200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('757', '177', 'SISTEMA DE CABLEADO - MATERIAL', '708.4000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('758', '178', 'SISTEMA DE AUDIO', '1159.2000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('759', '179', 'SISTEMA DE CCTV', '817.8800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('760', '180', 'DISEÑ Y MANO DE OBRA', '1094.8000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('761', '181', 'SWICH 16 PUERTOS SIMPLE', '114.6300', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('762', '182', 'OUTSORCING DE TALENTO', '1800.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('763', '183', 'CENTRAL IP 6304', '698.6000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('764', '184', 'PANTALLA PORTATIL VOSTRO', '260.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('765', '185', 'CAM IP TUBO SELLADA COLORVU 4MP L 2.8MM', '120.4000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('766', '186', 'DISCO DURO ESPECIAL DVR PURPLE 4TB', '116.2000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('767', '187', 'SWITCH POE 4CH 10/100/1000 + 1 10/1000MB 35W', '53.2000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('768', '188', 'MOUSE MEETION ERGONOMICO WIRELESS MT-R390', '18.5000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('769', '189', 'PAD MOUSE SPEEDMIND APOYADERA DE GEL', '5.1500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('770', '190', 'EXTENSOR POWERLINE', '70.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('771', '191', 'TECLADO ALAMBRICO', '10.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('772', '192', 'LECTOR USB KIT: 1D', '309.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('773', '193', 'CAJON DE DINERO  3 POSITIONS KEY LOCK', '51.5200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('774', '194', 'IMPRESORA TERMICA 80MM 80MM AUTO-CUTTER', '118.5000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('775', '195', 'EQUIPO POS \\u2013 MARCA: ZKTEKO ZKBIO550', '689.0800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('776', '196', 'LICENCIA KASPERSKY CLOUD PRO', '296.3300', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('777', '197', 'CASE TORRE', '50.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('778', '198', 'LINEA CELULAR', '26.7800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('779', '199', 'MEMORIA DE 16GB DDR4 2133P', '280.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('780', '200', 'CAMARA OJO DE PEZ | 6MP', '574.4500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('781', '201', 'CAMARA IP DOMO 5MP L1.6MM PANORAMICA 180\\u00b0', '195.7800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('782', '202', 'CAMARA OJO DE PEZ | 5MP | 180\\u00b0 ACUSENSE', '386.4000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('783', '203', 'CAMARA PTZ | 2MP | ACUSENSE', '745.7500', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('784', '204', 'GRABADOR IDS DEEPINMIND | 32CH', '1545.6000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('785', '205', 'GRABADOR 64CH | 8 BAHIAS DISCO DURO', '1776.4600', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('786', '206', 'DISCO DURO 10 TB', '326.8300', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('787', '207', 'DECODER 8 SALIDAS HDMI', '2203.7700', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('788', '208', 'PANTALLA LCD 65 PUL. USO 24/7', '1818.6600', '1', '', '\0', '0', '', '0.00000', '20', '0', '0', '34', null, '1', '', 'UNI', '1', '1', '1', '26', '', null, '', '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('789', '209', 'MONITOR DE CCTV 43 PUL PARA CCTV', '726.4300', '1', '', '\0', '0', '', '0.00000', '19', '0', '0', '34', null, '1', '', 'UNI', '1', '1', '1', '26', '', null, '', '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('790', '210', 'CONTROL JOYSTICK HIKVISION CON PANTALLA', '1253.2200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('791', '211', 'LECTOR BIOMETRICO FACIAL HUELLA', '203.5000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('792', '212', 'FUENTE PARA CONTROL DE ACCESO 5AMP', '34.7800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('793', '213', 'BATERIA RECARGABLE 12VDC 7AMP', '16.7400', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('794', '214', 'HIKCENTRAL MONITOREO CCTV | 300CH', '8870.4600', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('795', '215', 'LICENCIA HIKCENTRAL PARA 1 CANAL ADICIONAL', '34.7800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('796', '216', 'LICENCIA HIKCENTRAL GESTIÓN VIDEOWALL', '2165.1300', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('797', '217', 'LIC. HC ACTIVACIÓN MÓDULO ACCESOS 16 PUERTAS', '717.4200', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('798', '218', 'LICENCIA HC PARA 1 ACCESO ADICIONAL', '37.3800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('799', '219', 'LIC. HC 1 CANAL DE RECONOCIMIENTO FACIAL', '197.3800', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('800', '220', 'LICENCIA HIKCENTRAL PARA GESTION DE VISITAS', '386.4000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('801', '221', 'LICENCENCIA HIKCENTRAL PARA GESTIÓN DE PERSONAL', '930.5000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('802', '222', 'SCANNER OCR PARA EXTRACCIÓN DE DATOS DE CÉLULAS', '1578.0000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('803', '223', 'INJECTOR POE 60W', '26.1300', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('804', '224', 'DESARROLLO A MEDIDA', '5508.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('805', '225', 'LICENCIA DE USO DE PLATAFORMA MSC', '450.8000', '1', null, '\0', '0', '', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('806', '226', 'SERVIDOR HPE ML30 G10+ E-2314 1P 16G NHP 1TB', '4585.2800', '1', '', '\0', '0', '', '0.00000', '19', '0', '0', '34', '../img/articulos/226.jpeg', '1', 'ML30', 'UNI', '1', '1', '1', '26', '', null, '', '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('807', '227', 'PACK DE MANTENIMIENTO ANUAL', '890.0000', '1', null, '', '0', '\0', null, '19', '0', '0', '34', null, null, '', 'UNI', null, null, null, null, null, null, null, '0', '0', '', '\0', '\0', null, null, null);
+INSERT INTO `productos` VALUES ('808', 'UTP-7-INJ-60W ', 'INJECTOR POE 60W', '26.1300', '0', '', '\0', '0', '', '0.00000', '20', '', '', '34', null, '1', 'UTP-7-INJ-6', '', '1', '1', '1', '26', '', '2023-10-10', 'INJECTOR POE 60W', '0', '0', '', '\0', '\0', null, null, null);
 
 -- ----------------------------
 -- Table structure for promos
@@ -1300,7 +1838,7 @@ CREATE TABLE `promos` (
   KEY `FK_CATEGORIAS_PRODUCTO` (`id_producto`),
   CONSTRAINT `promos_ibfk_1` FOREIGN KEY (`id_categorias`) REFERENCES `categoria` (`id_categoria`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `promos_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_productos`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of promos
@@ -1321,7 +1859,7 @@ CREATE TABLE `recetas` (
   KEY `ID_RECETAS_MATERIA_PRIMA` (`id_materia_prima`),
   CONSTRAINT `recetas_ibfk_1` FOREIGN KEY (`id_materia_prima`) REFERENCES `productos` (`id_productos`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `recetas_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_productos`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of recetas
@@ -1355,7 +1893,7 @@ CREATE TABLE `retenciones` (
   `montoIva` varchar(255) DEFAULT '',
   `PagoLocExt` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_retenciones`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of retenciones
@@ -1397,7 +1935,7 @@ CREATE TABLE `retenciones_impuestos` (
   `por_bienes` char(1) DEFAULT '\0',
   `por_servicios` char(1) DEFAULT '\0',
   PRIMARY KEY (`id_impuesto`)
-) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of retenciones_impuestos
@@ -1445,7 +1983,7 @@ CREATE TABLE `sucursales` (
   PRIMARY KEY (`id_sucursal`),
   KEY `FK_SUCURSAL_EMPRESA` (`empresa`) USING BTREE,
   CONSTRAINT `sucursales_ibfk_1` FOREIGN KEY (`empresa`) REFERENCES `empresa` (`id_empresa`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of sucursales
@@ -1453,8 +1991,10 @@ CREATE TABLE `sucursales` (
 INSERT INTO `sucursales` VALUES ('7', '', '', '001-001', '5', null, 'sucursal principal');
 INSERT INTO `sucursales` VALUES ('8', '0987456321', 'direccion', '001-002', '6', 'example@example.com', 'sucursal principal');
 INSERT INTO `sucursales` VALUES ('9', '', '', '001-001', '7', 'javier.farinango92@gmail.com', 'SUCURSAL PRINCIPAL');
+INSERT INTO `sucursales` VALUES ('10', '0990313904', 'CAYETANO CESTARIS S7-158 Y PADRE ELIAS BRITO', '001-003', '8', 'transpesimalaya2016@hotmail.com', 'SUCURSAL PRINCIPAL');
 INSERT INTO `sucursales` VALUES ('23', '0987654321', 'la madrid', '001-001', '30', 'example.com', 'SUCURSAL PRINCIPAL');
 INSERT INTO `sucursales` VALUES ('25', '0987242579', 'jipiro y santa barbara', '001-001', '7', 'javier.farinango92@gmail.com', 'SUCURSAL PRINCIPAL');
+INSERT INTO `sucursales` VALUES ('26', '3920507', 'De los Motilones N40-345 y Camilo Gallegos', '001-001', '34', 'factura@corsinf.com', 'SUCURSAL PRINCIPAL');
 
 -- ----------------------------
 -- Table structure for tabla_naciones
@@ -1471,7 +2011,7 @@ CREATE TABLE `tabla_naciones` (
   `ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `IDX_Tabla_Naciones` (`Codigo`,`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of tabla_naciones
@@ -1783,7 +2323,7 @@ CREATE TABLE `tabla_referenciales_sri` (
   `ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `IDX_Tabla_Referenciales_SRI` (`Codigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of tabla_referenciales_sri
@@ -2201,7 +2741,7 @@ CREATE TABLE `tamanio` (
   PRIMARY KEY (`id_tamanio`),
   KEY `FK_PRODUCTO_TAMANIO` (`id_producto`),
   CONSTRAINT `tamanio_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_productos`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of tamanio
@@ -2223,7 +2763,7 @@ CREATE TABLE `tipo_concepto_retencion` (
   `ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `IDX_Tipo_Concepto_Retencion` (`Codigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of tipo_concepto_retencion
@@ -2813,7 +3353,7 @@ CREATE TABLE `tipo_retencion` (
   `bienes` bit(1) DEFAULT b'0',
   `servicios` bit(1) DEFAULT b'0',
   PRIMARY KEY (`id_tipo_retencion`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of tipo_retencion
@@ -2835,7 +3375,7 @@ CREATE TABLE `tipo_usuario` (
   PRIMARY KEY (`id_tipo_usuario`),
   KEY `FK_tipo_usuario_empresa` (`empresa`),
   CONSTRAINT `tipo_usuario_ibfk_1` FOREIGN KEY (`empresa`) REFERENCES `empresa` (`id_empresa`) ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of tipo_usuario
@@ -2846,6 +3386,7 @@ INSERT INTO `tipo_usuario` VALUES ('11', 'MOTORIZADO', '5');
 INSERT INTO `tipo_usuario` VALUES ('12', 'DBA', '6');
 INSERT INTO `tipo_usuario` VALUES ('13', 'CAJERO', '6');
 INSERT INTO `tipo_usuario` VALUES ('15', 'CAJA ADMIN', '6');
+INSERT INTO `tipo_usuario` VALUES ('16', 'administrador', '8');
 
 -- ----------------------------
 -- Table structure for transferencias
@@ -2861,7 +3402,7 @@ CREATE TABLE `transferencias` (
   KEY `FK_TRANFERENCIAS_USUARIO` (`id_usuario`),
   CONSTRAINT `transferencias_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `transferencias_ibfk_2` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_productos`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of transferencias
@@ -2894,7 +3435,7 @@ CREATE TABLE `trans_kardex` (
   `serie` varchar(255) DEFAULT NULL,
   `empresa` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_kardex`)
-) ENGINE=InnoDB AUTO_INCREMENT=117 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=117 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of trans_kardex
@@ -2994,7 +3535,7 @@ CREATE TABLE `usuario` (
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`tipo_usuario`) REFERENCES `tipo_usuario` (`id_tipo_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`sucursal`) REFERENCES `sucursales` (`id_sucursal`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `usuario_ibfk_3` FOREIGN KEY (`id_empresa`) REFERENCES `empresa` (`id_empresa`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of usuario
@@ -3002,5 +3543,8 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` VALUES ('18', '6', 'PACO', 'EXAMPLE', '147852369', 'Paco', 'Pepe', '001-002', '8', '../img/sistema/sin_imagen.jpg', 'example@example.com', '0222222222', '12');
 INSERT INTO `usuario` VALUES ('21', '6', 'invitado', 'example', '1750188326', 'invitado', 'invitado', '001-002', '8', '../img/sistema/sin_imagen.jpg', 'EXAMPLE@EXAMPLE.COM', '0987242589', '13');
 INSERT INTO `usuario` VALUES ('22', '7', 'invitado', 'invitado example', '9999999999', 'invitado', 'invitado', '001-001', null, '../img/sistema/sin_imagen.jpg', 'invitado@invitado.com', '022222222222222', '13');
+INSERT INTO `usuario` VALUES ('23', '8', 'PACO', 'EXAMPLE', '147852369', 'Paco', 'Pepe', '001-001', '8', '../img/sistema/sin_imagen.jpg', 'example@example.com', '0222222222', '12');
+INSERT INTO `usuario` VALUES ('24', '8', 'Geancarlo Asencio', 'CAYETANO CESTARIS S7-158 Y PADRE ELIAS BRITO', '0922284856', '1792680778001', '1792680778001', '001-003', '10', '../img/sistema/sin_imagen.jpg', 'geanasencio@hotmail.com', '0990313904', '16');
 INSERT INTO `usuario` VALUES ('36', '30', null, null, null, '1234567890001', '1234567890001', '001-001', null, '../img/sistema/sin_imagen.jpg', null, null, '10');
 INSERT INTO `usuario` VALUES ('38', '7', null, null, null, '1722214507001', '1722214507001', '001-001', null, '../img/sistema/sin_imagen.jpg', null, null, '10');
+INSERT INTO `usuario` VALUES ('39', '34', null, null, null, '1712605284001', '1712605284001', '001-001', null, '../img/sistema/sin_imagen.jpg', null, null, '10');
