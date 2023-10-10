@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>2</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>MILTON ANDRES RUBIO PUETATE</razonSocial>
+    <nombreComercial>CORSINF</nombreComercial>
+    <ruc>1712605284001</ruc>
+    <claveAcceso>0910202301171260528400120010010000007951234567816</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000795</secuencial>
+    <dirMatriz>De los Motilones N40345 y Camilo Gallegos</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>09/10/2023</fechaEmision>
+    <dirEstablecimiento>SAN JOSE COSTA RICA  CURRIDABAT CENTRO COMERCIAL JOSE MARIA ZELEDON CASA 121</dirEstablecimiento>
+    <obligadoContabilidad>NO</obligadoContabilidad>
+    <tipoIdentificacionComprador>06</tipoIdentificacionComprador>
+    <razonSocialComprador>LMT CONEXUS GROUP S.A</razonSocialComprador>
+    <identificacionComprador>3101680692</identificacionComprador>
+    <totalSinImpuestos>5318.1</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>0</codigoPorcentaje>
+        <descuentoAdicional>0</descuentoAdicional>
+        <baseImponible>0.00</baseImponible>
+        <valor>0.00</valor>
+      </totalImpuesto>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>2</codigoPorcentaje>
+        <descuentoAdicional>0.00</descuentoAdicional>
+        <baseImponible>5318.10</baseImponible>
+        <tarifa>12.00</tarifa>
+        <valor>638.17</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>5956.27</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>01</formaPago>
+        <total>5956.27</total>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>182</codigoPrincipal>
+      <descripcion>OUTSORCING DE TALENTO</descripcion>
+      <unidadMedida>DOLAR</unidadMedida>
+      <cantidad>1</cantidad>
+      <precioUnitario>5318.100000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>5318.10</precioTotalSinImpuesto>
+      <detallesAdicionales>
+        <detAdicional nombre="Serie_No" valor="001-001"/>
+      </detallesAdicionales>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>2</codigoPorcentaje>
+          <tarifa>12.00</tarifa>
+          <baseImponible>5318.10</baseImponible>
+          <valor>638.17</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">SAN JOSE COSTA RICA  CURRIDABAT CENTRO COMERCIAL JOSE MARIA ZELEDON CASA 121</campoAdicional>
+    <campoAdicional nombre="Email">fe.emi@conexusgroup.com</campoAdicional>
+    <campoAdicional nombre="Email2">fe.emi@conexusgroup.com</campoAdicional>
+    <campoAdicional nombre="Referencia">99999999</campoAdicional>
+  </infoAdicional>
+</factura>

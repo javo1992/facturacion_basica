@@ -341,11 +341,11 @@ function DCTipoPago()
         $lleva = '<span class="badge badge-primary badge-counter">lleva iva</span>';
       }
       $arti.='
-      <tr class="'.$alerta.'" onclick="usar(\''.$value['id_productos'].'\',\''.$value['referencia'].'\',\''.$value['nombre'].'\',\''.number_format($value['precio_uni'],2,'.',',').'\',\''.$value['iva'].'\')">
+      <tr class="'.$alerta.'" onclick="usar(\''.$value['id_productos'].'\',\''.$value['referencia'].'\',\''.$value['nombre'].'\',\''.number_format($value['precio_uni'],2,'.','').'\',\''.$value['iva'].'\')">
       <td>'.$value['referencia'].'</td>
       <td>'.$value['nombre'].'  '.$lleva.'</td>
       <td>'.$value['stock'].'</td>
-      <td>'.number_format($value['precio_uni'],2,'.',',').'</td>
+      <td>'.number_format($value['precio_uni'],2,'.','').'</td>
       <td>'.number_format($value['peso'],2,'.',',').'</td>
       <td>'.$value['uni_medida'].'</td>
       <td>'.$value['marca'].'</td>

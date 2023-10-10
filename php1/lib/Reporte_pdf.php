@@ -932,7 +932,7 @@ class Reporte_pdf
 
 		$tablaHTML2[$pos]['medidas']=array(86);
 		$tablaHTML2[$pos]['alineado']=array('L');
-		$tablaHTML2[$pos]['datos']=array($empresa[0]['Direccion']);
+		$tablaHTML2[$pos]['datos']=array(utf8_decode($empresa[0]['Direccion']));
 		// $tablaHTML2[$pos]['borde'] = 1;
 		$tablaHTML2[$pos]['altoRow'] = $altoRow;
 		$pos = $pos+1;
@@ -1043,7 +1043,7 @@ class Reporte_pdf
 
 		$tablaHTML3[5]['medidas']=array(25,115,50);
 		$tablaHTML3[5]['alineado']=array('L','L','L');
-		$tablaHTML3[5]['datos']=array('<b>Direccion:',$datos[0]['direccion'],'');
+		$tablaHTML3[5]['datos']=array('<b>Direccion:',utf8_decode($datos[0]['direccion']),'');
 		// $tablaHTML3[5]['borde'] = 1;
 		$tablaHTML3[5]['altoRow'] = $altoRow;
 
@@ -1069,7 +1069,7 @@ class Reporte_pdf
 			// print_r($value);die();
 			$tablaHTML4[$pos]['medidas']=$tablaHTML4[0]['medidas'];
 		    $tablaHTML4[$pos]['alineado']=$tablaHTML4[0]['alineado'];
-		    $tablaHTML4[$pos]['datos']=array($value['referencia'],$value['cantidad'],$value['producto'],number_format($value['precio_uni'],6,'.',''),$value['descuento'],$value['total']);
+		    $tablaHTML4[$pos]['datos']=array($value['referencia'],$value['cantidad'],$value['producto'],number_format($value['precio_uni'],2,'.',''),$value['descuento'],$value['total']);
 		    $tablaHTML4[$pos]['borde'] = 1;
 		    $tablaHTML4[$pos]['altoRow'] = $altoRow;
 		    $pos+=1;

@@ -178,7 +178,7 @@ class facturacionM
 		return $numero[0]['num'];
 	}
 
-	 function buscar_facturas($empresa,$numero=false)
+	 function buscar_facturas($empresa,$numero=false,$cliente=false,$id=false,$factura=false,$serie=false)
 	{
 		$sql= "SELECT id_factura as 'id',num_factura as 'num',fecha,C.nombre,estado_factura  
 		FROM facturas F 
@@ -187,6 +187,22 @@ class facturacionM
 		if($numero)
 		{			
 			$sql.=" AND num_factura = '".$numero."'";			
+		}
+		if($cliente)
+		{			
+			$sql.=" AND F.id_cliente = '".$cliente."'";			
+		}
+		if($factura)
+		{			
+			$sql.=" AND F.num_factura = '".$factura."'";			
+		}
+		if($serie)
+		{			
+			$sql.=" AND F.serie = '".$serie."'";			
+		}
+		if($id)
+		{
+			$sql.=" AND id_factura='".$id."'";
 		}
 		
 		$sql.=" ORDER BY F.fecha DESC";

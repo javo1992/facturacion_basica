@@ -2481,7 +2481,7 @@ class autorizacion_sri
 	    for($i=count($aux)-1;$i>=0;--$i)
 	    {
 		    $aux[$i]= substr($cadena,$i,1);
-		    $aux[$i]*=$multiplicador;
+		    $aux[$i]=floatval($aux[$i])*floatval($multiplicador);
 		    ++$multiplicador;
 		    if($multiplicador>$baseMultiplicador)
 		    {

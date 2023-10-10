@@ -185,7 +185,7 @@ class lista_facturaM
 		return $numero[0]['num'];
 	}
 
-	 function buscar_facturas($empresa,$numero=false,$cliente=false)
+	 function buscar_facturas($empresa,$numero=false,$cliente=false,$id=false)
 	{
 		$sql= "SELECT id_factura as 'id',num_factura as 'num',fecha,C.nombre,estado_factura  
 		FROM facturas F 
@@ -200,8 +200,14 @@ class lista_facturaM
 		{			
 			$sql.=" AND id_cliente = '".$cliente."'";			
 		}
+		if($id)
+		{
+			$sql.=" AND id_factura='".$id."'";
+		}
 		
 		$sql.=" ORDER BY F.fecha DESC";
+
+		// print_r($sql);die();
 		$result = $this->db->datos($sql,$empresa);
 	    return $result;
 	}

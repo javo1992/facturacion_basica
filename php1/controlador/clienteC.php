@@ -233,6 +233,8 @@ class clienteC
 	{
 		// print_r($parametros);die();
 		// print_r($_SESSION);die();
+		$factura = '.';
+		$serie = '.';
 		$datos[0]['campo']='nombre';
 		$datos[0]['dato']=$parametros['txt_nombre'];
 		$datos[1]['campo']='telefono';
@@ -294,13 +296,18 @@ class clienteC
 	    $datosF[3]['dato']=$parametros['txt_fecha'];    
 	    $datosF[4]['campo']='Porc_IVA';
 	    $datosF[4]['dato']=number_format(($_SESSION['INICIO']['IVA']/100),2,'.','');
+	    $datosF[5]['campo']='num_factura';
+	    $datosF[5]['dato']='.';
+	    $datosF[6]['campo']='serie';
+	    $datosF[6]['dato']='.';
 	
-    // print_r($numero);die();
+    // print_r($datosF);die();
 
 	    
 	    $re = $this->factura->add('facturas',$datosF,$_SESSION['INICIO']['ID_EMPRESA']);
 	    // print_r($re);
-	    $FA = $this->factura->buscar_facturas($_SESSION['INICIO']['ID_EMPRESA'],false,$_SESSION['INICIO']['ID_USUARIO']);
+	    $FA = $this->factura->buscar_facturas($_SESSION['INICIO']['ID_EMPRESA'],false,$idCli,false,$factura,$serie);
+
 	    return $FA;
 
 
