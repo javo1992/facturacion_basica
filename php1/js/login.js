@@ -26,7 +26,6 @@ function login()
 	var pass = $('#txt_password').val();
 	var emp = $('#txt_empresa').val();
   var idemp = $('#txt_id_empresa').val();
-  var rem = $('#customCheck').prop('checked');
   // console.log(rem);
   // return false;
   if(idemp=='')
@@ -39,13 +38,6 @@ function login()
     Swal.fire('Empresa inexistente','','warning');
     return false;
   }
-  if(rem==true)
-  {
-    // localStorage.setItem('RECORDAR','1');
-  }else
-  {
-    // localStorage.setItem('RECORDAR','0');
-  }  
    	var parametros = 
    	{
    	  'usu':usu,
@@ -199,6 +191,8 @@ function busca_empresa()
           if(response.logo!=null)
           {
             $('#logo_emp').attr('src',response.logo);
+            $('#img_empresa').css('display','flex');
+            $('#img_default').css('display','none');
           }
           $('#validar_emp').css('display','block');
         }else

@@ -6,13 +6,29 @@
 
 </script>
 	<script src="../js/cliente.js"></script>		
-<!-- Begin Page Content -->
-<main class="content">
-    <div class="container-fluid p-0">    <!-- Page Heading -->
-      <h1 class="h3 mb-3"><strong>Proveedores</strong></h1>
+
+<div class="page-wrapper">
+      <div class="page-content">
+        <!--breadcrumb-->
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+          <div class="breadcrumb-title pe-3">Proveedores</div>
+          <div class="ps-3">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page"></li>
+              </ol>
+            </nav>
+          </div>         
+        </div>
+
+        <hr>
+
+
       <div class="row">
         <div class="col-sm-2">
-            <a class="btn btn-success btn-sm" href="detalle_cliente.php"><i class="fa fa-plus"></i> Nuevo</a>
+            <a class="btn btn-success btn-sm" href="detalle_cliente.php"><i class="bx bx-plus me-0"></i> Nuevo</a>
         </div>
       </div>
       <br>
@@ -28,6 +44,6 @@
     </div>
     
 </div>
-</main>
+</div>
 <?php include('footer.php'); ?>
            

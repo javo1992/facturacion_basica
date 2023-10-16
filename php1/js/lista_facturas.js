@@ -48,7 +48,21 @@ function cargar_facturas()
         type:  'post',
         dataType: 'json',
         success:  function (response) { 
-            $('#lista_facturas').html(response);          
+            $('#lista_facturas').html(response);   
+             if (!$.fn.DataTable.isDataTable('#tbl_facturas')) {
+                table = $('#tbl_facturas').DataTable({
+                    lengthChange: false,
+                    buttons: false, // [ 'excel', 'pdf'],
+                    searching: false,
+                });
+                table.buttons().container().appendTo('#tbl_facturas_wrapper .col-md-6:eq(1)');
+
+
+            } else {
+                table = $('#tbl_factura').DataTable(); //ojo
+                table.clear().rows.add(response).draw(); 
+            }
+       
         }
       });
 
@@ -185,7 +199,7 @@ function lista_articulos()
         'query':$('#txt_query').val(),
         'ref':$('#txt_ref').val(),
         'cate':$('#ddl_categoria').val(),
-        'tipo':$('input:radio[name=opc]:checked').val()
+        // 'tipo':$('input:radio[name=opc]:checked').val()
     }
      $.ajax({
         data:  {parametros:parametros},
@@ -194,6 +208,21 @@ function lista_articulos()
         dataType: 'json',
         success:  function (response) { 
             $('#tbl_productos').html(response);          
+
+            if (!$.fn.DataTable.isDataTable('#tbl_productos_all')) {
+                table = $('#tbl_productos_all').DataTable({
+                    lengthChange: false,
+                    buttons: false, // [ 'excel', 'pdf'],
+                    searching: false,
+                });
+                table.buttons().container().appendTo('#tbl_productos_all_wrapper .col-md-6:eq(1)');
+
+
+            } else {
+                table = $('#tbl_productos_al').DataTable(); //ojo
+                table.clear().rows.add(response).draw(); 
+            }
+
         }
       });
 }
@@ -218,6 +247,7 @@ function categorias()
   {
     $('#ddl_categoria').select2({
       // width: 'resolve',
+      dropdownParent: $('#myModal_productos .modal-body'),
       placeholder: 'categoria',
       ajax: {
         url:   '../controlador/lista_facturaC.php?categorias=true',  

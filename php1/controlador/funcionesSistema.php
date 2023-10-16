@@ -94,6 +94,8 @@ class funcionesC
       if($result==true)
       {
         $datos = $this->modelo->usuario_datos($parametros);
+
+           $_SESSION['INICIO']['TOKEN'] = uniqid();
            $_SESSION['INICIO']['RUC_EMPRESA']=$datos[0]['RUC'];
 	       $_SESSION['INICIO']['ID_EMPRESA']=$datos[0]['id_empresa'];
 	       $_SESSION['INICIO']['EMPRESA']=$datos[0]['Nombre_Comercial'];
@@ -173,15 +175,19 @@ class funcionesC
         {
              $item.='<li class="sidebar-item active">
                          <a class="sidebar-link" href="'.$value['link'].'">
-                         '.$value['icono'].'
-                            <span>'.$value['detalle'].'</span></a>
+                          <div class="parent-icon">             
+                             '.$value['icono'].'
+                         </div>
+                            <div class="menu-title">'.$value['detalle'].'</div></a>
                     </li>';
         }else
         {
               $item.=' <li class="sidebar-item">
-                <a data-bs-target="#'.str_replace(' ','_',$value['detalle']).'" data-bs-toggle="collapse" class="sidebar-link collapsed">               
+                <a data-bs-target="#'.str_replace(' ','_',$value['detalle']).'" data-bs-toggle="collapse" class="sidebar-link collapsed has-arrow">  
+                <div class="parent-icon">             
                 '.$value['icono'].'
-                     <span>'.$value['detalle'].'</span></a>
+                </div>
+                     <div class="menu-title">'.$value['detalle'].'</div></a>
                 </a>
                 <ul id="'.str_replace(' ','_',$value['detalle']).'" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
                     <li class="sidebar-item">';
@@ -189,7 +195,7 @@ class funcionesC
                            foreach ($perimitido as $key3 => $value3) {
                                if($value2['codigo']==$value3['codigo'])
                                {
-                                 $item.=' <a class="sidebar-link" href="'.$value2['link'].'">'.$value2['detalle'].'</a>';
+                                 $item.=' <a class="sidebar-link" href="'.$value2['link'].'">'.$value['icono'].''.$value2['detalle'].'</a>';
                                }
                            }
                        }
@@ -222,14 +228,14 @@ class funcionesC
         }else
         {
              $item.=' <li class="sidebar-item">
-                <a data-bs-target="#'.str_replace(' ','_',$value['detalle']).'" data-bs-toggle="collapse" class="sidebar-link collapsed">            
+                <a data-bs-target="#'.str_replace(' ','_',$value['detalle']).'" data-bs-toggle="collapse" class="sidebar-link has-arrow collapsed">            
                     '.$value['icono'].'
                      <span>'.$value['detalle'].'</span></a>
                 </a>
                 <ul id="'.str_replace(' ','_',$value['detalle']).'" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
                     <li class="sidebar-item">';
                         foreach ($submenus as $key2 => $value2) {
-                           $item.=' <a class="sidebar-link" href="'.$value2['link'].'">'.$value2['detalle'].'</a>';
+                           $item.=' <a class="sidebar-link" href="'.$value2['link'].'">'.$value['icono'].''.$value2['detalle'].'</a>';
                         }
                     $item.='</li>
                 </ul>             

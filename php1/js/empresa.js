@@ -159,6 +159,7 @@ function empresa()
                 $("#txt_iva").val(response[0].valor_iva)
                 $("#txt_mesas").val(response[0].N_MESAS)
                 $("#ddl_tipo_usuario").val(response[0].encargado_envios)
+                $('#txt_nom_img').val(response[0].Nombre_Comercial);
                 if(response[0].logo !=null)
                 {
                     console.log(response[0].logo);
@@ -168,7 +169,7 @@ function empresa()
 
                 if(response[0]['Ruta_Certificado']!='')
                 {
-                    var t = '<tr><td>'+response[0]['Ruta_Certificado']+'</td><td>'+response[0]['Clave_Certificado']+'</td><td><button class="btn btn-sm btn-danger" onclick="eliminar_cert()"><i class="fa fa-trash"></i></button></td></tr>';  
+                    var t = '<tr><td>'+response[0]['Ruta_Certificado']+'</td><td>'+response[0]['Clave_Certificado']+'</td><td><button class="btn btn-sm btn-danger" onclick="eliminar_cert()"><i class="bx bx-trash me-0"></i></button></td></tr>';  
                 }
                 $('#tbl_certificados').html(t)
                 

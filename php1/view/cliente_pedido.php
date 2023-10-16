@@ -106,17 +106,28 @@ function guardar()
 }
 
 </script>
-<main class="content">
-    <div class="container-fluid p-0">
-        <h1 class="h3 mb-3"><strong>Nueva Factura</strong> </h1>
+<div class="page-wrapper">
+      <div class="page-content">
+        <!--breadcrumb-->
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+          <div class="breadcrumb-title pe-3">Nueva Factura</div>
+          <div class="ps-3">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page"></li>
+              </ol>
+            </nav>
+          </div>         
+        </div>
+
     <!-- <button onclick="eliminar_session()"> Cerrar</button> -->
     <div class="row">
          <div class="col-lg-12">
             <!-- Basic Card Example -->
             <div class="card shadow mb-8">
-                <div class="card-header py-3">
-                    <!-- <h6 class="m-0 font-weight-bold text-primary">Basic Card Example</h6> -->
-                </div>
+               
                 <div class="card-body">
                    <div class="row">
                    	  <form id="form_cliente" class="col-sm-9">
@@ -162,6 +173,6 @@ function guardar()
         </div>                        
     </div>
 </div>
-</main>
+</div>
 <?php include('footer.php'); ?>
            

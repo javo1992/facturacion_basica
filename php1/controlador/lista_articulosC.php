@@ -202,16 +202,8 @@ class lista_articulosC
 
 function articulos($parametros)
   {
-    // print_r($parametros);die();
-    if($parametros['tipo']=='P')
-    {
-      $datos = $this->factura->articulos_all2($_SESSION['INICIO']['ID_EMPRESA'],$parametros['query'],$parametros['ref'],$parametros['cate'],false,false,false,1);
-    }else
-    {
-      $datos = $this->factura->articulos_all2($_SESSION['INICIO']['ID_EMPRESA'],$parametros['query'],$parametros['ref'],$parametros['cate'],false,false,1,false);
-    }
-    
-    // print_r($parametros);die();
+      $datos = $this->factura->articulos_all2($_SESSION['INICIO']['ID_EMPRESA'],$parametros['query'],$parametros['ref'],$parametros['cate'],false,false,false,false);
+   
     $arti = '';
     foreach ($datos as $key => $value) {
       $alerta='table-default';
@@ -226,8 +218,8 @@ function articulos($parametros)
       }
       $arti.='
       <tr class="'.$alerta.'" onclick="usar(\''.$value['id_productos'].'\',\''.$value['referencia'].'\',\''.$value['nombre'].'\',\''.number_format($value['precio_uni'],2,'.',',').'\',\''.$value['iva'].'\')">
+      <td>'.($key+1).'</td>
       <td><a href="detalle_articulos.php?id='.$value['id_productos'].'"><u>'.$value['referencia'].'</u></a></td>
-      <td>'.$value['codigo_aux'].'</td>
       <td><a href="detalle_articulos.php?id='.$value['id_productos'].'"><u>'.$value['nombre'].'  '.$lleva.'</u></a></td>
       <td>'.$value['stock'].'</td>
       <td>'.$value['uni_medida'].'</td>

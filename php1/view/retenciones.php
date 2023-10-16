@@ -75,20 +75,35 @@ function guardar()
 
 </script>	
 <!-- Begin Page Content -->
-<main class="content">
-<div class="container-fluid p-0">
+<div class="page-wrapper">
+      <div class="page-content">
+        <!--breadcrumb-->
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+          <div class="breadcrumb-title pe-3">RETENCION</div>
+          <div class="ps-3">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page"></li>
+              </ol>
+            </nav>
+          </div>         
+        </div>
+
+
      <h1 class="h3 mb-3"><strong>RETENCION </strong><strong id="lbl_anulado" style="display:none;"><u>ANULADO</u></strong></h1>
     <div class="row">
     	<div class="col-sm-10">
-            <a class="btn btn-default btn-sm" style="border: 1px solid;" href="lista_retenciones.php"><i class="fa fa-arrow-left"></i> Regresar</a>
-            <button class="btn btn-default btn-sm" style="border: 1px solid;" onclick="pdf_retencion()"><i class="fa fa-print"></i> Imprimir</button>
-             <button class="btn btn-info btn-sm" style="border: 1px solid;" onclick="modal_email()"><i class="fa fa-envelope"></i> Enviar</button>
-             <button class="btn btn-warning btn-sm" onclick="autorizar()" id="btn_autorizar"><i class="fa fa-paper-plane"></i> Autorizar</button>
-             <button class="btn btn-danger btn-sm" style="border: 1px solid;display: none;" id="btn_sri_error" onclick="modal_error_seri($('#txt_autorizacionRET').text(),'RETENCIONES')"><i class="fa fa-eye"></i> Ver error en xml</button>     
+            <a class="btn btn-default btn-sm btn-sm" style="border: 1px solid;" href="lista_retenciones.php"><i class="bx bx-arrow-back"></i> Regresar</a>
+            <button class="btn btn-default btn-sm btn-sm" style="border: 1px solid;" onclick="pdf_retencion()"><i class="bx bx-printer"></i> Imprimir</button>
+             <button class="btn btn-info btn-sm" style="border: 1px solid;" onclick="modal_email()"><i class="bx bx-envelope"></i> Enviar</button>
+             <button class="btn btn-warning btn-sm" onclick="autorizar()" id="btn_autorizar"><i class="bx bx-paper-plane"></i> Autorizar</button>
+             <button class="btn btn-danger btn-sm" style="border: 1px solid;display: none;" id="btn_sri_error" onclick="modal_error_seri($('#txt_autorizacionRET').text(),'RETENCIONES')"><i class="bx bx-detail"></i> Ver error en xml</button>     
     	</div>
          <div class="col-sm-2 text-end">
-        <button class="btn btn-sm btn-danger" style="display:none;" id="btn_eliminar" onclick="eliminar_retencion(<?php echo $id; ?>)"><i class="fa fa-trash"></i> Eliminar</button>    
-        <button class="btn btn-sm btn-danger" style="display:none;" id="btn_anular" onclick="anular_retencion(<?php echo $id; ?>)"><i class="fa fa-times-circle"></i> Anular</button>          
+        <button class="btn btn-sm btn-danger" style="display:none;" id="btn_eliminar" onclick="eliminar_retencion(<?php echo $id; ?>)"><i class="bx bx-trash"></i> Eliminar</button>    
+        <button class="btn btn-sm btn-danger" style="display:none;" id="btn_anular" onclick="anular_retencion(<?php echo $id; ?>)"><i class="bx bx-times-circle"></i> Anular</button>          
         </div> 
     </div>
       <hr>
@@ -146,8 +161,8 @@ function guardar()
                             <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <label id="txt_serie"></label>
                             </button>
-                            <button class="btn btn-sm btn-outline-primary" type="button" style="display:none;" id="btn_guardar_serie" title="Guardar Serie" onclick="guardar_serie()"><i class="fa fa-save"></i></button>
-                            <button class="btn btn-sm btn-outline-info" type="button" style="display:none;" id="btn_recargar" onclick="location.reload()"><i class="fa fa-close"></i></button>
+                            <button class="btn btn-sm btn-outline-primary" type="button" style="display:none;" id="btn_guardar_serie" title="Guardar Serie" onclick="guardar_serie()"><i class="bx bx-save"></i></button>
+                            <button class="btn btn-sm btn-outline-info" type="button" style="display:none;" id="btn_recargar" onclick="location.reload()"><i class="bx bx-close"></i></button>
                             <div class="dropdown-menu" id="opciones">
                             </div>
                         </div>
@@ -289,7 +304,7 @@ function guardar()
                         </div>
                     </div> 
                     <div class="col-sm-2">
-                        <button type="button" class="btn btn-default" style="border:1px solid" onclick="agregar_impuesto()">Agregar</button>
+                        <button type="button" class="btn btn-default btn-sm" style="border:1px solid" onclick="agregar_impuesto()">Agregar</button>
                     </div>
                 </div>    	
             </div>   
@@ -323,7 +338,7 @@ function guardar()
                     </div>
                     <div class="col-sm-2">
                         <br>
-                        <button type="button" class="btn btn-default" style="border:1px solid" onclick="agregar_impuesto2()">Agregar</button>
+                        <button type="button" class="btn btn-default btn-sm" style="border:1px solid" onclick="agregar_impuesto2()">Agregar</button>
                     </div>
                 </div>
                 <div class="row">
@@ -396,7 +411,7 @@ function guardar()
                    </div>
             </div>
             <div class="modal-footer">
-                <a href="home.php" class="btn btn-default" style="border: 1px solid;">Cerrar</a>
+                <a href="home.php" class="btn btn-default btn-sm" style="border: 1px solid;">Cerrar</a>
                 <button class="btn btn-secondary"  onclick="guardar()"> Continuar</button>
             </div>
         </div>
@@ -439,7 +454,7 @@ function guardar()
         </div>
     </div>
 </div>
-</main>
+</div>
 
 
 <?php include('footer.php'); ?>

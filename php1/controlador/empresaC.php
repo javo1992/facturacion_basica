@@ -62,19 +62,25 @@ class empresaC
 	}
 	function guardar_foto($file,$post)
 	 {
+	 	// print_r($file);
+	 	// print_r($post);
+	 	// die();
 	    $ruta='../img/empresa/';//ruta carpeta donde queremos copiar las imágenes
 	    if (!file_exists($ruta)) {
 	       mkdir($ruta, 0777, true);
 	    }
-	    if($this->validar_formato_img($file)==1)
+	    if($this->validar_formato_img($file,$post['txt_nom_img'])==1)
 	    {
 	         $uploadfile_temporal=$file['file_img']['tmp_name'];
 	         $tipo = explode('/', $file['file_img']['type']);
-	         $nombre = 'logo.'.$tipo[1];	        
+	         // if($tipo[1]!='png'){
+	         	$nombre = str_replace(' ','_', $post['txt_nom_img']).'.'.$tipo[1];	   
+	         // }else{ $nombre = str_replace(' ','_', $post['txt_nom_img']).'.jpg'; }     
 	         $nuevo_nom=$ruta.$nombre;
 	         if (is_uploaded_file($uploadfile_temporal))
 	         {
-	           move_uploaded_file($uploadfile_temporal,$nuevo_nom);
+	         	// die();
+	           // move_uploaded_file($uploadfile_temporal,$nuevo_nom);
 	          
 	              $datosI[0]['campo']='logo';
 	              $datosI[0]['dato'] = $nuevo_nom;
@@ -145,13 +151,16 @@ class empresaC
 	     }
 
 	  }
- function validar_formato_img($file)
+ function validar_formato_img($file,$nombre=false)
   {
     switch ($file['file_img']['type']) {
       case 'image/jpeg':
       case 'image/pjpeg':
       case 'image/gif':
+         return 1;
+        break;      
       case 'image/png':
+      	 $this->validar_png($file,$nombre);
          return 1;
         break;      
       default:
@@ -159,6 +168,51 @@ class empresaC
         break;
     }
 
+  }
+
+  function validar_png($file,$nombre)
+  {
+  	// $rutaImagenEntrada =$file['file_img']['tmp_name'];
+		// // Cargar la imagen PNG
+		// $imagen = imagecreatefrompng($rutaImagenEntrada);
+
+		// Ruta de la imagen PNG de salida (sobrescribe la imagen original)
+		$rutaImagenSalida ='../img/empresa/'.str_replace(' ','_',$nombre).'.png';
+
+		// Guardar la imagen nuevamente como PNG
+		// imagepng($imagen, $rutaImagenSalida);
+		// // Liberar la memoria de la imagen
+		// imagedestroy($imagen);
+
+
+
+
+		$rutaImagenIntercalada = $file['file_img']['tmp_name'];
+
+		// Ruta de la imagen PNG sin intercalado (donde se guardará la versión corregida)
+		$rutaImagenSinIntercalado = $rutaImagenSalida;
+
+		// Cargar la imagen PNG intercalada
+$imagenIntercalada = imagecreatefrompng($rutaImagenIntercalada);
+
+// Obtener las dimensiones de la imagen intercalada
+$ancho = imagesx($imagenIntercalada);
+$alto = imagesy($imagenIntercalada);
+
+// Crear una nueva imagen en blanco con las mismas dimensiones y fondo blanco
+$imagenSinIntercalado = imagecreatetruecolor($ancho, $alto);
+$colorFondoBlanco = imagecolorallocate($imagenSinIntercalado, 255, 255, 255);
+imagefill($imagenSinIntercalado, 0, 0, $colorFondoBlanco);
+
+// Copiar la imagen intercalada en la imagen sin intercalado
+imagecopy($imagenSinIntercalado, $imagenIntercalada, 0, 0, 0, 0, $ancho, $alto);
+
+// Guardar la imagen sin intercalado
+imagepng($imagenSinIntercalado, $rutaImagenSinIntercalado);
+
+// Liberar la memoria de las imágenes
+imagedestroy($imagenIntercalada);
+imagedestroy($imagenSinIntercalado);
   }
 
   function validar_formato_certi($file)

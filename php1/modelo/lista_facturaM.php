@@ -359,7 +359,7 @@ class lista_facturaM
 		{
 			$sql.=" AND sucursal='".$_SESSION['INICIO']['SUCURSAL']."' ";
 		}
-		$sql.= '  ORDER BY id_productos DESC LIMIT 50;';
+		// $sql.= '  ORDER BY referencia ASC';
 
 		// print_r($sql);die();
 		$result = $this->db->datos($sql,$id_empresa);

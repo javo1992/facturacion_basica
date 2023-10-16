@@ -1114,7 +1114,18 @@ class factura_pdf
 		   	}
 
 		  $pos_x = 100;
-		 $this->pdftable->Image($src,10,10,45,20);
+		 $dimensiones = getimagesize($src);
+		 $ancho = $dimensiones[0];
+    	 $alto = $dimensiones[1];
+
+		 // print_r($dimensiones);die();
+		 if($alto >= $ancho)
+		 {
+		 	$this->pdftable->Image($src,10,10,25,25);
+		 }else{
+
+		 	$this->pdftable->Image($src,10,10,45,25);
+		 }
 		 $this->pdftable->SetXY($pos_x,20);
 		  $sizetable = 8;
 

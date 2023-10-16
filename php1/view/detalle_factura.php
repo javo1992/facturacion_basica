@@ -25,21 +25,35 @@
      });
 </script>
 <!-- Begin Page Content -->
-<main class="content">
-    <div class="container-fluid p-0">
+<div class="page-wrapper">
+      <div class="page-content">
+        <!--breadcrumb-->
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+          <div class="breadcrumb-title pe-3">Detalle factura</div>
+          <div class="ps-3">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page"></li>
+              </ol>
+            </nav>
+          </div>         
+        </div> 
+
         <h1 class="h3 mb-3"><strong>Factura </strong><strong id="lbl_anulado" style="display:none;"><u>ANULADO</u></strong></h1>
     <div class="row">
     	<div class="col-sm-10">    		
-    		<a class="btn btn-default btn-sm" style="border: 1px solid;" href="lista_facturas.php"><i class="fa fa-arrow-left"></i> Regresar</a>
-            <button class="btn btn-default btn-sm" style="border: 1px solid;" onclick="pdf_factura()"><i class="fa fa-print"></i> Imprimir</button>
-            <button class="btn btn-warning btn-sm" style="border: 1px solid;" id="btn_autorizar" onclick="autorizar()"><i class="fa fa-paper-plane"></i> Autorizar</button>
+    		<a class="btn btn-default btn-sm" style="border: 1px solid;" href="lista_facturas.php"><i class="bx bx-arrow-back"></i> Regresar</a>
+            <button class="btn btn-default btn-sm" style="border: 1px solid;" onclick="pdf_factura()"><i class="bx bx-printer"></i> Imprimir</button>
+            <button class="btn btn-warning btn-sm" style="border: 1px solid;" id="btn_autorizar" onclick="autorizar()"><i class="bx bx-paper-plane"></i> Autorizar</button>
             <button class="btn btn-warning btn-sm" style="border: 1px solid; display: none;" id="btn_modal_guia" onclick="modal_guia()"><i class="fa fa-paper-plane"></i> Generar guia de remision</button>
-            <button class="btn btn-info btn-sm" style="border: 1px solid;" onclick="modal_email()"><i class="fa fa-envelope"></i> Enviar</button>
-            <button class="btn btn-danger btn-sm" style="border: 1px solid;display: none;" id="btn_sri_error" onclick="modal_error_seri($('#txt_autorizacion').text(),'FACTURAS')"><i class="fa fa-eye"></i> Ver error en xml</button>      
+            <button class="btn btn-info btn-sm" style="border: 1px solid;" onclick="modal_email()"><i class="bx bx-envelope"></i> Enviar</button>
+            <button class="btn btn-danger btn-sm" style="border: 1px solid;display: none;" id="btn_sri_error" onclick="modal_error_seri($('#txt_autorizacion').text(),'FACTURAS')"><i class="bx bx-eye"></i> Ver error en xml</button>      
     	</div>
         <div class="col-sm-2 text-end">
-        <button class="btn btn-sm btn-danger" style="display:none;" id="btn_eliminar" onclick="eliminar_factura(<?php echo $id; ?>)"><i class="fa fa-trash"></i> Eliminar</button>    
-        <button class="btn btn-sm btn-danger" style="display:none;" id="btn_anular" onclick="anular_factura(<?php echo $id; ?>)"><i class="fa fa-times-circle"></i> Anular</button>          
+        <button class="btn btn-sm btn-danger" style="display:none;" id="btn_eliminar" onclick="eliminar_factura(<?php echo $id; ?>)"><i class="bx bx-trash"></i> Eliminar</button>    
+        <button class="btn btn-sm btn-danger" style="display:none;" id="btn_anular" onclick="anular_factura(<?php echo $id; ?>)"><i class="bx bx-times-circle"></i> Anular</button>          
         </div>                   	
     </div>
     <hr>
@@ -84,8 +98,8 @@
                 <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <label id="txt_serie"></label>
                 </button>
-                <button class="btn btn-sm btn-outline-primary" style="display:none;" id="btn_guardar_serie" title="Guardar Serie" onclick="guardar_serie()"><i class="fa fa-save"></i></button>
-                <button class="btn btn-sm btn-outline-info" style="display:none;" id="btn_recargar" onclick="location.reload()"><i class="fa fa-close"></i></button>
+                <button class="btn btn-sm btn-outline-primary p-0" style="display:none;" id="btn_guardar_serie" title="Guardar Serie" onclick="guardar_serie()"><i class="bx bx-save me-0 p-0"></i></button>
+                <button class="btn btn-sm btn-outline-info p-0" style="display:none;" id="btn_recargar" onclick="location.reload()"><i class="bx bx-x me-0 p-0"></i></button>
                 <div class="dropdown-menu" id="opciones">
                 </div>
             </div>
@@ -162,7 +176,7 @@
                         </div> 
                         <div class="col-sm-2 text-end">
                             <br>
-                            <button class="btn btn-primary btn-sm" onclick="agregar_factura()"><i class="fa fa-arrow-down"></i> Agregar</button>
+                            <button class="btn btn-primary btn-sm me-0" onclick="agregar_factura()"><i class="bx bx-down-arrow-alt me-0"></i> Agregar</button>
                         </div>                       
                     </div>
                     <div class="row">
@@ -322,7 +336,7 @@
         </div>                        
     </div>
 </div>
-</main>
+</div>
 <!-- Button to Open the Modal -->
 
 <!-- The Modal -->
@@ -339,10 +353,7 @@
       <!-- Modal body -->
       <div class="modal-body">
         <div class="row">
-            <div class="col-sm-2">
-                <label><input type="radio" name="opc" id="OpcP" checked value="P"  onclick="lista_articulos()">Producto</label>
-                <label><input type="radio" name="opc" id="OpcS" value="S" onclick="lista_articulos()">Servicio</label>
-            </div>
+        
             <div class="col-sm-3">
                 <b>Referencia</b>
                 <input type="text" name="txt_ref" id="txt_ref" class="form-control form-control-sm" onkeyup="lista_articulos()">
@@ -359,9 +370,10 @@
             </div>            
         </div>
         <div class="row">
-            <div class="col-sm-12">
-                <table class="table table-bordered dataTable table-sm">
+            <div class="col-sm-12 table-responsive">
+                <table class="table table-bordered dataTable table-sm" id="tbl_productos_all">
                     <thead class="text-primary">
+                        <th>#</th>
                         <th>Referencia</th>
                         <th>Producto</th>
                         <th>Stock</th>

@@ -11,127 +11,99 @@
     }
 </script>
 
-<main class="content">
-    <div class="container-fluid p-0">
-
-        <h1 class="h3 mb-3"><strong>Bienvenido</strong> ...</h1>
-        <div class="col-sm-12">
-            <label class="small text-danger">* No se olvidew de cargar su firma digital en el apartado de Empresa/ Datos de empresa/Certificados</label>
+<div class="page-wrapper">
+      <div class="page-content">
+        <!--breadcrumb-->
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+          <div class="breadcrumb-title pe-3">HOME</div>
+          <div class="ps-3">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page"></li>
+              </ol>
+            </nav>
+          </div>         
         </div>
-
+        <!--end breadcrumb-->
+        
         <div class="row">
-                        <div class="col-sm-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col mt-0">
-                                            <h5 class="card-title">Facturas</h5>
-                                        </div>
+          <div class="col-xl-12 mx-auto">
+            <h6 class="mb-0 text-uppercase">BIENVENIDO</h6>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12">
+                        <label class="small text-danger">* No se olvidew de cargar su firma digital en el apartado de Empresa/ Datos de empresa/Certificados</label>
+                        <br>
+                    </div>
 
-                                        <div class="col-auto">
-                                            <div class="stat text-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign align-middle"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h1 class="mt-1 mb-3">0</h1>
-                                   <!--  <div class="mb-0">
-                                        <span class="badge badge-success-light"> <i class="mdi mdi-arrow-bottom-right"></i> 3.65% </span>
-                                        <span class="text-muted">Since last week</span>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col mt-0">
-                                            <h5 class="card-title">Retenciones</h5>
-                                        </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
 
-                                        <div class="col-auto">
-                                            <div class="stat text-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag align-middle"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                            </div>
-                                        </div>
+                    <div class="col">
+                        <div class="card radius-10">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <p class="mb-0 text-secondary">Facturas</p>
+                                        <h4 class="my-1">42K</h4>
                                     </div>
-                                    <h1 class="mt-1 mb-3">0</h1>
-                                   <!--  <div class="mb-0">
-                                        <span class="badge badge-danger-light"> <i class="mdi mdi-arrow-bottom-right"></i> -5.25% </span>
-                                        <span class="text-muted">Since last week</span>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col mt-0">
-                                            <h5 class="card-title">Notas de credito</h5>
-                                        </div>
-
-                                        <div class="col-auto">
-                                            <div class="stat text-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity align-middle"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                                            </div>
-                                        </div>
+                                    <div class="text-primary ms-auto font-35"><i class='bx bxl-chrome'></i>
                                     </div>
-                                    <h1 class="mt-1 mb-3">0</h1>
-                                  <!--   <div class="mb-0">
-                                        <span class="badge badge-success-light"> <i class="mdi mdi-arrow-bottom-right"></i> 4.65% </span>
-                                        <span class="text-muted">Since last week</span>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xl-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col mt-0">
-                                            <h5 class="card-title">Guia de remision</h5>
-                                        </div>
-
-                                        <div class="col-auto">
-                                            <div class="stat text-primary">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart align-middle"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h1 class="mt-1 mb-3">0</h1>
-                                    <!-- <div class="mb-0">
-                                        <span class="badge badge-success-light"> <i class="mdi mdi-arrow-bottom-right"></i> 2.35% </span>
-                                        <span class="text-muted">Since last week</span>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-        <div class="row">
-            <div class="col-lg-12">
-            <!-- Basic Card Example -->
-            <div class="card shadow mb-8">
-                <div class="card-header py-3">
-                    <!-- <h6 class="m-0 font-weight-bold text-primary">Basic Card Example</h6> -->
+                    <div class="col">
+                        <div class="card radius-10">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <p class="mb-0 text-secondary">Retenciones</p>
+                                        <h4 class="my-1">42K</h4>
+                                    </div>
+                                    <div class="text-primary ms-auto font-35"><i class='bx bxl-chrome'></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card radius-10">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <p class="mb-0 text-secondary">Notas de credito</p>
+                                        <h4 class="my-1">42K</h4>
+                                    </div>
+                                    <div class="text-primary ms-auto font-35"><i class='bx bxl-chrome'></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card radius-10">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <p class="mb-0 text-secondary">Guia de remision</p>
+                                        <h4 class="my-1">42K</h4>
+                                    </div>
+                                    <div class="text-primary ms-auto font-35"><i class='bx bxl-chrome'></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                    
-                    <!-- <img src="https://erp.diskcoversystem.com/~diskcover/php/app1_php/img/articulos/logo.png"> -->
-                   <!--  The styling for this basic card example is created by using default Bootstrap
-                    utility classes. By using utility classes, the style of the card component can be
-                    easily modified with no need for any custom CSS! -->
-                    <?php 
-                    // print_r($_SESSION['INICIO']);
-                    ?>
             </div>
-
-        </div>          
+          </div>
         </div>
+        <!--end row-->
+      </div>
     </div>
-</main>
 
 
 <?php include('footer.php'); ?>

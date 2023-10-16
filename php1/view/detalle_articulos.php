@@ -15,17 +15,33 @@
      });
 </script>
 
-<main class="content">
-    <div class="container-fluid p-0">
+<div class="page-wrapper">
+      <div class="page-content">
+        <!--breadcrumb-->
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+          <div class="breadcrumb-title pe-3">Detalle de articulo</div>
+          <div class="ps-3">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page"></li>
+              </ol>
+            </nav>
+          </div>         
+        </div>
+        <hr>
 
-        <h1 class="h3 mb-3"><strong>Detalle de articulo</strong></h1>
         <div class="row">
         	<div class="col-sm-2">
-        		<a href="lista_articulos.php" class="btn btn-sm btn-default" style="border:1px solid;"><i class="fa fa-arrow-left"></i> Regresar</a>
+        		<a href="lista_articulos.php" class="btn btn-sm btn-default" style="border:1px solid;"><i class="bx bx-arrow-back"></i> Regresar</a>
         	</div>
         </div>
         <br>
 
+        <div class="card">
+        	<div class="card-body">
+        	
         <div class="row">
             <div class="col-lg-12">
             	<ul class="nav nav-pills">
@@ -44,23 +60,19 @@
 				<div class="tab-content">
 				  <div class="tab-pane container active" id="home">
 					  	<div class="row">
-					         <div class="col-lg-12">
-					            <!-- Basic Card Example -->
-					            <div class="card shadow mb-8">            	
-					                <div class="card-header py-3">
+					         <div class="col-lg-12">  
 					                <div class="row">
 					                	<div class="col-sm-9">
 					                		<!-- <button class="btn btn-primary btn-sm"><i class="fa fa-save"></i> Guardar</button> -->
 					                	</div>
-					                	<div class="col-sm-3 text-right">
-					                		<button class="btn btn-primary btn-sm" onclick="add_edit()"><i class="fa fa-save"></i> Guardar</button>
-					                		<?php if($id!=''){echo '<button class="btn btn-danger btn-sm" onclick="eliminar()"><i class="fa fa-trash"></i> Eliminar</button>' ;} ?>
+					                	<div class="col-sm-3 text-end">
+					                		<button class="btn btn-primary btn-sm" onclick="add_edit()"><i class="bx bx-save"></i> Guardar</button>
+					                		<?php if($id!=''){echo '<button class="btn btn-danger btn-sm" onclick="eliminar()"><i class="bx bx-trash"></i> Eliminar</button>' ;} ?>
 					                		
 					                	</div>                	
 					                </div>                	
 					                    <!-- <h6 class="m-0 font-weight-bold text-primary" id="lbl_nombre">Name Basic Example</h6> -->
-					                </div>
-					                <div class="card-body">
+					                
 					                   <div class="row">
 					                   	<div class="col-sm-4">
 					                   		 <form enctype="multipart/form-data" id="form_img" method="post" class="col-sm-12">
@@ -143,7 +155,7 @@
 										                            <select class="form-select" id="ddl_categoria" style="width:85%">
 										                              <option>Seleccione Categoria</option>
 										                            </select>
-										                            <button class="btn btn-secondary btn-sm" type="button" title="Nuevo Articulos" onclick="$('#nueva_categoria').modal('show');"><i class="fa fa-plus"></i></button>
+										                            <button class="btn btn-secondary btn-sm" type="button" title="Nuevo Articulos" onclick="$('#nueva_categoria').modal('show');"><i class="bx bx-plus me-0"></i></button>
 										                        </div>
 								                          </div>
 								                          <div class="col-sm-3">
@@ -197,7 +209,7 @@
 								                         </div>  
 								                         <div class="col-sm-3">
 								                            <b>Estado</b> <br>
-								                            <select class="form-control-sm form-select" id="ddl_estado">
+								                            <select class="form-select-sm form-select" id="ddl_estado">
 								                              <option>Selecciones</option>
 								                            </select value="">
 								                         </div>
@@ -218,51 +230,14 @@
 
 								            </div>                 	
 					                   </div>
-					                </div>
-					            </div>
+					                
 
 					        </div>                        
 					  </div>
 					  </div>		
 				
 
-				 <div class="tab-pane container fade card" id="menu1">
-					  	<!-- <div class="card"> -->
-					  	<!-- 	<div class="row">
-					  			<div class="col-sm-6">
-					  				<div class="row">
-					  					<div class="col-sm-4">
-					  						<b>Tamaño</b>
-					  						<input type="hidden" name="txt_id_tama" id="txt_id_tama">
-					  						<input class="form-control form-control-sm" name="txt_tama" id="txt_tama">
-					  					</div>
-
-					  					<div class="col-sm-4">
-					  						<b>Precio</b>
-					  						<input class="form-control form-control-sm" name="txt_precio_ta" id="txt_precio_ta">
-					  					</div>
-					  					<div class="col-sm-4">
-					  						<br>
-					  						<button class="btn btn-sm btn-primary" onclick="tamanio_add()"><i class="fa fa-plus"></i> Agregar</button>
-					  					</div>		  					
-					  				</div>
-
-					  			</div>
-					  			<div class="col-sm-6">
-					  				<table class="table table-hover">
-					  					<thead>
-					  						<th>Tamaño</th>
-					  						<th>Precio</th>
-					  						<th></th>
-					  					</thead>
-					  					<tbody id="tbl_tama">
-					  						<tr>
-					  							<td colspan="3">No se encontraron tamaños</td>
-					  						</tr>
-					  					</tbody>
-					  				</table>
-					  			</div>
-					  		</div> -->
+				 <div class="tab-pane container fade" id="menu1">					  
 					  		<h1 class="h3 mb-4 text-gray-800" id="">Materia prima</h1>
 					  		<div class="row">
 					  			<div class="col-sm-7">
@@ -353,8 +328,13 @@
 				</div>
 			</div>
 		</div>
+
+
+        	</div>
+        </div>
+
     </div>
-</main>
+</div>
 
 <div class="modal fade" id="nueva_categoria"  data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">

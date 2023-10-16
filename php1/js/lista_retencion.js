@@ -171,7 +171,21 @@ function cargar_retenciones()
         type:  'post',
         dataType: 'json',
         success:  function (response) { 
-            $('#lista_retenciones').html(response);          
+            $('#lista_retenciones').html(response);   
+              if (!$.fn.DataTable.isDataTable('#dataTable')) {
+          // Si DataTables no está inicializado, inicialízalo
+            table = $('#dataTable').DataTable({
+                lengthChange: false,
+                buttons: false, // [ 'excel', 'pdf'],
+                searching: false,
+            });
+            table.buttons().container().appendTo('#dataTable_wrapper .col-md-6:eq(1)');
+
+
+        } else {
+            table = $('#tbl_articulo').DataTable(); //ojo
+            table.clear().rows.add(response).draw(); 
+        }       
         }
       });
 

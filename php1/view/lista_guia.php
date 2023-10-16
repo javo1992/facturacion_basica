@@ -8,13 +8,28 @@
 </script>
 	<script src="../js/guias_remision.js"></script>		
 <!-- Begin Page Content -->
-<main class="content">
-    <div class="container-fluid p-0">    <!-- Page Heading -->
+<div class="page-wrapper">
+      <div class="page-content">
+        <!--breadcrumb-->
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+          <div class="breadcrumb-title pe-3">Guias de remision</div>
+          <div class="ps-3">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0 p-0">
+                <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page"></li>
+              </ol>
+            </nav>
+          </div>         
+        </div>
+
+
       <h1 class="h3 mb-3"><strong>Guias de remision</strong></h1>
     <!-- <button onclick="eliminar_session()"> Cerrar</button> -->
     <div class="row">
     	<div class="col-sm-2">
-    		<a class="btn btn-success btn-sm" href="detalle_guia.php"><i class="fa fa-plus"></i> Nuevo</a>
+    		<a class="btn btn-success btn-sm" href="detalle_guia.php"><i class="bx bx-plus"></i> Nuevo</a>
     	</div>
     </div>
      <div class="row">
@@ -46,9 +61,9 @@
          <div class="col-lg-12">
             <!-- Basic Card Example -->
             <div class="card shadow mb-8">
-                <div class="card-header">
+                <div class="card-header"><!-- 
                     <h5 class="card-title">Lista de guias de remision</h5>
-                </div>
+                </div> -->
                 <div class="card-body" style="padding-top: 0px;">
                 	<table class="table table-bordered table-sm table-striped " id="dataTable">
                         <thead>                            
@@ -69,6 +84,6 @@
         </div>                        
     </div>
 </div>
-</main>
+</div>
 <?php include('footer.php'); ?>
            

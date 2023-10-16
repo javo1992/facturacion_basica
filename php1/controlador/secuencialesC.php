@@ -83,8 +83,8 @@ class secuencialesC
                     <td><input type="" name="numero_'.$value['id_secuenciales'].'" id="numero_'.$value['id_secuenciales'].'" class="form-control form-control-sm" value="'.$value['numero'].'">
                     </td>
                     <td>
-                    <button class="btn btn btn-primary btn-sm" onclick="editar(\''.$value['id_secuenciales'].'\')"><i class="fa fa-save"></i></button>
-                    <button class="btn btn btn-danger btn-sm" onclick="eliminar(\''.$value['id_secuenciales'].'\')"><i class="fa fa-trash"></i></button>
+                    <button class="btn btn btn-primary btn-sm" onclick="editar(\''.$value['id_secuenciales'].'\')"><i class="bx bx-save me-0"></i></button>
+                    <button class="btn btn btn-danger btn-sm" onclick="eliminar(\''.$value['id_secuenciales'].'\')"><i class="bx bx-trash me-0"></i></button>
                     </td>
                 </tr>';
 		}

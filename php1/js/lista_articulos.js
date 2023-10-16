@@ -223,8 +223,28 @@ function list_articulos()
         type:  'post',
         dataType: 'json',
         success:  function (response) { 
-            $('#tbl_productos').html(response);          
+
+
+         $('#tbl_productos').html(response); 
+        if (!$.fn.DataTable.isDataTable('#tbl_articulos')) {
+          // Si DataTables no está inicializado, inicialízalo
+            table = $('#tbl_articulos').DataTable({
+                lengthChange: false,
+                buttons: false, // [ 'excel', 'pdf'],
+                searching: false,
+            });
+            table.buttons().container().appendTo('#tbl_articulos_wrapper .col-md-6:eq(1)');
+
+
+        } else {
+            table = $('#tbl_articulo').DataTable(); //ojo
+            table.clear().rows.add(response).draw(); 
         }
+
+ 
+
+        }
+
       });
 }
 
@@ -251,7 +271,6 @@ function list_trasferencias()
 function categorias()
   {
     $('#ddl_categoria').select2({
-      // width: 'resolve',
       placeholder: 'categoria',
       ajax: {
         url:   '../controlador/lista_facturaC.php?categorias=true',  
@@ -940,4 +959,10 @@ function add_categoria()
           }      
         }
       });
+}
+
+function limpiar_cate()
+{
+   $('#ddl_categoria').val(null).trigger('change');
+   lista_articulos();
 }

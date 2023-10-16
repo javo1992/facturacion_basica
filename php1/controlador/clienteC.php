@@ -529,7 +529,7 @@ class clienteC
 
 						</tbody>
 					</table>
-					<a href="detalle_cliente.php?id='.$value['id'].'" class="btn btn-primary btn-block btn-sm"><i class="fa fa-eye"></i> Ver Detalles</a>
+					<a href="detalle_cliente.php?id='.$value['id'].'" class="btn btn-primary btn-block btn-sm"><i class="bx bx-detail"></i> Ver Detalles</a>
 				</div>
 			</div>
 		</div>';

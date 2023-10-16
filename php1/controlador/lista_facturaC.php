@@ -175,20 +175,20 @@ function DCTipoPago()
       }
       $tr.='<tr>
               <td>
-                <a class="btn-sm btn btn-primary" href="../controlador/facturar.php?reporte_factura=true&empresa='.$_SESSION['INICIO']['ID_EMPRESA'].'&fac='.$value['id'].'&usu='.$_SESSION['INICIO']['ID_USUARIO'].'" target="_blank"><i class="fa fa-eye" title="Ver factura"></i></a>
+                <a class="btn-sm btn btn-primary" href="../controlador/facturar.php?reporte_factura=true&empresa='.$_SESSION['INICIO']['ID_EMPRESA'].'&fac='.$value['id'].'&usu='.$_SESSION['INICIO']['ID_USUARIO'].'" target="_blank"><i class="bx bx-detail p-0 me-0" title="Ver factura"></i></a>
                 ';
                 if($value['estado']=='P' || $value['estado']=='')
                 {
-                  $tr.='<button class="btn-sm btn btn-danger" onclick="eliminar_factura('.$value['id'].')"><i class="fa fa-trash" title="Eliminar"></i></button><button class="btn-sm btn btn-info" onclick="autorizar('.$value['id'].')"><i class="fa fa-paper-plane" title="Autorizar"></i></button>';
+                  $tr.='<button class="btn-sm btn btn-danger" onclick="eliminar_factura('.$value['id'].')"><i class="bx bx-trash" title="Eliminar"></i></button><button class="btn-sm btn btn-info" onclick="autorizar('.$value['id'].')"><i class="bx bx-paper-plane p-0 me-0" title="Autorizar"></i></button>';
                 }
                 if($value['estado']=='R')
                 {
-                  $tr.='<button class="btn-sm btn btn-warning" onclick="modal_error_seri(\''.$value['Autorizacion'].'\',\'FACTURAS\')"><i class="fa fa-exclamation-triangle" title="Descargar xml"></i></button>';
+                  $tr.='<button class="btn-sm btn btn-warning" onclick="modal_error_seri(\''.$value['Autorizacion'].'\',\'FACTURAS\')"><i class="bx bx-error p-0 me-0" title="Descargar xml"></i></button>';
                 }
                 
                 if($value['estado']=='A')
                 {
-                  $tr.='<button class="btn-sm btn btn-secondary" onclick="anular_factura(\''.$value['id'].'\',\'FACTURAS\')"><i class="fa fa-times-circle" title="Anular"></i></button>';
+                  $tr.='<button class="btn-sm btn btn-secondary" onclick="anular_factura(\''.$value['id'].'\',\'FACTURAS\')"><i class="bx bx-x-circle p-0 me-0" title="Anular"></i></button>';
                 }
               $tr.='</td>
               <td><a href="#" onclick="cargar_detalle(\''.$value['id'].'\',\''.$value['estado'].'\')">'.$value['nombre'].'</a></td>
@@ -254,8 +254,8 @@ function DCTipoPago()
        if($estado_fac[0]['estado_factura']!='A' && $estado_fac[0]['estado_factura']!='AN')
         {
           $lineas.= '   <td>
-                         <button class="btn-sm btn-danger" onclick="Eliminar(\''.$value['id_lineas'].'\')" ><i class="fa fa-trash"></i></button>
-                        <!--- <button class="btn-sm btn-primary" onclick="Editar(\''.$value['id_lineas'].'\')" ><i class="fa fa-save"></i></button> --!>
+                         <button class="btn btn-sm btn-danger me-0" onclick="Eliminar(\''.$value['id_lineas'].'\')" ><i class="bx bx-trash me-0 p-0"></i></button>
+                        <!--- <button class="btn-sm btn-primary" onclick="Editar(\''.$value['id_lineas'].'\')" ><i class="bx bx-save"></i></button> --!>
                       </td>';
         }else{ $lineas.= '<td></td>';}
       $lineas.= '   <td>'.$value['producto'].'</td>
@@ -319,13 +319,13 @@ function DCTipoPago()
 
   function articulos($parametros)
   {
-    if($parametros['tipo']=='P')
-    {
-      $datos = $this->modelo->articulos_all2($_SESSION['INICIO']['ID_EMPRESA'],$parametros['query'],$parametros['ref'],$parametros['cate'],false,false,false,1);
-    }else
-    {
-      $datos = $this->modelo->articulos_all2($_SESSION['INICIO']['ID_EMPRESA'],$parametros['query'],$parametros['ref'],$parametros['cate'],false,false,1,false);
-    }
+    // if($parametros['tipo']=='P')
+    // {
+    //   $datos = $this->modelo->articulos_all2($_SESSION['INICIO']['ID_EMPRESA'],$parametros['query'],$parametros['ref'],$parametros['cate'],false,false,false,1);
+    // }else
+    // {
+      $datos = $this->modelo->articulos_all2($_SESSION['INICIO']['ID_EMPRESA'],$parametros['query'],$parametros['ref'],$parametros['cate'],false,false,false,false);
+    // }
 
     // print_r($parametros);die();
     $arti = '';
@@ -342,6 +342,7 @@ function DCTipoPago()
       }
       $arti.='
       <tr class="'.$alerta.'" onclick="usar(\''.$value['id_productos'].'\',\''.$value['referencia'].'\',\''.$value['nombre'].'\',\''.number_format($value['precio_uni'],2,'.','').'\',\''.$value['iva'].'\')">
+      <td>'.($key+1).'</td>
       <td>'.$value['referencia'].'</td>
       <td>'.$value['nombre'].'  '.$lleva.'</td>
       <td>'.$value['stock'].'</td>

@@ -7,14 +7,26 @@
 
 </script>
 	<script src="../js/lista_facturas.js"></script>		
-<!-- Begin Page Content -->
-<main class="content">
-    <div class="container-fluid p-0">    <!-- Page Heading -->
-      <h1 class="h3 mb-3"><strong>Facturas</strong></h1>
-    <!-- <button onclick="eliminar_session()"> Cerrar</button> -->
+<div class="page-wrapper">
+  <div class="page-content">
+    <!--breadcrumb-->
+    <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+      <div class="breadcrumb-title pe-3">Facturas</div>
+      <div class="ps-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0 p-0">
+            <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page"></li>
+          </ol>
+        </nav>
+      </div>         
+    </div>
+
+
     <div class="row">
     	<div class="col-sm-2">
-    		<a class="btn btn-success btn-sm" href="cliente_pedido.php?tipo=FA"><i class="fa fa-plus"></i> Nuevo</a>
+    		<a class="btn btn-success btn-sm" href="cliente_pedido.php?tipo=FA"><i class="bx bx-plus me-0"></i> Nuevo</a>
     	</div>
     </div>
      <div class="row">
@@ -36,7 +48,7 @@
     	</div>
     	<div class="col-sm-2">
     		<b>Serie</b>
-    		<select class="form-control form-control-sm" id="ddl_serie" name="ddl_serie" onchange="cargar_facturas()">
+    		<select class="form-select form-select-sm" id="ddl_serie" name="ddl_serie" onchange="cargar_facturas()">
     			<option value="">Serie</option>
     		</select>
     	</div>
@@ -50,7 +62,7 @@
                     <h5 class="card-title">Lista de facturas</h5>
                 </div>
                 <div class="card-body" style="padding-top:0px">
-                	<table class="table table-bordered dataTable table-sm" id="dataTable">
+                	<table class="table table-bordered dataTable table-sm" id="tbl_facturas">
                         <thead>                            
                             <th width="15%"></th>
                         	<th>Cliente</th>
@@ -70,6 +82,6 @@
         </div>                        
     </div>
 </div>
-</main>
+</div>
 <?php include('footer.php'); ?>
            
